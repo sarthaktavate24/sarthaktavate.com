@@ -26,19 +26,13 @@
 			text-align: center
 		}
 
-		.bee-page-container,
-		.bee-row-2 {
-			background-position: top center
-		}
-
-		.bee-row-10 .bee-row-content,
-		.bee-row-11 .bee-row-content,
-		.bee-row-12 .bee-row-content,
-		.bee-row-3 .bee-row-content,
-		.bee-row-6 .bee-row-content,
-		.bee-row-8 .bee-row-content,
-		.bee-row-9 .bee-row-content {
-			background-image: url('images/2_Faint_Bg.png')
+		.bee-row-10,
+		.bee-row-3,
+		.bee-row-4,
+		.bee-row-8,
+		.bee-row-9 {
+			background-color: #ffffff;
+			background-repeat: no-repeat
 		}
 
 		body {
@@ -48,15 +42,14 @@
 		}
 
 		.bee-page-container {
-			background-image: url("images/3_BG_electronics.png")
+			background-image: url("images/2_BG_electronics.png");
+			background-position: top center
 		}
 
-		.bee-row-1 .bee-col-2 .bee-block-2 li a,
-		.bee-row-12 .bee-col-1 .bee-block-10 a,
-		.bee-row-12 .bee-col-1 .bee-block-3 a,
-		.bee-row-12 .bee-col-2 .bee-block-4 a,
+		.bee-row-11 .bee-col-1 .bee-block-10 a,
+		.bee-row-11 .bee-col-2 .bee-block-4 a,
 		a {
-			color: #ffffff
+			color: #7747FF
 		}
 
 		* {
@@ -104,8 +97,8 @@
 			flex-basis: 75%
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 div.label:not(.inline),
-		.bee-row-12 .bee-col-2 .bee-block-3 label:not(.inline),
+		.bee-row-11 .bee-col-2 .bee-block-3 div.label:not(.inline),
+		.bee-row-11 .bee-col-2 .bee-block-3 label:not(.inline),
 		.bee-row-content .bee-col-w12 {
 			flex-basis: 100%
 		}
@@ -124,10 +117,9 @@
 		}
 
 		.bee-row-1 .bee-col-1 .bee-block-2,
-		.bee-row-11 .bee-col-1 .bee-block-1,
-		.bee-row-12 .bee-col-2 .bee-block-3 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]),
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-11 .bee-col-2 .bee-block-3 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]),
 		.bee-row-3 .bee-col-1 .bee-block-1,
-		.bee-row-3 .bee-col-1 .bee-block-2,
 		.bee-row-4 .bee-col-1 .bee-block-1,
 		.bee-row-5 .bee-col-1 .bee-block-1,
 		.bee-row-5 .bee-col-2 .bee-block-1,
@@ -135,8 +127,7 @@
 		.bee-row-5 .bee-col-3 .bee-block-1,
 		.bee-row-5 .bee-col-4 .bee-block-1,
 		.bee-row-5 .bee-col-4 .bee-block-3,
-		.bee-row-8 .bee-col-1 .bee-block-1,
-		.bee-row-9 .bee-col-1 .bee-block-1 {
+		.bee-row-8 .bee-col-1 .bee-block-1 {
 			width: 100%
 		}
 
@@ -192,15 +183,6 @@
 			height: 38px
 		}
 
-		.bee-row-1 .bee-row-content,
-		.bee-row-4 .bee-row-content,
-		.bee-row-5 .bee-row-content,
-		.bee-row-7 .bee-row-content {
-			border-radius: 0;
-			color: #000000;
-			background-repeat: no-repeat
-		}
-
 		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
 			margin: 0;
 			padding: 2px
@@ -241,13 +223,18 @@
 			background-repeat: no-repeat
 		}
 
+		.bee-row-1 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-7 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000
+		}
+
 		.bee-row-1 .bee-col-1,
 		.bee-row-1 .bee-col-2,
-		.bee-row-11 .bee-col-1,
-		.bee-row-2 .bee-col-1,
-		.bee-row-4 .bee-col-1,
+		.bee-row-3 .bee-col-1,
 		.bee-row-8 .bee-col-1 {
-			padding-bottom: 5px;
 			padding-top: 5px
 		}
 
@@ -261,7 +248,6 @@
 		}
 
 		.bee-row-2 {
-			background-image: url('images/3_BG_electronics.png');
 			background-repeat: no-repeat;
 			background-size: auto
 		}
@@ -277,37 +263,34 @@
 			width: 100%
 		}
 
-		.bee-row-3,
-		.bee-row-9 {
-			background-color: #ffffff;
-			background-repeat: no-repeat;
+		.bee-row-4,
+		.bee-row-8 {
 			background-size: auto
 		}
 
-		.bee-row-12 .bee-row-content,
-		.bee-row-3 .bee-row-content,
-		.bee-row-9 .bee-row-content {
+		.bee-row-11 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-8 .bee-row-content {
+			background-image: url('images/3_Faint_Bg.png');
 			background-repeat: no-repeat;
 			background-size: auto;
 			border-radius: 0;
 			color: #000000
 		}
 
-		.bee-row-3 .bee-col-1,
-		.bee-row-9 .bee-col-1 {
-			padding-top: 5px
-		}
-
-		.bee-row-10,
-		.bee-row-11,
-		.bee-row-4,
-		.bee-row-8 {
-			background-color: #ffffff;
-			background-repeat: no-repeat
-		}
-
 		.bee-row-5 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000;
 			padding: 60px
+		}
+
+		.bee-row-6 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			border-radius: 20px;
+			background-image: url('images/3_Faint_Bg.png');
+			color: #000000;
+			background-repeat: no-repeat
 		}
 
 		.bee-row-5 .bee-col-1,
@@ -322,44 +305,41 @@
 		}
 
 		.bee-row-6 .bee-row-content {
-			background-color: #848484;
-			background-repeat: no-repeat;
-			border-radius: 20px;
-			color: #000000
+			background-color: #848484
 		}
 
-		.bee-row-10 .bee-col-1,
-		.bee-row-6 .bee-col-1 {
+		.bee-row-6 .bee-col-1,
+		.bee-row-9 .bee-col-1 {
 			padding: 35px 60px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center
 		}
 
-		.bee-row-10 .bee-col-1 .bee-block-1,
-		.bee-row-6 .bee-col-1 .bee-block-1 {
+		.bee-row-6 .bee-col-1 .bee-block-1,
+		.bee-row-9 .bee-col-1 .bee-block-1 {
 			padding: 10px 25px;
 			text-align: center;
 			width: 100%
 		}
 
-		.bee-row-10 .bee-col-2,
-		.bee-row-6 .bee-col-2 {
+		.bee-row-6 .bee-col-2,
+		.bee-row-9 .bee-col-2 {
 			padding: 5px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center
 		}
 
-		.bee-row-10 .bee-col-2 .bee-block-1,
-		.bee-row-6 .bee-col-2 .bee-block-1 {
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-9 .bee-col-2 .bee-block-1 {
 			padding-bottom: 15px;
 			padding-left: 25px;
 			padding-right: 25px
 		}
 
-		.bee-row-10 .bee-col-3,
-		.bee-row-6 .bee-col-3 {
+		.bee-row-6 .bee-col-3,
+		.bee-row-9 .bee-col-3 {
 			padding-bottom: 20px;
 			padding-right: 25px;
 			padding-top: 35px;
@@ -368,84 +348,86 @@
 			justify-content: center
 		}
 
-		.bee-row-10 .bee-col-3 .bee-block-1,
-		.bee-row-6 .bee-col-3 .bee-block-1 {
+		.bee-row-6 .bee-col-3 .bee-block-1,
+		.bee-row-9 .bee-col-3 .bee-block-1 {
 			padding-bottom: 25px;
 			padding-left: 10px;
 			padding-top: 25px
 		}
 
-		.bee-row-10 .bee-col-3 .bee-block-2,
-		.bee-row-6 .bee-col-3 .bee-block-2 {
+		.bee-row-6 .bee-col-3 .bee-block-2,
+		.bee-row-9 .bee-col-3 .bee-block-2 {
 			padding: 10px;
 			text-align: left
 		}
 
-		.bee-row-11 .bee-row-content,
-		.bee-row-8 .bee-row-content {
+		.bee-row-9 .bee-row-content {
+			background-color: #ffffff
+		}
+
+		.bee-row-10 .bee-row-content {
+			background-image: url('images/3_Faint_Bg.png');
 			background-repeat: no-repeat;
 			border-radius: 0;
 			color: #000000
 		}
 
-		.bee-row-10 .bee-row-content {
-			background-color: #ffffff;
-			background-repeat: no-repeat;
-			border-radius: 20px;
-			color: #000000
+		.bee-row-10 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
 		}
 
-		.bee-row-12 {
+		.bee-row-11 {
 			background-color: #adadad;
 			background-repeat: no-repeat;
 			background-size: auto
 		}
 
-		.bee-row-12 .bee-col-1,
-		.bee-row-12 .bee-col-2 {
+		.bee-row-11 .bee-col-1,
+		.bee-row-11 .bee-col-2 {
 			padding-bottom: 5px;
 			padding-left: 30px;
 			padding-top: 5px
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-2 {
+		.bee-row-11 .bee-col-1 .bee-block-2 {
 			padding: 25px 30px 20px;
 			width: 100%
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-10,
-		.bee-row-12 .bee-col-1 .bee-block-3,
-		.bee-row-12 .bee-col-2 .bee-block-4 {
+		.bee-row-11 .bee-col-1 .bee-block-10,
+		.bee-row-11 .bee-col-1 .bee-block-3,
+		.bee-row-11 .bee-col-2 .bee-block-4 {
 			padding: 10px 25px 5px
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-4 {
+		.bee-row-11 .bee-col-1 .bee-block-4 {
 			padding: 10px 25px 20px;
 			text-align: left
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-5 {
+		.bee-row-11 .bee-col-1 .bee-block-5 {
 			padding-bottom: 5px;
 			padding-left: 30px;
 			padding-top: 10px;
 			text-align: left
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-6,
-		.bee-row-12 .bee-col-1 .bee-block-7,
-		.bee-row-12 .bee-col-1 .bee-block-8 {
+		.bee-row-11 .bee-col-1 .bee-block-6,
+		.bee-row-11 .bee-col-1 .bee-block-7,
+		.bee-row-11 .bee-col-1 .bee-block-8 {
 			padding: 10px 30px 5px;
 			text-align: center;
 			width: 100%
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-2 {
+		.bee-row-11 .bee-col-2 .bee-block-2 {
 			padding: 10px;
 			text-align: center;
 			width: 100%
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 {
+		.bee-row-11 .bee-col-2 .bee-block-3 {
 			font-family: Montserrat, Oxygen;
 			font-size: 14px;
 			font-weight: 500;
@@ -454,6 +436,11 @@
 
 		.bee-row-1 .bee-col-2 .bee-block-2 li {
 			padding: 5px 20px
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-2 li a,
+		.bee-row-11 .bee-col-1 .bee-block-3 a {
+			color: #ffffff
 		}
 
 		.bee-row-6 .bee-col-1 .bee-block-1 h1 {
@@ -467,34 +454,8 @@
 			text-align: left
 		}
 
-		.bee-row-6 .bee-col-3 .bee-block-1 {
-			color: #ffffff;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 18px;
-			font-weight: 400;
-			letter-spacing: 0;
-			line-height: 150%;
-			text-align: left
-		}
-
-		.bee-row-10 .bee-col-3 .bee-block-1 a,
-		.bee-row-6 .bee-col-3 .bee-block-1 a {
-			color: #adadad
-		}
-
-		.bee-row-10 .bee-col-2 .bee-block-1 p:not(:last-child),
-		.bee-row-10 .bee-col-3 .bee-block-1 p:not(:last-child),
-		.bee-row-12 .bee-col-1 .bee-block-10 p:not(:last-child),
-		.bee-row-12 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-12 .bee-col-2 .bee-block-4 p:not(:last-child),
-		.bee-row-6 .bee-col-2 .bee-block-1 p:not(:last-child),
-		.bee-row-6 .bee-col-3 .bee-block-1 p:not(:last-child) {
-			margin-bottom: 16px
-		}
-
-		.bee-row-10 .bee-col-2 .bee-block-1,
-		.bee-row-6 .bee-col-2 .bee-block-1 {
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-9 .bee-col-2 .bee-block-1 {
 			color: #ffffff;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -505,14 +466,44 @@
 			text-align: left
 		}
 
-		.bee-row-10 .bee-col-2 .bee-block-1 a,
-		.bee-row-6 .bee-col-2 .bee-block-1 a {
+		.bee-row-6 .bee-col-3 .bee-block-1,
+		.bee-row-9 .bee-col-3 .bee-block-1 {
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 150%
+		}
+
+		.bee-row-6 .bee-col-2 .bee-block-1 a,
+		.bee-row-9 .bee-col-2 .bee-block-1 a {
 			color: #8a3b8f
 		}
 
-		.bee-row-10 .bee-col-3 .bee-block-2 a:hover,
-		.bee-row-12 .bee-col-1 .bee-block-4 a:hover,
-		.bee-row-6 .bee-col-3 .bee-block-2 a:hover {
+		.bee-row-11 .bee-col-1 .bee-block-10 p:not(:last-child),
+		.bee-row-11 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-11 .bee-col-2 .bee-block-4 p:not(:last-child),
+		.bee-row-6 .bee-col-2 .bee-block-1 p:not(:last-child),
+		.bee-row-6 .bee-col-3 .bee-block-1 p:not(:last-child),
+		.bee-row-9 .bee-col-2 .bee-block-1 p:not(:last-child),
+		.bee-row-9 .bee-col-3 .bee-block-1 p:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.bee-row-6 .bee-col-3 .bee-block-1 {
+			color: #ffffff;
+			font-size: 18px;
+			text-align: left
+		}
+
+		.bee-row-6 .bee-col-3 .bee-block-1 a,
+		.bee-row-9 .bee-col-3 .bee-block-1 a {
+			color: #adadad
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-4 a:hover,
+		.bee-row-6 .bee-col-3 .bee-block-2 a:hover,
+		.bee-row-9 .bee-col-3 .bee-block-2 a:hover {
 			background-color: #ffffff !important;
 			border-bottom: 0 solid transparent !important;
 			border-left: 0 solid transparent !important;
@@ -521,9 +512,9 @@
 			color: #000000 !important
 		}
 
-		.bee-row-10 .bee-col-3 .bee-block-2 a,
-		.bee-row-12 .bee-col-1 .bee-block-4 a,
-		.bee-row-6 .bee-col-3 .bee-block-2 a {
+		.bee-row-11 .bee-col-1 .bee-block-4 a,
+		.bee-row-6 .bee-col-3 .bee-block-2 a,
+		.bee-row-9 .bee-col-3 .bee-block-2 a {
 			background-color: #ff5c37;
 			border-bottom: 1px solid #ffffff;
 			border-left: 1px solid #ffffff;
@@ -541,7 +532,7 @@
 			width: auto
 		}
 
-		.bee-row-10 .bee-col-1 .bee-block-1 h1 {
+		.bee-row-9 .bee-col-1 .bee-block-1 h1 {
 			color: #adadad;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -552,20 +543,15 @@
 			text-align: left
 		}
 
-		.bee-row-10 .bee-col-3 .bee-block-1 {
+		.bee-row-9 .bee-col-3 .bee-block-1 {
 			color: #363434;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
 			font-size: 18px;
-			font-weight: 400;
-			letter-spacing: 0;
-			line-height: 150%;
 			text-align: left
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-10,
-		.bee-row-12 .bee-col-1 .bee-block-3,
-		.bee-row-12 .bee-col-2 .bee-block-4 {
+		.bee-row-11 .bee-col-1 .bee-block-10,
+		.bee-row-11 .bee-col-1 .bee-block-3,
+		.bee-row-11 .bee-col-2 .bee-block-4 {
 			font-size: 14px;
 			letter-spacing: 0;
 			line-height: 150%;
@@ -574,24 +560,12 @@
 			font-weight: 500
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-3 {
-			color: #545454;
+		.bee-row-11 .bee-col-1 .bee-block-3 {
+			color: #1a1a1a;
 			text-align: left
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-6 h3,
-		.bee-row-12 .bee-col-1 .bee-block-7 h3 {
-			color: #000000;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 16px;
-			font-weight: 500;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.bee-row-12 .bee-col-1 .bee-block-8 h3 {
+		.bee-row-11 .bee-col-1 .bee-block-8 h3 {
 			color: #1a1a1a;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -602,13 +576,25 @@
 			text-align: left
 		}
 
-		.bee-row-12 .bee-col-1 .bee-block-10,
-		.bee-row-12 .bee-col-2 .bee-block-4 {
+		.bee-row-11 .bee-col-1 .bee-block-6 h3,
+		.bee-row-11 .bee-col-1 .bee-block-7 h3 {
+			color: #000000;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-10,
+		.bee-row-11 .bee-col-2 .bee-block-4 {
 			color: #ffffff;
 			text-align: left
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-2 h3 {
+		.bee-row-11 .bee-col-2 .bee-block-2 h3 {
 			color: #ffffff;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -660,27 +646,27 @@
 			}
 
 			.bee-row-1 .bee-col-1 .bee-block-2,
-			.bee-row-10 .bee-col-2,
-			.bee-row-6 .bee-col-2 {
+			.bee-row-6 .bee-col-2,
+			.bee-row-9 .bee-col-2 {
 				padding: 0 !important
 			}
 
-			.bee-row-10 .bee-col-3,
-			.bee-row-6 .bee-col-3 {
+			.bee-row-6 .bee-col-3,
+			.bee-row-9 .bee-col-3 {
 				padding: 0 25px 20px !important
 			}
 
-			.bee-row-10 .bee-col-1 {
+			.bee-row-9 .bee-col-1 {
 				padding: 10px 5px 0 !important
 			}
 
-			.bee-row-12 .bee-row-content {
+			.bee-row-11 .bee-row-content {
 				padding-left: 15px !important;
 				padding-right: 15px !important
 			}
 
-			.bee-row-12 .bee-col-1,
-			.bee-row-12 .bee-col-2 {
+			.bee-row-11 .bee-col-1,
+			.bee-row-11 .bee-col-2 {
 				padding: 5px 0 !important
 			}
 
@@ -689,7 +675,7 @@
 			}
 
 			.bee-row-1 .bee-col-1 .bee-block-2 img,
-			.bee-row-12 .bee-col-1 .bee-block-2 img,
+			.bee-row-11 .bee-col-1 .bee-block-2 img,
 			.bee-row-2 .bee-col-1 .bee-block-1 img,
 			.bee-row-5 .bee-col-1 .bee-block-1 img,
 			.bee-row-5 .bee-col-2 .bee-block-1 img,
@@ -697,14 +683,9 @@
 			.bee-row-5 .bee-col-3 .bee-block-1 img,
 			.bee-row-5 .bee-col-4 .bee-block-1 img,
 			.bee-row-5 .bee-col-4 .bee-block-3 img,
-			.bee-row-9 .bee-col-1 .bee-block-1 img {
+			.bee-row-8 .bee-col-1 .bee-block-1 img {
 				float: none !important;
 				margin: 0 auto !important
-			}
-
-			.bee-row-5 .bee-col-1 .bee-block-2,
-			.bee-row-7 .bee-col-1 .bee-block-1 {
-				height: 1px !important
 			}
 
 			.bee-row-5 .bee-col-1 .bee-block-1,
@@ -714,6 +695,11 @@
 			.bee-row-5 .bee-col-4 .bee-block-1,
 			.bee-row-5 .bee-col-4 .bee-block-3 {
 				padding: 0 15px !important
+			}
+
+			.bee-row-5 .bee-col-1 .bee-block-2,
+			.bee-row-7 .bee-col-1 .bee-block-1 {
+				height: 1px !important
 			}
 
 			.bee-row-5 .bee-col-2 .bee-block-2,
@@ -732,130 +718,130 @@
 				line-height: auto !important
 			}
 
-			.bee-row-10 .bee-col-1 .bee-block-1,
-			.bee-row-6 .bee-col-1 .bee-block-1 {
+			.bee-row-6 .bee-col-1 .bee-block-1,
+			.bee-row-9 .bee-col-1 .bee-block-1 {
 				padding: 10px 15px;
 				text-align: center
 			}
 
-			.bee-row-10 .bee-col-1 .bee-block-1 h1,
-			.bee-row-6 .bee-col-1 .bee-block-1 h1 {
+			.bee-row-6 .bee-col-1 .bee-block-1 h1,
+			.bee-row-9 .bee-col-1 .bee-block-1 h1 {
 				font-size: 22px;
 				text-align: center
 			}
 
-			.bee-row-10 .bee-col-3 .bee-block-1,
-			.bee-row-6 .bee-col-3 .bee-block-1 {
+			.bee-row-6 .bee-col-2 .bee-block-1,
+			.bee-row-9 .bee-col-2 .bee-block-1 {
+				text-align: center !important;
+				font-size: 1px !important
+			}
+
+			.bee-row-6 .bee-col-3 .bee-block-1,
+			.bee-row-9 .bee-col-3 .bee-block-1 {
 				padding: 5px 0 5px 35px !important;
 				text-align: justify !important;
 				font-size: 13px !important
 			}
 
-			.bee-row-10 .bee-col-2 .bee-block-1,
-			.bee-row-6 .bee-col-2 .bee-block-1 {
-				text-align: center !important;
-				font-size: 1px !important
-			}
-
-			.bee-row-10 .bee-col-3 .bee-block-2,
-			.bee-row-10 .bee-col-3 .bee-block-2 .bee-button-content,
-			.bee-row-12 .bee-col-1 .bee-block-4,
-			.bee-row-12 .bee-col-1 .bee-block-4 .bee-button-content,
-			.bee-row-6 .bee-col-3 .bee-block-2,
-			.bee-row-6 .bee-col-3 .bee-block-2 .bee-button-content {
-				text-align: center !important
-			}
-
-			.bee-row-9 .bee-col-1 .bee-block-1 {
+			.bee-row-8 .bee-col-1 .bee-block-1 {
 				padding: 0 10px !important
 			}
 
-			.bee-row-12 .bee-col-1 .bee-block-2 {
+			.bee-row-11 .bee-col-1 .bee-block-4,
+			.bee-row-11 .bee-col-1 .bee-block-4 .bee-button-content,
+			.bee-row-6 .bee-col-3 .bee-block-2,
+			.bee-row-6 .bee-col-3 .bee-block-2 .bee-button-content,
+			.bee-row-9 .bee-col-3 .bee-block-2,
+			.bee-row-9 .bee-col-3 .bee-block-2 .bee-button-content {
+				text-align: center !important
+			}
+
+			.bee-row-11 .bee-col-1 .bee-block-2 {
 				padding: 10px 0 !important
 			}
 
-			.bee-row-12 .bee-col-1 .bee-block-3 {
+			.bee-row-11 .bee-col-1 .bee-block-3 {
 				padding: 10px 0 !important;
 				text-align: left !important
 			}
 
-			.bee-row-12 .bee-col-1 .bee-block-5 {
+			.bee-row-11 .bee-col-1 .bee-block-5 {
 				padding: 10px 0 5px !important;
 				text-align: center !important
 			}
 
-			.bee-row-12 .bee-col-1 .bee-block-6,
-			.bee-row-12 .bee-col-1 .bee-block-7,
-			.bee-row-12 .bee-col-1 .bee-block-8,
-			.bee-row-12 .bee-col-2 .bee-block-2 {
+			.bee-row-11 .bee-col-1 .bee-block-6,
+			.bee-row-11 .bee-col-1 .bee-block-7,
+			.bee-row-11 .bee-col-1 .bee-block-8,
+			.bee-row-11 .bee-col-2 .bee-block-2 {
 				padding: 10px 0;
 				text-align: center
 			}
 
-			.bee-row-12 .bee-col-1 .bee-block-6 h3,
-			.bee-row-12 .bee-col-1 .bee-block-7 h3,
-			.bee-row-12 .bee-col-1 .bee-block-8 h3,
-			.bee-row-12 .bee-col-2 .bee-block-2 h3 {
+			.bee-row-11 .bee-col-1 .bee-block-6 h3,
+			.bee-row-11 .bee-col-1 .bee-block-7 h3,
+			.bee-row-11 .bee-col-1 .bee-block-8 h3,
+			.bee-row-11 .bee-col-2 .bee-block-2 h3 {
 				text-align: center
 			}
 
-			.bee-row-12 .bee-col-1 .bee-block-10 {
+			.bee-row-11 .bee-col-1 .bee-block-10 {
 				padding: 10px 0 !important;
 				text-align: center !important
 			}
 
-			.bee-row-12 .bee-col-2 .bee-block-4 {
+			.bee-row-11 .bee-col-2 .bee-block-4 {
 				padding: 10px 0 !important;
 				text-align: center !important;
 				font-size: 10px !important
 			}
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 {
+		.bee-row-11 .bee-col-2 .bee-block-3 {
 			text-align: left
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 form {
+		.bee-row-11 .bee-col-2 .bee-block-3 form {
 			display: inline-block;
 			width: 100%
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 div.label,
-		.bee-row-12 .bee-col-2 .bee-block-3 label {
+		.bee-row-11 .bee-col-2 .bee-block-3 div.label,
+		.bee-row-11 .bee-col-2 .bee-block-3 label {
 			color: #545454;
 			line-height: 200%;
 			text-align: left;
 			display: block
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 ::-webkit-input-placeholder {
+		.bee-row-11 .bee-col-2 .bee-block-3 ::-webkit-input-placeholder {
 			color: #000000
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 :-moz-placeholder {
+		.bee-row-11 .bee-col-2 .bee-block-3 :-moz-placeholder {
 			color: #000000
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 ::-moz-placeholder {
+		.bee-row-11 .bee-col-2 .bee-block-3 ::-moz-placeholder {
 			color: #000000
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 :-ms-input-placeholder {
+		.bee-row-11 .bee-col-2 .bee-block-3 :-ms-input-placeholder {
 			color: #000000
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 .bee-field>label:first-child,
-		.bee-row-12 .bee-col-2 .bee-block-3 div.label {
+		.bee-row-11 .bee-col-2 .bee-block-3 .bee-field>label:first-child,
+		.bee-row-11 .bee-col-2 .bee-block-3 div.label {
 			padding: 3px
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type=checkbox] {
+		.bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type=checkbox] {
 			position: relative;
 			color: purple;
 			top: 8px
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+		.bee-row-11 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
 			background-color: #ffffff;
 			border-bottom: 1px solid transparent;
 			border-left: 1px solid transparent;
@@ -868,11 +854,11 @@
 			min-height: 48px
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):focus {
+		.bee-row-11 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):focus {
 			outline-color: #ff5c37
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 button {
+		.bee-row-11 .bee-col-2 .bee-block-3 button {
 			background-color: #ff5c37;
 			border-bottom: 1px solid #ffffff;
 			border-left: 1px solid #ffffff;
@@ -887,7 +873,7 @@
 			width: 45%
 		}
 
-		.bee-row-12 .bee-col-2 .bee-block-3 .bee-button-container {
+		.bee-row-11 .bee-col-2 .bee-block-3 .bee-button-container {
 			padding-top: 15px;
 			text-align: left
 		}
@@ -911,16 +897,10 @@
 					<div class="bee-block bee-block-2 bee-menu">
 						<nav class="bee-menu">
 							<ul class="bee-horizontal">
-								<li><a href="https://drive.google.com/file/d/1A3gB-oYzuU1fI6N9xcpv_3J46Xo_nbvL/view?usp=sharing" target="_blank">Resumé ↗</a></li>
-    <span></span>
-
-    <li><a href="ux.html">User Experience Design </a></li>
-    <span></span>
-
-    <li><a href="product.html">Product Design </a></li>
-    <span></span>
-								
-	<li><a href="contact.html">Contact</a></li>
+								<li>Home</li><span> </span>
+								<li>User Experience Design </li><span> </span>
+								<li>Product Design </li><span> </span>
+								<li>Resumé ↗</li>
 							</ul>
 						</nav>
 					</div>
@@ -928,63 +908,50 @@
 			</div>
 		</div>
 		<div class="bee-row bee-row-2">
-    <div class="bee-row-content">
-        <div class="bee-col bee-col-1 bee-col-w12">
-            <div class="bee-block bee-block-1 bee-image">
-                <div class="swap-container">
-                    <img src="images/5_bf86ed9e-06c4-4e99-80b0-f89f7ca7e81a.png"
-                         alt="Hello!"
-                         class="img-default"
-                         style="max-width:960px;">
-
-                    <img src="images/posterafterhover.png"
-                         alt="Hello Hover"
-                         class="img-hover"
-                         style="max-width:960px;">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-image"><img alt="Hello!" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/5_Final_Poster.gif" style="max-width:900px;" title="Hello!" /></div>
+				</div>
+			</div>
+		</div>
 		<div class="bee-row bee-row-3">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/6_Skills_Island.png" style="max-width:720px;" title="" /></div>
-					<div class="bee-block bee-block-2 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif" style="max-width:960px;" title="" /></div>
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/6_Strip_final_1.gif" style="max-width:720px;" title="" /></div>
 				</div>
 			</div>
 		</div>
 		<div class="bee-row bee-row-4">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/8_Product_Design_Island.png" style="max-width:900px;" title="" /></div>
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif" style="max-width:960px;" title="" /></div>
 				</div>
 			</div>
 		</div>
 		<div class="bee-row bee-row-5">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="#" target="_self"><img alt="Z" class="bee-center bee-fullwidthOnMobile bee-autowidth" src="images/9_PD_1.png" style="max-width:250px;border-radius:40px;" title="Z" /></a></div>
+					<div class="bee-block bee-block-1 bee-image"><a href="#" target="_self"><img alt="Z" class="bee-center bee-fullwidthOnMobile bee-autowidth" src="images/8_PD_1.png" style="max-width:250px;border-radius:40px;" title="Z" /></a></div>
 					<div class="bee-block bee-block-2 bee-spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_blank"><img alt="Hex" class="bee-center bee-autowidth" src="images/10_colored_hex.png" style="max-width:250px;border-radius:40px;" title="Hex" /></a></div>
+					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_blank"><img alt="Hex" class="bee-center bee-autowidth" src="images/9_colored_hex.png" style="max-width:250px;border-radius:40px;" title="Hex" /></a></div>
 					<div class="bee-block bee-block-2 bee-spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
-					<div class="bee-block bee-block-3 bee-image"><a href="www.example.com" target="_blank"><img alt="Nova" class="bee-center bee-autowidth" src="images/11_PD8.png" style="max-width:250px;border-radius:40px 40px 40px 40px;" title="Nova" /></a></div>
+					<div class="bee-block bee-block-3 bee-image"><a href="www.example.com" target="_blank"><img alt="Nova" class="bee-center bee-autowidth" src="images/10_PD8.png" style="max-width:250px;border-radius:40px 40px 40px 40px;" title="Nova" /></a></div>
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_blank"><img alt="Titan" class="bee-center bee-autowidth" src="images/12_PD_4.png" style="max-width:250px;border-radius:40px;" title="Titan" /></a></div>
+					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_blank"><img alt="Titan" class="bee-center bee-autowidth" src="images/11_PD_4.png" style="max-width:250px;border-radius:40px;" title="Titan" /></a></div>
 				</div>
 				<div class="bee-col bee-col-4 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_blank"><img alt="IKEA" class="bee-center bee-autowidth" src="images/13_PD_5.png" style="max-width:250px;border-radius:40px;" title="IKEA" /></a></div>
+					<div class="bee-block bee-block-1 bee-image"><a href="www.example.com" target="_blank"><img alt="IKEA" class="bee-center bee-autowidth" src="images/12_PD_5.png" style="max-width:250px;border-radius:40px;" title="IKEA" /></a></div>
 					<div class="bee-block bee-block-2 bee-spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
-					<div class="bee-block bee-block-3 bee-image"><a href="www.example.com" target="_blank"><img alt="Expedition" class="bee-center bee-autowidth" src="images/14_PD7.png" style="max-width:250px;border-radius:40px;" title="Expedition" /></a></div>
+					<div class="bee-block bee-block-3 bee-image"><a href="www.example.com" target="_blank"><img alt="Expedition" class="bee-center bee-autowidth" src="images/13_PD7.png" style="max-width:250px;border-radius:40px;" title="Expedition" /></a></div>
 				</div>
 			</div>
 		</div>
@@ -1000,7 +967,7 @@
 				</div>
 				<div class="bee-col bee-col-3 bee-col-w4">
 					<div class="bee-block bee-block-1 bee-paragraph">
-						<p>Purpose-led design, real results<br />Here’s what I’ve been creating.</p>
+						<p>Products that solve real problems impacting real people.</p>
 					</div>
 					<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="www.example.com" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
 				</div>
@@ -1033,18 +1000,11 @@
 		<div class="bee-row bee-row-8">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="images/15_User_Experience_Island.png" style="max-width:900px;" title="" /></div>
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/14_Colored_UX_poster.png" style="max-width:1200px;" title="" /></div>
 				</div>
 			</div>
 		</div>
 		<div class="bee-row bee-row-9">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/16_Colored_UX_poster.png" style="max-width:1200px;" title="" /></div>
-				</div>
-			</div>
-		</div>
-		<div class="bee-row bee-row-10">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w6">
 					<div class="bee-block bee-block-1 bee-heading">
@@ -1062,14 +1022,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-11 bee-mobile_hide">
+		<div class="bee-row bee-row-10 bee-mobile_hide">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="images/17_Small_blank.png" style="max-width:900px;" title="" /></div>
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="images/15_Small_blank.png" style="max-width:900px;" title="" /></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-12">
+		<div class="bee-row bee-row-11">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w8">
 					<div class="bee-block bee-block-1 bee-spacer">
@@ -1081,7 +1041,7 @@
 					</div>
 					<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You’d Be a Great Fit!&amp;body=" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Hire me  ↗</span></a></div>
 					<div class="bee-block bee-block-5 bee-social">
-						<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img alt="Linkedin" src="images/18_linkedin2x.png" title="linkedin" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.behance.net/sarthaktawate" target="_blank"><img alt="Behance" src="images/19_Behance.png" title="Behance" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank"><img alt="Facebook" src="images/20_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img alt="Instagram" src="images/21_instagram2x.png" title="instagram" /></a></span></div>
+						<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img alt="Linkedin" src="images/16_linkedin2x.png" title="linkedin" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.behance.net/sarthaktawate" target="_blank"><img alt="Behance" src="images/17_Behance.png" title="Behance" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank"><img alt="Facebook" src="images/18_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img alt="Instagram" src="images/19_instagram2x.png" title="instagram" /></a></span></div>
 					</div>
 					<div class="bee-block bee-block-6 bee-heading">
 						<h3>+1 (646) 318-9495 </h3>
@@ -1109,20 +1069,20 @@
 					<div class="bee-block bee-block-3 bee-form bee-mobile_hide">
 						<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r11c1m2r1f1"><label for="r11c1m2r1f1">Name</label><input id="r11c1m2r1f1" name="firstname" required="" type="text" /></div>
+								<div class="bee-field bee-field-r10c1m2r1f1"><label for="r10c1m2r1f1">Name</label><input id="r10c1m2r1f1" name="firstname" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r11c1m2r2f1"><label for="r11c1m2r2f1">Email</label><input id="r11c1m2r2f1" name="email" required="" type="text" /></div>
+								<div class="bee-field bee-field-r10c1m2r2f1"><label for="r10c1m2r2f1">Email</label><input id="r10c1m2r2f1" name="email" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r11c1m2r3f1"><label for="r11c1m2r3f1">Message</label><input id="r11c1m2r3f1" name="lastname" required="" type="text" /></div>
+								<div class="bee-field bee-field-r10c1m2r3f1"><label for="r10c1m2r3f1">Message</label><input id="r10c1m2r3f1" name="lastname" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r11c1m2r4f1 bee-inline-field"><span class="bee-form-option-wrapper"><input id="r11c1m2r4f1" name="privacy_policy" type="checkbox" /><label class="inline" for="r11c1m2r4f1"> Hit me with your brainwaves!</label></span></div>
+								<div class="bee-field bee-field-r10c1m2r4f1 bee-inline-field"><span class="bee-form-option-wrapper"><input id="r10c1m2r4f1" name="privacy_policy" type="checkbox" /><label class="inline" for="r10c1m2r4f1"> Hit me with your brainwaves!</label></span></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r11c1m2r5f1">
-									<div class="bee-button-container"><button id="r11c1m2r5f1" name="submit" type="submit" value="Send">Send</button></div>
+								<div class="bee-field bee-field-r10c1m2r5f1">
+									<div class="bee-button-container"><button id="r10c1m2r5f1" name="submit" type="submit" value="Send">Send</button></div>
 								</div>
 							</div>
 						</form>
