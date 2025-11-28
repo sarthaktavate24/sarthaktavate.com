@@ -20,6 +20,18 @@
 	
 	<style>
 
+		/* Hover effect for the logo image */
+.bee-row-1 .bee-col-1 .bee-block-2 a img {
+    transition: all 0.3s ease-in-out; /* smooth transition */
+    border-radius: 50px;              /* optional: capsule rounding if needed */
+}
+
+/* On hover, apply same translucent overlay effect */
+.bee-row-1 .bee-col-1 .bee-block-2 a:hover img {
+    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2); /* simulate translucent overlay */
+    transform: scale(1.05);                                /* subtle zoom effect */
+}
+
 .bee-page-container > .bee-row-1 {
     position: sticky;
     top: 0;
