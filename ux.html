@@ -17,6 +17,54 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<style>
+		.bee-page-container > .bee-row-1 {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    /* Glassmorphism */
+    background: rgba(173, 173, 173, 0.5);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    /* Background image */
+    background-image: url("images/2_BG_electronics.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    /* Rounded bottom corners */
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    /* White stroke around header */
+    border-bottom: 2px solid #ffffff;
+
+    /* Drop shadow */
+    box-shadow: 0 4px 20px #adadad;
+
+    /* Optional padding */
+    padding-bottom: 10px;
+}
+		
+		/* Static capsule for active page */
+.bee-row-1 .bee-menu a.active {
+    border: 2px solid #ffffff;  /* white stroke */
+    border-radius: 50px;        /* capsule shape */
+    padding: 6px 20px;          /* vertical | horizontal spacing */
+    background-color: transparent; /* no fill */
+    color: #ffffff;             /* text color */
+    font-weight: 600;           /* emphasis */
+}
+
+/* Hover effect for all menu items (including active) */
+.bee-row-1 .bee-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.08); /* very subtle dark overlay */
+    padding: 6px 20px; 
+    color: #ffffff; /* text stays visible */
+    border-radius: 50px; /* capsule shape */
+    transition: all 0.3s ease-in-out; /* smooth in and out */
+}
 		.bee-row,
 		.bee-row-content {
 			position: relative
