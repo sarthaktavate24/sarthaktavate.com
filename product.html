@@ -17,16 +17,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<style>
-		/* Hover effect for the logo image */
+		/* Original logo style (no rounding) */
 .bee-row-1 .bee-col-1 .bee-block-2 a img {
     transition: all 0.3s ease-in-out; /* smooth transition */
-    border-radius: 50px;              /* optional: capsule rounding if needed */
+    border-radius: 0;                 /* original: no rounding */
 }
 
-/* On hover, apply same translucent overlay effect */
+/* On hover, apply rounding and overlay effect */
 .bee-row-1 .bee-col-1 .bee-block-2 a:hover img {
-    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2); /* simulate translucent overlay */
-    transform: scale(1.05);                                /* subtle zoom effect */
+    border-radius: 50px;              /* capsule/pill rounding on hover */
+    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2); /* translucent overlay */
+    transform: scale(1.05);           /* subtle zoom effect */
 }
 		.bee-page-container > .bee-row-1 {
     position: sticky;
