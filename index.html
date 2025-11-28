@@ -19,7 +19,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	
 	<style>
-	.bee-row-1 {
+	.bee-page-container > .bee-row-1 {
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -27,12 +27,10 @@
     background-image: url("images/2_BG_electronics.png");
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 20px; /* adjust spacing below content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* horizontal, vertical, blur, color */
-		.bee-button-content {
-			text-align: center
-		}
+    background-size: auto; /* don't override layout */
+    padding-bottom: 10px; /* optional */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
 		.bee-row-10,
 		.bee-row-3,
