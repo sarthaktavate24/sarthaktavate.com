@@ -26,8 +26,8 @@
 
     /* Darker glassmorphism for better text visibility */
     background: rgba(100, 100, 100, 0.6); /* darker gray with opacity */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 
     /* Background image */
     background-image: url("images/2_BG_electronics.png");
@@ -48,20 +48,21 @@
     /* Optional padding */
     padding-bottom: 10px;
 }
-
-		/* Target the "Home" menu link */
+		/* Active page capsule */
 .bee-row-1 .bee-menu a.active {
-    background-color: rgba(255, 255, 255, 0.2); /* or a color of your choice */
-    padding: 8px 20px; /* vertical | horizontal */
-    border-radius: 50px; /* capsule shape */
-    color: #ffffff; /* text color inside capsule */
-    font-weight: 600; /* optional, make it stand out */
-    transition: background 0.3s; /* smooth hover/change effect */
+    border: 2px solid #ffffff; /* white stroke */
+    border-radius: 50px;        /* makes it a pill/capsule shape */
+    padding: 6px 20px;          /* adjust vertical | horizontal */
+    background-color: transparent; /* no fill */
+    color: #ffffff;             /* text color */
+    font-weight: 600;           /* optional, for emphasis */
+    transition: all 0.3s ease;
 }
 
-/* Optional: hover effect for all menu items */
+/* Hover effect for all menu items (including active) */
 .bee-row-1 .bee-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.2); /* translucent white fill */
+    color: #ffffff; /* text stays visible */
 }
 		.bee-row-10,
 		.bee-row-3,
