@@ -903,6 +903,31 @@
 </head>
 
 <body>
+
+	 <script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.bee-row-1');
+        const menuLinks = document.querySelectorAll('.bee-row-1 .bee-menu a');
+
+        const bgColor = window.getComputedStyle(header).backgroundColor;
+
+        function rgbToBrightness(rgb) {
+            const matches = rgb.match(/\d+/g);
+            if(!matches) return 255;
+            const r = parseInt(matches[0]);
+            const g = parseInt(matches[1]);
+            const b = parseInt(matches[2]);
+            return (r*299 + g*587 + b*114) / 1000;
+        }
+
+        const brightness = rgbToBrightness(bgColor);
+
+        menuLinks.forEach(link => {
+            link.style.color = brightness < 180 ? '#ffffff' : '#000000';
+        });
+    });
+  </script>
+	
 	<div class="bee-page-container">
 		<div class="bee-row bee-row-1">
 			<div class="bee-row-content">
