@@ -50,15 +50,23 @@
     padding-bottom: 10px;
 }
 		
-	.bee-row-1 .bee-menu a {
-    transition: background-color 0.3s ease-in, background-color 0.5s ease-out; /* slower fade out */
+		/* Static capsule for active page */
+.bee-row-1 .bee-menu a.active {
+    border: 2px solid #ffffff;  /* white stroke */
+    border-radius: 50px;        /* capsule shape */
+    padding: 6px 20px;          /* vertical | horizontal spacing */
+    background-color: transparent; /* no fill */
+    color: #ffffff;             /* text color */
+    font-weight: 600;           /* emphasis */
 }
 
+/* Hover effect for all menu items (including active) */
 .bee-row-1 .bee-menu a:hover {
     background-color: rgba(0, 0, 0, 0.08); /* very subtle dark overlay */
+    padding: 6px 20px; 
+    color: #ffffff; /* text stays visible */
     border-radius: 50px; /* capsule shape */
-    color: #ffffff;       /* text stays visible */
-    padding: 6px 20px;    /* keep consistent spacing */
+    transition: all 0.3s ease-in-out; /* smooth in and out */
 }
 		.bee-row-10,
 		.bee-row-3,
