@@ -3,6 +3,50 @@
 
 <head>
 	<link rel="icon" type="image/png" href="images/favicon.png">
+	<style>
+		/* Make the header stick to the top */
+.bee-row-1 {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #ffffff; /* match your header background */
+}
+
+/* Keep the header layout clean when sticky */
+.bee-row-1 .bee-row-content {
+    align-items: center;
+    display: flex;
+    padding: 10px 0;
+}
+
+/* Navigation alignment */
+.bee-row-1 .bee-menu ul.bee-horizontal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+/* Links style */
+.bee-row-1 .bee-menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.bee-row-1 .bee-menu a:hover {
+    color: #0073e6; /* choose any color */
+}
+
+/* Remove unnecessary <span> spacing from BeeFree */
+.bee-row-1 .bee-menu span {
+    display: none;
+}
+	</style>
 	<title></title>
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta content="website" property="og:type" />
