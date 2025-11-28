@@ -19,15 +19,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	
 	<style>
+
 .bee-page-container > .bee-row-1 {
     position: sticky;
     top: 0;
     z-index: 9999;
 
-    /* Darker glassmorphism for better text visibility */
-    background: rgba(100, 100, 100, 0.6); /* darker gray with opacity */
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    /* Glassmorphism */
+    background: rgba(173, 173, 173, 0.5);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 
     /* Background image */
     background-image: url("images/2_BG_electronics.png");
@@ -48,6 +49,7 @@
     /* Optional padding */
     padding-bottom: 10px;
 }
+		
 		/* Active page capsule */
 .bee-row-1 .bee-menu a.active {
     border: 2px solid #ffffff; /* white stroke */
@@ -61,8 +63,10 @@
 
 /* Hover effect for all menu items (including active) */
 .bee-row-1 .bee-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* translucent white fill */
+    background-color: rgba(0, 0, 0, 0.25); /* darker semi-transparent black */
+    padding: 6px 20px; 
     color: #ffffff; /* text stays visible */
+    transition: all 0.3s ease;
 }
 		.bee-row-10,
 		.bee-row-3,
