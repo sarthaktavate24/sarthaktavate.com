@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -129,49 +130,6 @@
     border-radius: 50px; /* capsule shape */
     transition: all 0.3s ease-in-out; /* smooth in and out */
 }
-
-		/* Base Menu Styling */
-.bee-menu ul {
-    list-style: none;               /* remove bullets */
-    margin: 0;
-    padding: 0;
-    display: flex;                  /* horizontal layout */
-    justify-content: center;        /* center menu items */
-    gap: 20px;                      /* spacing between items */
-    background-color: #1a1a1a;     /* dark background to make white text visible */
-    padding: 10px 0;                /* vertical padding */
-    border-radius: 12px;            /* slightly rounded container */
-}
-
-/* Menu Items */
-.bee-menu ul.bee-horizontal li {
-    display: inline-block;
-}
-
-/* Menu Links */
-.bee-menu ul.bee-horizontal li a {
-    color: #ffffff;                 /* white text */
-    text-decoration: none;          /* remove underline */
-    font-weight: 600;               /* emphasis */
-    padding: 8px 16px;              /* internal spacing */
-    border-radius: 50px;            /* capsule shape */
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.bee-menu ul.bee-horizontal li a:hover {
-    background-color: rgba(255, 92, 55, 0.1);  /* subtle overlay on hover */
-    color: #ff5c37;                            /* highlight color */
-    transform: scale(1.05);                     /* slight zoom */
-}
-
-/* Active Link */
-.bee-menu ul.bee-horizontal li a.active {
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-		
 		.bee-row-10,
 		.bee-row-3,
 		.bee-row-4,
@@ -247,6 +205,11 @@
 		.bee-row-11 .bee-col-2 .bee-block-3 label:not(.inline),
 		.bee-row-content .bee-col-w12 {
 			flex-basis: 100%
+		}
+
+		.bee-button a,
+		.bee-menu ul li a {
+			text-decoration: none
 		}
 
 		.bee-image {
@@ -337,6 +300,16 @@
 		.bee-image img {
 			display: block;
 			width: 100%
+		}
+
+		.bee-menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-menu ul.bee-horizontal li {
+			display: inline-block
 		}
 
 		.bee-paragraph {
@@ -1176,7 +1149,7 @@
 					<div class="bee-block bee-block-3 bee-paragraph bee-mobile_hide">
 						<p>Multidisciplinary product designer with a strong foundation in both UX design and industrial design, bringing over 3 years of experience crafting human-centered digital systems, immersive 3D environments, and functional hardware prototypes. Currently pursuing an M.S. in Human-Centered Computing (HCI) at the University of Maryland, BC, serving as a Research Assistant and Student Association Senator.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
 					</div>
-					<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You’d Be a Great Fit!&amp;body=" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Hire me  ↗</span></a></div>
+					<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You’d Be a Great Fit!&amp;body=" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Hire me  ↗</span></a></div>
 					<div class="bee-block bee-block-5 bee-social">
 						<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img alt="Linkedin" src="images/16_linkedin2x.png" title="linkedin" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.behance.net/sarthaktawate" target="_blank"><img alt="Behance" src="images/17_Behance.png" title="Behance" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank"><img alt="Facebook" src="images/18_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img alt="Instagram" src="images/19_instagram2x.png" title="instagram" /></a></span></div>
 					</div>
@@ -1193,7 +1166,7 @@
 						<div class="spacer" style="height:50px;"></div>
 					</div>
 					<div class="bee-block bee-block-10 bee-paragraph bee-mobile_hide">
-						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
+						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
 					</div>
 				</div>
 				<div class="bee-col bee-col-2 bee-col-w4">
@@ -1215,7 +1188,7 @@
 								<div class="bee-field bee-field-r10c1m2r3f1"><label for="r10c1m2r3f1">Message</label><input id="r10c1m2r3f1" name="lastname" required="" type="text" /></div>
 							</div>
 							<div class="bee-form-row">
-								<div class="bee-field bee-field-r10c1m2r4f1 bee-inline-field"><span class="bee-form-option-wrapper"><input id="r10c1m2r4f1" name="privacy_policy" type="checkbox" /><label class="inline" for="r10c1m2r4f1"> Hit me with your brainwaves!</label></span></div>
+								<div class="bee-field bee-field-r10c1m2r4f1 bee-inline-field"><span class="bee-form-option-wrapper"><input id="r10c1m2r4f1" name="privacy_policy" type="checkbox" /><label class="inline" for="r10c1m2r4f1"> Hit me with your brainwaves!</label></span></div>
 							</div>
 							<div class="bee-form-row">
 								<div class="bee-field bee-field-r10c1m2r5f1">
@@ -1225,7 +1198,7 @@
 						</form>
 					</div>
 					<div class="bee-block bee-block-4 bee-paragraph bee-desktop_hide">
-						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
+						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
 					</div>
 				</div>
 			</div>
