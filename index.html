@@ -129,6 +129,49 @@
     border-radius: 50px; /* capsule shape */
     transition: all 0.3s ease-in-out; /* smooth in and out */
 }
+
+		/* Base Menu Styling */
+.bee-menu ul {
+    list-style: none;               /* remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;                  /* horizontal layout */
+    justify-content: center;        /* center menu items */
+    gap: 20px;                      /* spacing between items */
+    background-color: #1a1a1a;     /* dark background to make white text visible */
+    padding: 10px 0;                /* vertical padding */
+    border-radius: 12px;            /* slightly rounded container */
+}
+
+/* Menu Items */
+.bee-menu ul.bee-horizontal li {
+    display: inline-block;
+}
+
+/* Menu Links */
+.bee-menu ul.bee-horizontal li a {
+    color: #ffffff;                 /* white text */
+    text-decoration: none;          /* remove underline */
+    font-weight: 600;               /* emphasis */
+    padding: 8px 16px;              /* internal spacing */
+    border-radius: 50px;            /* capsule shape */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.bee-menu ul.bee-horizontal li a:hover {
+    background-color: rgba(255, 92, 55, 0.1);  /* subtle overlay on hover */
+    color: #ff5c37;                            /* highlight color */
+    transform: scale(1.05);                     /* slight zoom */
+}
+
+/* Active Link */
+.bee-menu ul.bee-horizontal li a.active {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+		
 		.bee-row-10,
 		.bee-row-3,
 		.bee-row-4,
