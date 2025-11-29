@@ -139,13 +139,19 @@
     font-weight: 600;           /* emphasis */
 }
 
-/* Hover effect for all menu items (including active) */
-.bee-row-1 .bee-menu a:hover {
-    background-color: rgba(0, 0, 0, 0.08); /* very subtle dark overlay */
-    padding: 6px 20px; 
-    color: #ffffff; /* text stays visible */
+/* Default menu item style */
+.bee-row-1 .bee-menu a {
+    background-color: rgba(0, 0, 0, 0.08); /* subtle dark overlay by default */
+    padding: 6px 20px;
+    color: #ffffff; /* text visible */
     border-radius: 50px; /* capsule shape */
-    transition: all 0.3s ease-in-out; /* smooth in and out */
+    text-decoration: none;
+    transition: background-color 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect: darken relative to default */
+.bee-row-1 .bee-menu a:hover {
+    filter: brightness(0.8); /* darkens the current background */
 }
 		.bee-row-10,
 		.bee-row-3,
