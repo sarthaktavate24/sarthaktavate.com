@@ -1035,6 +1035,26 @@
 			padding-top: 15px;
 			text-align: left
 		}
+
+		/* FORCE POSITION LOGO + MENU HIGHER */
+.bee-row-1,
+.bee-row-1 .bee-row-content {
+    display: flex !important;
+    align-items: flex-start !important;   /* moves everything upward */
+    justify-content: space-between !important;
+}
+
+/* keep logo height under control */
+.bee-row-1 img {
+    max-height: 55px !important;
+    display: block !important;
+}
+
+/* make sure menu items follow the same upward alignment */
+.bee-row-1 .bee-menu {
+    display: flex !important;
+    align-items: flex-start !important;
+}
 	</style>
 </head>
 
