@@ -1036,24 +1036,27 @@
 			text-align: left
 		}
 
-		/* FORCE POSITION LOGO + MENU HIGHER */
+/* FORCE VERTICAL CENTERING FOR HEADER, LOGO, AND MENU */
 .bee-row-1,
 .bee-row-1 .bee-row-content {
     display: flex !important;
-    align-items: flex-start !important;   /* moves everything upward */
+    align-items: center !important;       /* vertical center */
     justify-content: space-between !important;
+    height: 80px !important;              /* ensure header bg height stays consistent */
+    padding: 0 !important;
 }
 
-/* keep logo height under control */
+/* ensure the logo stays vertically centered */
 .bee-row-1 img {
-    max-height: 55px !important;
     display: block !important;
+    max-height: 55px !important;          /* adjust if needed */
+    margin: 0 !important;
 }
 
-/* make sure menu items follow the same upward alignment */
+/* ensure menu items also center vertically */
 .bee-row-1 .bee-menu {
     display: flex !important;
-    align-items: flex-start !important;
+    align-items: center !important;
 }
 	</style>
 </head>
