@@ -163,7 +163,8 @@
     color: #ffffff;                        /* keep text white */
     border-radius: 50px;                   /* capsule shape */
     text-decoration: none;
-    display: inline-block;                  /* ensures transform works correctly */
+    display: flex;                /* ensures flex respects alignment */
+    align-items: flex-end;        /* align text inside button */
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* smooth hover */
     transform: scale(1);                    /* default size */
 }
