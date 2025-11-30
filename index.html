@@ -21,15 +21,16 @@
 	
 	<style>
 
-//* Reduce header top space and bottom-align logo + menu */
+/* Control header height and bottom-align logo + menu */
 .bee-row-1 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    height: 80px;               /* fixed height so bottom alignment works */
+    padding: 0 !important;      
 }
 
 .bee-row-1 .bee-row-content {
     display: flex;
-    align-items: flex-end;   /* bottom-align logo + menu items */
+    height: 100%;
+    align-items: flex-end;      /* bottom-aligned */
     justify-content: space-between;
 }
 
@@ -40,7 +41,7 @@
 
 .bee-row-1 .bee-menu {
     display: flex;
-    align-items: flex-end;   /* ensures menu items also bottom-align */
+    align-items: flex-end;      /* bottom-align menu items too */
 }
 		
 .bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
