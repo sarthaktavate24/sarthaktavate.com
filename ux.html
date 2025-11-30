@@ -1283,6 +1283,29 @@ nav .menu-item a:hover {
     border-radius: 999px;
     transform: scale(1.05); /* only applies on hover */
 }
+		/* Static hover-state applied permanently to the UX link */
+.bee-row-1 .bee-menu li:nth-child(2) a {
+    background-color: rgba(0, 0, 0, 0.25);   /* same as hover */
+    transform: scale(1.05);                  /* same as hover */
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 6px 20px;
+}
+
+/* Prevent UX link from reacting to hover */
+.bee-row-1 .bee-menu li:nth-child(2) a:hover {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+
+/* Keep all OTHER menu items behaving normally on hover (excluding Home and UX) */
+.bee-row-1 .bee-menu li:not(:first-child):not(:nth-child(2)) a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    color: #ffffff;
+    border-radius: 50px;
+}
 	</style>
 </head>
 
