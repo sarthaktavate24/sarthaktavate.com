@@ -21,28 +21,26 @@
 	
 	<style>
 
-/* Reduce header top space and align logo + menu */
+//* Reduce header top space and bottom-align logo + menu */
 .bee-row-1 {
-    padding-top: 0 !important;       /* remove top white space */
-    padding-bottom: 0 !important;    /* optional: also trim bottom */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .bee-row-1 .bee-row-content {
     display: flex;
-    align-items: center;  /* vertically center logo + menu */
-    justify-content: space-between; 
+    align-items: flex-end;   /* bottom-align logo + menu items */
+    justify-content: space-between;
 }
 
-/* Ensure logo is centered vertically */
 .bee-row-1 img {
     display: block;
     margin: 0;
 }
 
-/* Keep menu items aligned */
 .bee-row-1 .bee-menu {
     display: flex;
-    align-items: center;
+    align-items: flex-end;   /* ensures menu items also bottom-align */
 }
 		
 .bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
