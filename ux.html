@@ -1264,34 +1264,30 @@
     align-items: center !important;
     display: flex !important;
 }
-		/* STICKY ACTIVE STATE FOR HOME (only on index.html) */
-nav .menu-item.home a {
-    background: rgba(0,0,0,0.35); /* adjust opacity as needed */
-    border-radius: 999px; /* creates a capsule shape */
-    padding: 8px 16px; /* slightly larger tap target without shifting layout */
-    transform: scale(1); /* ensure Home is not shrunk or enlarged */
-}
-
-/* Prevent Resume button from inheriting hover-scale unless hovered */
-nav .menu-item.resume a {
-    transform: scale(1) !important;
-}
-
-/* Maintain your original hover rules for all items */
-nav .menu-item a:hover {
-    background: rgba(0,0,0,0.45); /* hover stays slightly stronger */
-    border-radius: 999px;
-    transform: scale(1.05); /* only applies on hover */
-}
-	/* Override for UX.html menu item to stay in hover style */
-.bee-row-1 .bee-menu a[href="UX.html"] {
-    background-color: rgba(0, 0, 0, 0.25); /* darker overlay */
-    transform: scale(1.05);                 /* subtle zoom */
-    color: #ffffff;                         /* text stays visible */
+		/* Static hover-state applied permanently to the UX menu item */
+.bee-row-1 .bee-menu li a[href="ux.html"] {
+    background-color: rgba(0, 0, 0, 0.25);   /* same as hover */
+    transform: scale(1.05);                  /* same as hover */
+    color: #ffffff;
     border-radius: 50px;                     /* capsule shape */
-    padding: 6px 20px;                       /* match hover padding */
-    transition: all 0.3s ease-in-out;        /* smooth transition if hovered elsewhere */
+    padding: 6px 20px;                       /* same padding as hover */
 }
+
+/* Prevent UX menu item from changing on hover */
+.bee-row-1 .bee-menu li a[href="ux.html"]:hover {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+
+/* Keep all other menu items behaving normally on hover */
+.bee-row-1 .bee-menu li a:not([href="ux.html"]):hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    color: #ffffff;
+    border-radius: 50px;
+}
+
 	</style>
 </head>
 
