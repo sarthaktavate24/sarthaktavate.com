@@ -21,27 +21,6 @@
 	
 	<style>
 
-		.bee-page-container > .bee-row-1 {
-    padding-bottom: 0;           /* remove bottom padding */
-}
-
-.bee-row-1 .bee-col-1,
-.bee-row-1 .bee-col-2 {
-    padding-top: 0;               /* remove top padding */
-    display: flex;
-    align-items: flex-end;        /* enforce bottom alignment */
-}
-
-.bee-row-1 .bee-col-2 .bee-block-2 {
-    padding: 0;                   /* remove internal padding */
-}
-
-.bee-row-1 .bee-menu a {
-    display: flex;                /* ensures flex respects alignment */
-    align-items: flex-end;        /* align text inside button */
-    padding: 6px 20px;            /* optional: fine-tune vertical spacing */
-}
-
 /* Control header height and bottom-align logo + menu */
 .bee-row-1 {
     height: 80px;               /* fixed height so bottom alignment works */
@@ -402,6 +381,10 @@
 
 		.bee-row-1 .bee-col-1,
 		.bee-row-1 .bee-col-2,
+		 padding-top: 0;               /* remove top padding */
+    display: flex;
+    align-items: flex-end;        /* enforce bottom alignment */
+}
 		.bee-row-3 .bee-col-1,
 		.bee-row-8 .bee-col-1 {
 			padding-top: 5px
