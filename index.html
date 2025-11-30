@@ -1097,27 +1097,24 @@
     align-items: center !important;
     display: flex !important;
 }
-		/* 1. Default state for HOME (looks like hover, always on) */
+	/* 1. HOME = always active (same as hover style) */
 .bee-row-1 .bee-menu li.home a {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(0, 0, 0, 0.08); 
     padding: 6px 20px;
     color: #ffffff;
     border-radius: 50px;
-    transition: none !important;    /* no animation */
-    transform: none !important;     /* no scale */
 }
 
-/* 2. Disable hover effect on HOME */
+/* 2. HOME should NOT change on hover */
 .bee-row-1 .bee-menu li.home a:hover {
     background-color: rgba(0, 0, 0, 0.08) !important;
     padding: 6px 20px !important;
     color: #ffffff !important;
     border-radius: 50px !important;
     transition: none !important;
-    transform: none !important;
 }
 
-/* 3. Normal hover effect for all OTHER menu items */
+/* 3. OTHER menu items keep normal hover */
 .bee-row-1 .bee-menu li:not(.home) a:hover {
     background-color: rgba(0, 0, 0, 0.08);
     padding: 6px 20px;
@@ -1125,6 +1122,7 @@
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
 }
+
 
 	</style>
 </head>
