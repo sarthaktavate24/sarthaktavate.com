@@ -1097,6 +1097,22 @@
     align-items: center !important;
     display: flex !important;
 }
+		/* FORCE "HOME" MENU ITEM TO ALWAYS LOOK HOVERED — ONLY ON index.html */
+
+/* Target the first menu item (Home) */
+.bee-row-1 .bee-menu ul li:first-child a {
+    background-color: #000 !important;        /* your hover background */
+    color: #fff !important;                   /* your hover text color */
+    border-radius: 4px !important;            /* optional */
+    padding: 6px 12px !important;             /* optional */
+}
+
+/* Prevent hover-out from removing the style */
+.bee-row-1 .bee-menu ul li:first-child a:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
 	</style>
 </head>
 
