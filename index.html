@@ -20,6 +20,30 @@
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	
 	<style>
+
+/* Reduce header top space and align logo + menu */
+.bee-row-1 {
+    padding-top: 0 !important;       /* remove top white space */
+    padding-bottom: 0 !important;    /* optional: also trim bottom */
+}
+
+.bee-row-1 .bee-row-content {
+    display: flex;
+    align-items: center;  /* vertically center logo + menu */
+    justify-content: space-between; 
+}
+
+/* Ensure logo is centered vertically */
+.bee-row-1 img {
+    display: block;
+    margin: 0;
+}
+
+/* Keep menu items aligned */
+.bee-row-1 .bee-menu {
+    display: flex;
+    align-items: center;
+}
 		
 .bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
     margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
