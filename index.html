@@ -21,17 +21,16 @@
 	
 	<style>
 
-/* Control header height and vertically center logo + menu */
+/* Control header height and bottom-align logo + menu */
 .bee-row-1 {
-    height: 80px;               /* fixed header height */
-    padding: 0 !important;
-    background-color: #fff;     /* restore your header background */
+    height: 80px;               /* fixed height so bottom alignment works */
+    padding: 0 !important;      
 }
 
 .bee-row-1 .bee-row-content {
     display: flex;
     height: 100%;
-    align-items: center;        /* vertically center logo and menu */
+    align-items: flex-center;      /* bottom-aligned */
     justify-content: space-between;
 }
 
@@ -42,11 +41,7 @@
 
 .bee-row-1 .bee-menu {
     display: flex;
-    align-items: center;        /* vertically center menu items */
-}
-
-.bee-form-row.checkbox-row {
-    margin-top: 12px;    /* space above the entire row */
+    align-items: flex-center;      /* bottom-align menu items too */
 }
 		
 .bee-form-row input[type="text"],
