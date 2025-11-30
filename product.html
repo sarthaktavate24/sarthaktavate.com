@@ -1208,6 +1208,29 @@ nav .menu-item a:hover {
     border-radius: 999px;
     transform: scale(1.05); /* only applies on hover */
 }
+		/* Static hover-state applied permanently to the Product Design menu item */
+.bee-row-1 .bee-menu li a[href="product.html"] {
+    background-color: rgba(0, 0, 0, 0.25);   /* same as hover */
+    transform: scale(1.05);                  /* same as hover */
+    color: #ffffff;
+    border-radius: 50px;                     /* capsule shape */
+    padding: 6px 20px;                       /* same padding as hover */
+}
+
+/* Prevent Product Design menu item from changing on hover */
+.bee-row-1 .bee-menu li a[href="product.html"]:hover {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+
+/* Keep all other menu items behaving normally on hover */
+.bee-row-1 .bee-menu li a:not([href="product.html"]):hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    color: #ffffff;
+    border-radius: 50px;
+}
 	</style>
 </head>
 
