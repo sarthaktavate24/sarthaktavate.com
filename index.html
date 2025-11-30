@@ -139,20 +139,22 @@
     font-weight: 600;           /* emphasis */
 }
 
-/* Default state — NO padding added */
+/* Default menu item style */
 .bee-row-1 .bee-menu a {
-    --base-bg: rgba(0, 0, 0, 0.04); 
-    background-color: var(--base-bg);
-    color: #ffffff;
-    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.08); /* subtle overlay by default */                
+    color: #ffffff;                        /* keep text white */
+    border-radius: 50px;                   /* capsule shape */
     text-decoration: none;
-    transition: filter 0.3s ease, background-color 0.3s ease;
+    display: inline-block;                  /* ensures transform works correctly */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* smooth hover */
+    transform: scale(1);                    /* default size */
 }
 
-/* Hover state: slightly darker + apply padding only on hover */
+/* Hover effect: darken background + scale up slightly */
 .bee-row-1 .bee-menu a:hover {
-    filter: brightness(0.8);
-    padding: 6px 20px; /* apply capsule padding ONLY on hover */
+    background-color: rgba(0, 0, 0, 0.25); /* darker overlay */
+    transform: scale(1.05);                 /* subtle zoom only on hover */
+    color: #ffffff;                          /* text stays visible */
 }
 		.bee-row-10,
 		.bee-row-3,
