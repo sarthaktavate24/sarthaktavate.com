@@ -110,13 +110,9 @@
     border-radius: 40px;
 }
 		/* Original logo style (no rounding) */
-  .bee-row-1 .bee-col-1 .bee-block-2 a img {
-    transition: all 0.3s ease-in-out;
-    border-radius: 0;
-    align-self: flex-end; /* bottom-align logo with menu */
-    display: block;
-    margin: 0;
-    max-height: 60px; /* optional: ensure logo fits header height */
+.bee-row-1 .bee-col-1 .bee-block-2 a img {
+    transition: all 0.3s ease-in-out; /* smooth transition */
+    border-radius: 0;                 /* original: no rounding */
 }
 
 /* On hover, apply rounding and overlay effect */
@@ -1035,29 +1031,6 @@
 			padding-top: 15px;
 			text-align: left
 		}
-
-/* FORCE VERTICAL CENTERING FOR HEADER, LOGO, AND MENU */
-.bee-row-1,
-.bee-row-1 .bee-row-content {
-    display: flex !important;
-    align-items: center !important;       /* vertical center */
-    justify-content: space-between !important;
-    height: 80px !important;              /* ensure header bg height stays consistent */
-    padding: 0 !important;
-}
-
-/* ensure the logo stays vertically centered */
-.bee-row-1 img {
-    display: block !important;
-    max-height: 55px !important;          /* adjust if needed */
-    margin: 0 !important;
-}
-
-/* ensure menu items also center vertically */
-.bee-row-1 .bee-menu {
-    display: flex !important;
-    align-items: center !important;
-}
 	</style>
 </head>
 
