@@ -24,25 +24,26 @@
 /* Control header height and bottom-align logo + menu */
 .bee-row-1 {
     height: 80px;               /* fixed height so bottom alignment works */
-    padding: 0 !important;      
+    padding: 0 !important;
+    display: flex;              /* ensure flex context for alignment */
+    align-items: flex-end;      /* bottom-align everything inside */
 }
 
 .bee-row-1 .bee-row-content {
     display: flex;
-    height: 100%;
-    align-items: flex-end;      /* bottom-aligned */
+    width: 100%;
     justify-content: space-between;
+    align-items: flex-end;      /* bottom-align content inside row-content */
 }
 
 .bee-row-1 img {
     display: block;
     margin: 0;
-    margin-bottom: 10px;        /* lifts logo from bottom */
 }
 
 .bee-row-1 .bee-menu {
     display: flex;
-    align-items: flex-end;      /* bottom-align menu items too */
+    align-items: flex-end;      /* bottom-align menu items */
 }
 		
 .bee-form-row input[type="text"],
