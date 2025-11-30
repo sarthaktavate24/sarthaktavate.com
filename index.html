@@ -1116,7 +1116,25 @@ nav .menu-item a:hover {
     border-radius: 999px;
     transform: scale(1.05); /* only applies on hover */
 }
+/* ACTIVE STATE — same visual as hover */
+nav .menu-item.active a {
+    background: rgba(0,0,0,0.35); /* same opacity you used for permanent Home */
+    border-radius: 999px; /* capsule shape */
+    padding: 8px 16px;
+    transform: scale(1.05); /* matches your hover scaling */
+}
 
+/* Keep hover working normally */
+nav .menu-item a:hover {
+    background: rgba(0,0,0,0.45); /* slightly stronger than active */
+    border-radius: 999px;
+    transform: scale(1.05);
+}
+
+/* Prevent the Resume button from being affected unless hovered */
+nav .menu-item.resume a {
+    transform: scale(1) !important;
+}
 	</style>
 </head>
 
