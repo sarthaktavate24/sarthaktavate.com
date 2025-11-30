@@ -21,19 +21,17 @@
 	
 	<style>
 
-/* Control header height and bottom-align logo + menu */
+/* Control header height and center-align logo + menu */
 .bee-row-1 {
-    height: 80px;               /* fixed height so bottom alignment works */
+    height: 80px;
     padding: 0 !important;
-    display: flex;              /* ensure flex context for alignment */
-    align-items: flex-end;      /* bottom-align everything inside */
 }
 
 .bee-row-1 .bee-row-content {
     display: flex;
-    width: 100%;
+    height: 100%;
+    align-items: center;          /* center alignment */
     justify-content: space-between;
-    align-items: flex-end;      /* bottom-align content inside row-content */
 }
 
 .bee-row-1 img {
@@ -43,7 +41,15 @@
 
 .bee-row-1 .bee-menu {
     display: flex;
-    align-items: flex-end;      /* bottom-align menu items */
+    align-items: center;          /* ensure menu text aligns to center line */
+}
+		
+.bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
+    margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
+}
+
+.bee-form-row.checkbox-row {
+    margin-top: 12px;    /* space above the entire row */
 }
 		
 .bee-form-row input[type="text"],
@@ -143,7 +149,7 @@
     box-shadow: 0 4px 20px #adadad;
 
     /* Optional padding */
-    padding-bottom: 0px;
+    padding-bottom: 15px;
 }
 		
 		/* Static capsule for active page */
@@ -163,8 +169,7 @@
     color: #ffffff;                        /* keep text white */
     border-radius: 50px;                   /* capsule shape */
     text-decoration: none;
-    display: flex;                /* ensures flex respects alignment */
-    align-items: flex-end;        /* align text inside button */
+    display: inline-block;                  /* ensures transform works correctly */
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* smooth hover */
     transform: scale(1);                    /* default size */
 }
@@ -382,10 +387,6 @@
 
 		.bee-row-1 .bee-col-1,
 		.bee-row-1 .bee-col-2,
-		 padding-top: 0;               /* remove top padding */
-    display: flex;
-    align-items: flex-end;        /* enforce bottom alignment */
-}
 		.bee-row-3 .bee-col-1,
 		.bee-row-8 .bee-col-1 {
 			padding-top: 5px
