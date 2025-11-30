@@ -18,23 +18,35 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<style>
-.bee-field.bee-inline-field input[type="checkbox"] + label {
-    margin-left: 5px;
+
+/* Control header height and bottom-align logo + menu */
+.bee-row-1 {
+    height: 80px;               /* fixed height so bottom alignment works */
+    padding: 0 !important;      
 }
 
-.bee-form-row.checkbox-row {
-    margin-top: 12px;    /* space above the entire row */
+.bee-row-1 .bee-row-content {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;      /* bottom-aligned */
+    justify-content: space-between;
+}
+
+.bee-row-1 img {
+    display: block;
+    margin: 0;
+}
+
+.bee-row-1 .bee-menu {
+    display: flex;
+    align-items: flex-end;      /* bottom-align menu items too */
 }
 		
-.bee-form-row input[type="text"],
-.bee-form-row input[type="email"],
-.bee-form-row input[type="tel"],
-.bee-form-row textarea {
-    padding: 10px 14px;      /* adjust inner spacing */
-    box-sizing: border-box;  /* keeps size consistent */
+.bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
+    margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
 }
 		
-		/* Original logo style (no rounding) */
+/* Original logo style (no rounding) */
 .bee-row-1 .bee-col-1 .bee-block-2 a img {
     transition: all 0.3s ease-in-out; /* smooth transition */
     border-radius: 0;                 /* original: no rounding */
@@ -46,15 +58,16 @@
     box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2); /* translucent overlay */
     transform: scale(1.05);           /* subtle zoom effect */
 }
-		.bee-page-container > .bee-row-1 {
+
+.bee-page-container > .bee-row-1 {
     position: sticky;
     top: 0;
     z-index: 9999;
 
     /* Glassmorphism */
     background: rgba(173, 173, 173, 0.5);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 
     /* Background image */
     background-image: url("images/2_BG_electronics.png");
@@ -73,7 +86,7 @@
     box-shadow: 0 4px 20px #adadad;
 
     /* Optional padding */
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 		
 		/* Static capsule for active page */
@@ -86,14 +99,32 @@
     font-weight: 600;           /* emphasis */
 }
 
-/* Hover effect for all menu items (including active) */
-.bee-row-1 .bee-menu a:hover {
-    background-color: rgba(0, 0, 0, 0.08); /* very subtle dark overlay */
-    padding: 6px 20px; 
-    color: #ffffff; /* text stays visible */
-    border-radius: 50px; /* capsule shape */
-    transition: all 0.3s ease-in-out; /* smooth in and out */
+/* Default menu item style */
+.bee-row-1 .bee-menu a {
+    background-color: rgba(0, 0, 0, 0.08); /* subtle overlay by default */
+    padding: 6px 20px;                     /* controls visual size */
+    color: #ffffff;                        /* keep text white */
+    border-radius: 50px;                   /* capsule shape */
+    text-decoration: none;
+    display: inline-block;                  /* ensures transform works correctly */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* smooth hover */
+    transform: scale(1);                    /* default size */
 }
+
+/* Hover effect: darken background + scale up slightly */
+.bee-row-1 .bee-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.25); /* darker overlay */
+    transform: scale(1.05);                 /* subtle zoom only on hover */
+    color: #ffffff;                          /* text stays visible */
+}
+		.bee-row-10,
+		.bee-row-3,
+		.bee-row-4,
+		.bee-row-8,
+		.bee-row-9 {
+			background-color: #ffffff;
+			background-repeat: no-repeat
+		}
 		.bee-row,
 		.bee-row-content {
 			position: relative
@@ -1093,6 +1124,90 @@
 			padding-top: 15px;
 			text-align: left
 		}
+		/* Force header height and vertically center logo + menu */
+.bee-row-1 {
+    height: 90px !important;         /* adjust as needed */
+    padding-top: 10px !important;   /* adjust value as needed */
+    padding-bottom: 10px !important;
+    display: flex !important;
+    align-items: center !important;  /* center items inside header background */
+}
+
+.bee-row-1 .bee-row-content {
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center !important;  /* vertical centering */
+	height: 90px !important;
+    max-height: 60px;
+}
+
+.bee-row-1 img {
+    display: block;
+    height: auto;
+    max-height: 60px;                /* keep logo inside header */
+}
+
+.bee-row-1 .bee-menu {
+    display: flex !important;
+    align-items: center !important;  /* center menu items as well */
+}
+/* FORCE TRUE VERTICAL CENTERING – FULL OVERRIDE */
+
+/* Remove any internal padding BeeFree injects */
+.bee-row-1,
+.bee-row-1 .bee-row-content,
+.bee-row-1 .bee-col,
+.bee-row-1 .bee-col-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;     /* center vertically */
+}
+
+/* Force the header to the height you want */
+.bee-row-1 {
+    height: 90px !important;            /* adjust if needed */
+}
+
+/* Make columns center their children */
+.bee-row-1 .bee-col,
+.bee-row-1 .bee-col-content {
+    justify-content: center !important; /* vertical alignment helper */
+}
+
+/* Center the logo */
+.bee-row-1 img {
+    max-height: 60px !important;        /* ensures it won't overflow */
+    align-self: center !important;
+}
+
+/* Center menu items */
+.bee-row-1 .bee-menu {
+    align-items: center !important;
+    display: flex !important;
+}
+		/* STICKY ACTIVE STATE FOR HOME (only on index.html) */
+nav .menu-item.home a {
+    background: rgba(0,0,0,0.35); /* adjust opacity as needed */
+    border-radius: 999px; /* creates a capsule shape */
+    padding: 8px 16px; /* slightly larger tap target without shifting layout */
+    transform: scale(1); /* ensure Home is not shrunk or enlarged */
+}
+
+/* Prevent Resume button from inheriting hover-scale unless hovered */
+nav .menu-item.resume a {
+    transform: scale(1) !important;
+}
+
+/* Maintain your original hover rules for all items */
+nav .menu-item a:hover {
+    background: rgba(0,0,0,0.45); /* hover stays slightly stronger */
+    border-radius: 999px;
+    transform: scale(1.05); /* only applies on hover */
+}
 	</style>
 </head>
 
