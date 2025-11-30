@@ -1097,44 +1097,35 @@
     align-items: center !important;
     display: flex !important;
 }
-		/* STICKY ACTIVE STATE FOR HOME (only on index.html) */
-nav .menu-item.home a {
-    background: rgba(0,0,0,0.35); /* adjust opacity as needed */
-    border-radius: 999px; /* creates a capsule shape */
-    padding: 8px 16px; /* slightly larger tap target without shifting layout */
-    transform: scale(1); /* ensure Home is not shrunk or enlarged */
+		/* 1. Default state for HOME (looks like hover, always on) */
+.bee-row-1 .bee-menu li.home a {
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 6px 20px;
+    color: #ffffff;
+    border-radius: 50px;
+    transition: none !important;    /* no animation */
+    transform: none !important;     /* no scale */
 }
 
-/* Prevent Resume button from inheriting hover-scale unless hovered */
-nav .menu-item.resume a {
-    transform: scale(1) !important;
+/* 2. Disable hover effect on HOME */
+.bee-row-1 .bee-menu li.home a:hover {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+    padding: 6px 20px !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    transition: none !important;
+    transform: none !important;
 }
 
-/* Maintain your original hover rules for all items */
-nav .menu-item a:hover {
-    background: rgba(0,0,0,0.45); /* hover stays slightly stronger */
-    border-radius: 999px;
-    transform: scale(1.05); /* only applies on hover */
-}
-/* ACTIVE STATE — same visual as hover */
-nav .menu-item.active a {
-    background: rgba(0,0,0,0.35); /* same opacity you used for permanent Home */
-    border-radius: 999px; /* capsule shape */
-    padding: 8px 16px;
-    transform: scale(1.05); /* matches your hover scaling */
+/* 3. Normal hover effect for all OTHER menu items */
+.bee-row-1 .bee-menu li:not(.home) a:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 6px 20px;
+    color: #ffffff;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Keep hover working normally */
-nav .menu-item a:hover {
-    background: rgba(0,0,0,0.45); /* slightly stronger than active */
-    border-radius: 999px;
-    transform: scale(1.05);
-}
-
-/* Prevent the Resume button from being affected unless hovered */
-nav .menu-item.resume a {
-    transform: scale(1) !important;
-}
 	</style>
 </head>
 
