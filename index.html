@@ -21,16 +21,17 @@
 	
 	<style>
 
-/* Control header height and center-align logo + menu */
+/* Control header height and vertically center logo + menu */
 .bee-row-1 {
-    height: 80px;
+    height: 80px;               /* fixed header height */
     padding: 0 !important;
+    background-color: #fff;     /* restore your header background */
 }
 
 .bee-row-1 .bee-row-content {
     display: flex;
     height: 100%;
-    align-items: center;          /* center alignment */
+    align-items: center;        /* vertically center logo and menu */
     justify-content: space-between;
 }
 
@@ -41,11 +42,7 @@
 
 .bee-row-1 .bee-menu {
     display: flex;
-    align-items: center;          /* ensure menu text aligns to center line */
-}
-		
-.bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
-    margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
+    align-items: center;        /* vertically center menu items */
 }
 
 .bee-form-row.checkbox-row {
