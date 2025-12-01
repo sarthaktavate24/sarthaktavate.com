@@ -1336,6 +1336,24 @@
         padding: 6px 0;
     }
 }
+		/* Logo centered */
+.bee-row-1 img {
+    display: block !important;       /* force block layout */
+    margin: 0 auto !important;       /* horizontally center */
+    max-width: 100%;
+    height: auto;
+    float: none !important;          /* remove any floating */
+    transition: none !important;     /* prevent hover shifts */
+}
+
+/* Ensure the logo never shifts or pushes layout on hover */
+.bee-row-1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transform: none !important;
+    transition: inherit !important; /* preserves existing hover effects elsewhere */
+}
 
 	</style>
 </head>
