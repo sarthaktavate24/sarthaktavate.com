@@ -1219,7 +1219,41 @@ nav .menu-item a:hover {
     float: none !important;          /* remove any floating */
     transition: none !important;     /* prevent hover shifts */
 }
+* Prevent any scrollbars from appearing around the logo in desktop view */
+.bee-row-1,
+.bee-row-1 .bee-row-content,
+.bee-row-1 .bee-col,
+.bee-row-1 img {
+    overflow: hidden !important;
+}
 
+/* Ensure the logo never shifts or pushes layout on hover */
+.bee-row-1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transform: none !important;
+    transition: inherit !important; /* preserves existing hover effects elsewhere */
+}
+
+/* If any parent container expands on hover, freeze its size */
+.bee-row-1,
+.bee-row-1 .bee-row-content {
+    height: 80px !important;  /* or whatever height your header uses */
+    min-height: 80px !important;
+    max-height: 80px !important;
+}
+
+/* Prevent margin/padding shifts on hover */
+.bee-row-1 * {
+    margin: 0 !important;
+    padding: 0 !important;
+    scrollbar-width: none !important; /* Firefox */
+}
+
+.bee-row-1 *::-webkit-scrollbar {
+    display: none !important; /* Chrome/Safari */
+}
 	</style>
 </head>
 
