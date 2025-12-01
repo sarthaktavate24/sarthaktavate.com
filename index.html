@@ -1139,55 +1139,73 @@ nav .menu-item a:hover {
     color: #ffffff;
     border-radius: 50px;
 }
-		/* ----------------------------- */
-/* MOBILE OVERRIDE — MAX 600px   */
-/* ----------------------------- */
-@media (max-width: 600px) {
-
-    /* Make header auto-height so items do NOT overflow */
-    .bee-row-1 {
-        height: auto !important;
-        padding: 12px 0 !important;
-    }
-
-    .bee-row-1 .bee-row-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: auto !important;
-    }
-
-    /* Logo centered */
-    .bee-row-1 img {
-        max-width: 70%;
-        height: auto;
-        margin: 0 auto 12px auto !important;
-    }
-
-    /* MENU STACKED VERTICALLY */
-    .bee-row-1 .bee-menu {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        width: 100% !important;
-    }
-
-    /* Style each menu item */
-    .bee-row-1 .bee-menu li {
-        list-style: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    .bee-row-1 .bee-menu li a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 6px 0;
-    }
+<style>
+/* Full header override */
+.bee-row-1 {
+    height: auto !important;                 /* let height adjust to content */
+    min-height: 120px !important;            /* ensure enough space */
+    padding: 0 20px 20px 20px !important;   /* bottom padding for spacing */
+    display: flex;
+    align-items: center;                     /* vertically center logo/menu */
+    justify-content: center;                 /* horizontally center content */
+    background: rgba(173, 173, 173, 0.5) !important;
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    background-image: url("images/2_BG_electronics.png") !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-bottom-left-radius: 60px !important;
+    border-bottom-right-radius: 60px !important;
+    border-bottom: 2px solid #ffffff !important;
+    box-shadow: 0 4px 20px #adadad !important;
+    z-index: 9999;
+    position: sticky;
+    top: 0;
 }
+
+.bee-row-1 .bee-row-content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;        /* center logo & menu vertically */
+    justify-content: center !important;    /* center horizontally */
+    gap: 40px;                             /* space between logo and menu */
+}
+
+.bee-row-1 .bee-col-1,
+.bee-row-1 .bee-col-2 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.bee-row-1 .bee-col-1 .bee-block-2 a img {
+    max-height: 80px !important;           /* prevent logo from overflow */
+    height: auto !important;
+}
+
+.bee-row-1 .bee-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px;                             /* spacing between menu items */
+}
+
+.bee-row-1 .bee-menu a {
+    padding: 8px 22px !important;
+    font-size: 16px !important;
+    border-radius: 50px !important;
+    background-color: rgba(0,0,0,0.08) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.bee-row-1 .bee-menu a:hover {
+    background-color: rgba(0,0,0,0.25) !important;
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+</style>
+
 
 	</style>
 </head>
