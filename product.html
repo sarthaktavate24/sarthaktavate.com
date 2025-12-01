@@ -18,7 +18,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
 	<style>
-
+.bee-form-row input[type="text"],
+.bee-form-row input[type="email"],
+.bee-form-row input[type="tel"],
+.bee-form-row textarea {
+    padding: 10px 14px;      /* adjust inner spacing */
+    box-sizing: border-box;  /* keeps size consistent */
+}
 /* Control header height and bottom-align logo + menu */
 .bee-row-1 {
     height: 80px;               /* fixed height so bottom alignment works */
@@ -43,7 +49,7 @@
 }
 		
 .bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
-    margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
+    margin-left: 10px; /* space between checkbox and "Send me your brainwaves via email!" */
 }
 		
 /* Original logo style (no rounding) */
