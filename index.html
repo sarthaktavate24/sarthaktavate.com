@@ -1139,53 +1139,91 @@ nav .menu-item a:hover {
     color: #ffffff;
     border-radius: 50px;
 }
-		/* ----------------------------- */
-/* MOBILE OVERRIDE — MAX 600px   */
-/* ----------------------------- */
-@media (max-width: 600px) {
+/* Header height and alignment */
+.bee-row-1 {
+    height: 70px !important;
+    padding: 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: rgba(173,173,173,0.5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-bottom: 2px solid #fff;
+    box-shadow: 0 4px 20px #adadad;
+}
 
-    /* Make header auto-height so items do NOT overflow */
-    .bee-row-1 {
-        height: auto !important;
-        padding: 12px 0 !important;
-    }
+/* Flex container for logo and menu */
+.bee-row-1 .bee-row-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* Logo adjustments */
+.bee-row-1 .bee-col-1 .bee-block-2 img {
+    display: block;
+    max-height: 50px;
+    margin: 0;
+}
+
+/* Menu as flex row */
+.bee-row-1 .bee-col-2 .bee-block-2 ul.bee-horizontal {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    scrollbar-width: none; /* Firefox */
+}
+.bee-row-1 .bee-col-2 .bee-block-2 ul.bee-horizontal::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* Menu items inline and centered vertically */
+.bee-row-1 .bee-col-2 .bee-block-2 li {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 5px;
+}
+
+/* Menu links */
+.bee-row-1 .bee-col-2 .bee-block-2 li a {
+    display: inline-block !important;
+    white-space: nowrap;
+    padding: 6px 20px;
+    border-radius: 50px;
+    background-color: rgba(0,0,0,0.08);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+.bee-row-1 .bee-col-2 .bee-block-2 li a:hover {
+    background-color: rgba(0,0,0,0.25);
+    transform: scale(1.05);
+}
+
+/* Active menu item */
+.bee-row-1 .bee-col-2 .bee-block-2 li a.active {
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+/* Mobile override to prevent wrapping */
+@media (max-width: 768px) {
     .bee-row-1 .bee-row-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        height: auto !important;
+        flex-wrap: nowrap !important;
     }
-
-    /* Logo centered */
-    .bee-row-1 img {
-        max-width: 70%;
-        height: auto;
-        margin: 0 auto 12px auto !important;
-    }
-
-    /* MENU STACKED VERTICALLY */
-    .bee-row-1 .bee-menu {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        width: 100% !important;
-    }
-
-    /* Style each menu item */
-    .bee-row-1 .bee-menu li {
-        list-style: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    .bee-row-1 .bee-menu li a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 6px 0;
+    .bee-row-1 .bee-col-2 .bee-block-2 ul.bee-horizontal {
+        justify-content: flex-start !important;
+        overflow-x: auto;
     }
 }
 
