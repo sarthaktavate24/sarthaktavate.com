@@ -1139,73 +1139,38 @@ nav .menu-item a:hover {
     color: #ffffff;
     border-radius: 50px;
 }
-<style>
-/* Full header override */
-.bee-row-1 {
-    height: auto !important;                 /* let height adjust to content */
-    min-height: 120px !important;            /* ensure enough space */
-    padding: 0 20px 20px 20px !important;   /* bottom padding for spacing */
-    display: flex;
-    align-items: center;                     /* vertically center logo/menu */
-    justify-content: center;                 /* horizontally center content */
-    background: rgba(173, 173, 173, 0.5) !important;
-    backdrop-filter: blur(30px) !important;
-    -webkit-backdrop-filter: blur(30px) !important;
-    background-image: url("images/2_BG_electronics.png") !important;
-    background-position: top center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    border-bottom-left-radius: 60px !important;
-    border-bottom-right-radius: 60px !important;
-    border-bottom: 2px solid #ffffff !important;
-    box-shadow: 0 4px 20px #adadad !important;
-    z-index: 9999;
-    position: sticky;
-    top: 0;
-}
+@media (max-width: 768px) {
+    /* Increase header height on mobile */
+    .bee-row-1 {
+        height: auto !important;
+        min-height: 120px; /* adjust value to fit logo + menu */
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
 
-.bee-row-1 .bee-row-content {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;        /* center logo & menu vertically */
-    justify-content: center !important;    /* center horizontally */
-    gap: 40px;                             /* space between logo and menu */
-}
+    /* Vertically center logo and menu */
+    .bee-row-1 .bee-row-content {
+        align-items: center !important;
+    }
 
-.bee-row-1 .bee-col-1,
-.bee-row-1 .bee-col-2 {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
+    .bee-row-1 .bee-menu {
+        align-items: center !important;
+    }
 
-.bee-row-1 .bee-col-1 .bee-block-2 a img {
-    max-height: 80px !important;           /* prevent logo from overflow */
-    height: auto !important;
-}
+    /* Ensure logo scales properly on mobile */
+    .bee-row-1 .bee-col-1 .bee-block-2 img {
+        max-height: 60px; /* adjust to fit header */
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
 
-.bee-row-1 .bee-menu {
-    display: flex !important;
-    align-items: center !important;
-    gap: 20px;                             /* spacing between menu items */
+    /* Reduce padding between menu items if needed */
+    .bee-row-1 .bee-col-2 .bee-block-2 li {
+        padding: 5px 10px !important;
+        font-size: 14px !important;
+    }
 }
-
-.bee-row-1 .bee-menu a {
-    padding: 8px 22px !important;
-    font-size: 16px !important;
-    border-radius: 50px !important;
-    background-color: rgba(0,0,0,0.08) !important;
-    color: #ffffff !important;
-    transition: all 0.3s ease-in-out !important;
-}
-
-.bee-row-1 .bee-menu a:hover {
-    background-color: rgba(0,0,0,0.25) !important;
-    transform: scale(1.05) !important;
-    color: #ffffff !important;
-}
-</style>
-
 
 	</style>
 </head>
