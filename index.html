@@ -1139,6 +1139,56 @@ nav .menu-item a:hover {
     color: #ffffff;
     border-radius: 50px;
 }
+		/* ----------------------------- */
+/* MOBILE OVERRIDE — MAX 600px   */
+/* ----------------------------- */
+@media (max-width: 600px) {
+
+    /* Make header auto-height so items do NOT overflow */
+    .bee-row-1 {
+        height: auto !important;
+        padding: 12px 0 !important;
+    }
+
+    .bee-row-1 .bee-row-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important;
+    }
+
+    /* Logo centered */
+    .bee-row-1 img {
+        max-width: 70%;
+        height: auto;
+        margin: 0 auto 12px auto !important;
+    }
+
+    /* MENU STACKED VERTICALLY */
+    .bee-row-1 .bee-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    /* Style each menu item */
+    .bee-row-1 .bee-menu li {
+        list-style: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .bee-row-1 .bee-menu li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+    }
+}
+
 	</style>
 </head>
 
