@@ -22,40 +22,40 @@
 	<style>
 
 /* Control header height and bottom-align logo + menu */
-.bee-row-1 {
+.row-1 {
     height: 80px;               /* fixed height so bottom alignment works */
     padding: 0 !important;      
 }
 
-.bee-row-1 .bee-row-content {
+.row-1 .row-content {
     display: flex;
     height: 100%;
     align-items: flex-end;      /* bottom-aligned */
     justify-content: space-between;
 }
 
-.bee-row-1 img {
+.row-1 img {
     display: block;
     margin: 0;
 }
 
-.bee-row-1 .bee-menu {
+.row-1 .menu {
     display: flex;
     align-items: flex-end;      /* bottom-align menu items too */
 }
 		
-.bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type="checkbox"] + label {
+.row-11 .col-2 .block-3 .field.inline-field input[type="checkbox"] + label {
     margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
 }
 
-.bee-form-row.checkbox-row {
+.form-row.checkbox-row {
     margin-top: 12px;    /* space above the entire row */
 }
 		
-.bee-form-row input[type="text"],
-.bee-form-row input[type="email"],
-.bee-form-row input[type="tel"],
-.bee-form-row textarea {
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row textarea {
     padding: 10px 14px;      /* adjust inner spacing */
     box-sizing: border-box;  /* keeps size consistent */
 }
@@ -63,7 +63,7 @@
 /* Hover effect for Portfolio Images in Row 5 */
 
 /* Z Image */
-.bee-row-5 .bee-col-1 .bee-block-1 a:hover img {
+.row-5 .col-1 .block-1 a:hover img {
     transform: scale(0.97);                  /* slightly smaller */ 
     border: 3px solid #ff5c37;               /* colored stroke */
     transition: all 0.3s ease-in-out;        /* smooth effect */
@@ -71,7 +71,7 @@
 }
 
 /* Hex Image */
-.bee-row-5 .bee-col-2 .bee-block-1 a:hover img {
+.row-5 .col-2 .block-1 a:hover img {
     transform: scale(0.97);
     border: 3px solid #ffffff;
     transition: all 0.3s ease-in-out;
@@ -79,7 +79,7 @@
 }
 
 /* Nova Image */
-.bee-row-5 .bee-col-2 .bee-block-3 a:hover img {
+.row-5 .col-2 .block-3 a:hover img {
     transform: scale(0.97);
     border: 3px solid #ff5c37;
     transition: all 0.3s ease-in-out;
@@ -87,7 +87,7 @@
 }
 
 /* Titan Image */
-.bee-row-5 .bee-col-3 .bee-block-1 a:hover img {
+.row-5 .col-3 .block-1 a:hover img {
     transform: scale(0.97);
     border: 3px solid #ff5c37;
     transition: all 0.3s ease-in-out;
@@ -95,7 +95,7 @@
 }
 
 /* IKEA Image */
-.bee-row-5 .bee-col-4 .bee-block-1 a:hover img {
+.row-5 .col-4 .block-1 a:hover img {
     transform: scale(0.97);
     border: 3px solid #ff5c37;
     transition: all 0.3s ease-in-out;
@@ -103,26 +103,26 @@
 }
 
 /* Expedition Image */
-.bee-row-5 .bee-col-4 .bee-block-3 a:hover img {
+.row-5 .col-4 .block-3 a:hover img {
     transform: scale(0.97);
     border: 3px solid #ff5c37;
     transition: all 0.3s ease-in-out;
     border-radius: 40px;
 }
 		/* Original logo style (no rounding) */
-.bee-row-1 .bee-col-1 .bee-block-2 a img {
+.row-1 .col-1 .block-2 a img {
     transition: all 0.3s ease-in-out; /* smooth transition */
     border-radius: 0;                 /* original: no rounding */
 }
 
 /* On hover, apply rounding and overlay effect */
-.bee-row-1 .bee-col-1 .bee-block-2 a:hover img {
+.row-1 .col-1 .block-2 a:hover img {
     border-radius: 50px;              /* capsule/pill rounding on hover */
     box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2); /* translucent overlay */
     transform: scale(1.05);           /* subtle zoom effect */
 }
 
-.bee-page-container > .bee-row-1 {
+.page-container > .row-1 {
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -153,7 +153,7 @@
 }
 		
 		/* Static capsule for active page */
-.bee-row-1 .bee-menu a.active {
+.row-1 .menu a.active {
     border: 2px solid #ffffff;  /* white stroke */
     border-radius: 50px;        /* capsule shape */
     padding: 6px 20px;          /* vertical | horizontal spacing */
@@ -163,7 +163,7 @@
 }
 
 /* Default menu item style */
-.bee-row-1 .bee-menu a {
+.row-1 .menu a {
     background-color: rgba(0, 0, 0, 0.08); /* subtle overlay by default */
     padding: 6px 20px;                     /* controls visual size */
     color: #ffffff;                        /* keep text white */
@@ -175,16 +175,16 @@
 }
 
 /* Hover effect: darken background + scale up slightly */
-.bee-row-1 .bee-menu a:hover {
+.row-1 .menu a:hover {
     background-color: rgba(0, 0, 0, 0.25); /* darker overlay */
     transform: scale(1.05);                 /* subtle zoom only on hover */
     color: #ffffff;                          /* text stays visible */
 }
-		.bee-row-10,
-		.bee-row-3,
-		.bee-row-4,
-		.bee-row-8,
-		.bee-row-9 {
+		.row-10,
+		.row-3,
+		.row-4,
+		.row-8,
+		.row-9 {
 			background-color: #ffffff;
 			background-repeat: no-repeat
 		}
@@ -195,13 +195,13 @@
 			font-family: Fira Sans, Lucida Sans Unicode, Lucida Grande, sans-serif
 		}
 
-		.bee-page-container {
+		.page-container {
 			background-image: url("images/2_BG_electronics.png");
 			background-position: top center
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-10 a,
-		.bee-row-11 .bee-col-2 .bee-block-4 a,
+		.row-11 .col-1 .block-10 a,
+		.row-11 .col-2 .block-4 a,
 		a {
 			color: #7747FF
 		}
@@ -217,75 +217,75 @@
 			margin: 0
 		}
 
-		.bee-desktop_hide {
+		.desktop_hide {
 			display: none
 		}
 
-		.bee-row-content {
+		.row-content {
 			max-width: 1200px;
 			margin: 0 auto;
 			display: flex
 		}
 
-		.bee-row-content .bee-col-w2 {
+		.row-content .col-w2 {
 			flex-basis: 16.6666666667%
 		}
 
-		.bee-row-content .bee-col-w3 {
+		.row-content .col-w3 {
 			flex-basis: 25%
 		}
 
-		.bee-row-content .bee-col-w4 {
+		.row-content .col-w4 {
 			flex-basis: 33.3333333333%
 		}
 
-		.bee-row-content .bee-col-w6 {
+		.row-content .col-w6 {
 			flex-basis: 50%
 		}
 
-		.bee-row-content .bee-col-w8 {
+		.row-content .col-w8 {
 			flex-basis: 66.6666666667%
 		}
 
-		.bee-row-content .bee-col-w9 {
+		.row-content .col-w9 {
 			flex-basis: 75%
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 div.label:not(.inline),
-		.bee-row-11 .bee-col-2 .bee-block-3 label:not(.inline),
-		.bee-row-content .bee-col-w12 {
+		.row-11 .col-2 .block-3 div.label:not(.inline),
+		.row-11 .col-2 .block-3 label:not(.inline),
+		.row-content .col-w12 {
 			flex-basis: 100%
 		}
 
-		.bee-button a,
-		.bee-menu ul li a {
+		.button a,
+		.menu ul li a {
 			text-decoration: none
 		}
 
-		.bee-image {
+		.image {
 			overflow: auto
 		}
 
-		.bee-image .bee-center {
+		.image .center {
 			margin: 0 auto
 		}
 
-		.bee-row-1 .bee-col-1 .bee-block-2,
-		.bee-row-10 .bee-col-1 .bee-block-1,
-		.bee-row-11 .bee-col-2 .bee-block-3 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]),
-		.bee-row-3 .bee-col-1 .bee-block-1,
-		.bee-row-4 .bee-col-1 .bee-block-1,
-		.bee-row-5 .bee-col-1 .bee-block-1,
-		.bee-row-5 .bee-col-2 .bee-block-1,
-		.bee-row-5 .bee-col-2 .bee-block-3,
-		.bee-row-5 .bee-col-3 .bee-block-1,
-		.bee-row-5 .bee-col-4 .bee-block-1,
-		.bee-row-5 .bee-col-4 .bee-block-3,
-		.bee-row-8 .bee-col-1 .bee-block-1 {
+		.row-1 .col-1 .block-2,
+		.row-10 .col-1 .block-1,
+		.row-11 .col-2 .block-3 .form-row:not(.sidelabel) input:not([type=checkbox]):not([type=radio]),
+		.row-3 .col-1 .block-1,
+		.row-4 .col-1 .block-1,
+		.row-5 .col-1 .block-1,
+		.row-5 .col-2 .block-1,
+		.row-5 .col-2 .block-3,
+		.row-5 .col-3 .block-1,
+		.row-5 .col-4 .block-1,
+		.row-5 .col-4 .block-3,
+		.row-8 .col-1 .block-1 {
 			width: 100%
 		}
 
-		.bee-form .bee-form-row .bee-field {
+		.form .form-row .field {
 			padding: 3px;
 			display: flex;
 			flex: 1;
@@ -293,106 +293,106 @@
 			align-items: center
 		}
 
-		.bee-form .bee-form-row .bee-field.bee-inline-field {
+		.form .form-row .field.inline-field {
 			flex-wrap: nowrap;
 			align-items: flex-start;
 			display: block
 		}
 
-		.bee-form .bee-form-row .bee-field .bee-form-option-wrapper {
+		.form .form-row .field .form-option-wrapper {
 			align-items: flex-start;
 			display: inline-flex
 		}
 
-		.bee-form .bee-form-row .bee-field .bee-form-option-wrapper>input {
+		.form .form-row .field .form-option-wrapper>input {
 			margin: 0 0 0 3px
 		}
 
-		.bee-form .bee-form-row .bee-field .bee-form-option-wrapper>label {
+		.form .form-row .field .form-option-wrapper>label {
 			min-width: 0
 		}
 
-		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+		.form .form-row .field input:not([type=checkbox]):not([type=radio]) {
 			flex-grow: 1;
 			font-family: inherit;
 			font-size: inherit
 		}
 
-		.bee-form .bee-form-row .bee-field input[type=checkbox]:not(:first-of-type) {
+		.form .form-row .field input[type=checkbox]:not(:first-of-type) {
 			margin-left: 15px
 		}
 
-		.bee-form .bee-form-row .bee-field button {
+		.form .form-row .field button {
 			font-family: inherit;
 			font-size: inherit;
 			cursor: pointer
 		}
 
-		.bee-form .bee-form-row .bee-field .bee-button-container {
+		.form .form-row .field .button-container {
 			flex-grow: 1
 		}
 
-		.bee-form input[type=color] {
+		.form input[type=color] {
 			border: none;
 			height: 38px
 		}
 
-		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
+		.form input[type=color]::-webkit-color-swatch-wrapper {
 			margin: 0;
 			padding: 2px
 		}
 
-		.bee-form input[type=color]::-webkit-color-swatch {
+		.form input[type=color]::-webkit-color-swatch {
 			margin: 0;
 			padding: 0
 		}
 
-		.bee-image img {
+		.image img {
 			display: block;
 			width: 100%
 		}
 
-		.bee-menu ul {
+		.menu ul {
 			list-style-type: none;
 			margin: 0;
 			padding: 0
 		}
 
-		.bee-menu ul.bee-horizontal li {
+		.menu ul.horizontal li {
 			display: inline-block
 		}
 
-		.bee-paragraph {
+		.paragraph {
 			overflow-wrap: anywhere
 		}
 
-		.bee-social .icon img {
+		.social .icon img {
 			max-height: 32px
 		}
 
-		.bee-row-1,
-		.bee-row-5,
-		.bee-row-6,
-		.bee-row-7 {
+		.row-1,
+		.row-5,
+		.row-6,
+		.row-7 {
 			background-repeat: no-repeat
 		}
 
-		.bee-row-1 .bee-row-content,
-		.bee-row-3 .bee-row-content,
-		.bee-row-7 .bee-row-content {
+		.row-1 .row-content,
+		.row-3 .row-content,
+		.row-7 .row-content {
 			background-repeat: no-repeat;
 			border-radius: 0;
 			color: #000000
 		}
 
-		.bee-row-1 .bee-col-1,
-		.bee-row-1 .bee-col-2,
-		.bee-row-3 .bee-col-1,
-		.bee-row-8 .bee-col-1 {
+		.row-1 .col-1,
+		.row-1 .col-2,
+		.row-3 .col-1,
+		.row-8 .col-1 {
 			padding-top: 5px
 		}
 
-		.bee-row-1 .bee-col-2 .bee-block-2 {
+		.row-1 .col-2 .block-2 {
 			color: #ffffff;
 			font-family: inherit;
 			font-size: 16px;
@@ -401,30 +401,30 @@
 			text-align: left
 		}
 
-		.bee-row-2 {
+		.row-2 {
 			background-repeat: no-repeat;
 			background-size: auto
 		}
 
-		.bee-row-2 .bee-row-content {
+		.row-2 .row-content {
 			background-repeat: no-repeat;
 			background-size: auto;
 			color: #000000
 		}
 
-		.bee-row-2 .bee-col-1 .bee-block-1 {
+		.row-2 .col-1 .block-1 {
 			padding-left: 20px;
 			width: 100%
 		}
 
-		.bee-row-4,
-		.bee-row-8 {
+		.row-4,
+		.row-8 {
 			background-size: auto
 		}
 
-		.bee-row-11 .bee-row-content,
-		.bee-row-4 .bee-row-content,
-		.bee-row-8 .bee-row-content {
+		.row-11 .row-content,
+		.row-4 .row-content,
+		.row-8 .row-content {
 			background-image: url('images/3_Faint_Bg.png');
 			background-repeat: no-repeat;
 			background-size: auto;
@@ -432,68 +432,68 @@
 			color: #000000
 		}
 
-		.bee-row-5 .bee-row-content {
+		.row-5 .row-content {
 			background-repeat: no-repeat;
 			border-radius: 0;
 			color: #000000;
 			padding: 60px
 		}
 
-		.bee-row-6 .bee-row-content,
-		.bee-row-9 .bee-row-content {
+		.row-6 .row-content,
+		.row-9 .row-content {
 			border-radius: 20px;
 			background-image: url('images/3_Faint_Bg.png');
 			color: #000000;
 			background-repeat: no-repeat
 		}
 
-		.bee-row-5 .bee-col-1,
-		.bee-row-5 .bee-col-2,
-		.bee-row-5 .bee-col-3,
-		.bee-row-5 .bee-col-4,
-		.bee-row-7 .bee-col-1,
-		.bee-row-7 .bee-col-2,
-		.bee-row-7 .bee-col-3,
-		.bee-row-7 .bee-col-4 {
+		.row-5 .col-1,
+		.row-5 .col-2,
+		.row-5 .col-3,
+		.row-5 .col-4,
+		.row-7 .col-1,
+		.row-7 .col-2,
+		.row-7 .col-3,
+		.row-7 .col-4 {
 			padding: 10px
 		}
 
-		.bee-row-6 .bee-row-content {
+		.row-6 .row-content {
 			background-color: #848484
 		}
 
-		.bee-row-6 .bee-col-1,
-		.bee-row-9 .bee-col-1 {
+		.row-6 .col-1,
+		.row-9 .col-1 {
 			padding: 35px 60px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center
 		}
 
-		.bee-row-6 .bee-col-1 .bee-block-1,
-		.bee-row-9 .bee-col-1 .bee-block-1 {
+		.row-6 .col-1 .block-1,
+		.row-9 .col-1 .block-1 {
 			padding: 10px 25px;
 			text-align: center;
 			width: 100%
 		}
 
-		.bee-row-6 .bee-col-2,
-		.bee-row-9 .bee-col-2 {
+		.row-6 .col-2,
+		.row-9 .col-2 {
 			padding: 5px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center
 		}
 
-		.bee-row-6 .bee-col-2 .bee-block-1,
-		.bee-row-9 .bee-col-2 .bee-block-1 {
+		.row-6 .col-2 .block-1,
+		.row-9 .col-2 .block-1 {
 			padding-bottom: 15px;
 			padding-left: 25px;
 			padding-right: 25px
 		}
 
-		.bee-row-6 .bee-col-3,
-		.bee-row-9 .bee-col-3 {
+		.row-6 .col-3,
+		.row-9 .col-3 {
 			padding-bottom: 20px;
 			padding-right: 25px;
 			padding-top: 35px;
@@ -502,102 +502,102 @@
 			justify-content: center
 		}
 
-		.bee-row-6 .bee-col-3 .bee-block-1,
-		.bee-row-9 .bee-col-3 .bee-block-1 {
+		.row-6 .col-3 .block-1,
+		.row-9 .col-3 .block-1 {
 			padding-bottom: 25px;
 			padding-left: 10px;
 			padding-top: 25px
 		}
 
-		.bee-row-6 .bee-col-3 .bee-block-2,
-		.bee-row-9 .bee-col-3 .bee-block-2 {
+		.row-6 .col-3 .block-2,
+		.row-9 .col-3 .block-2 {
 			padding: 10px;
 			text-align: left
 		}
 
-		.bee-row-9 .bee-row-content {
+		.row-9 .row-content {
 			background-color: #ffffff
 		}
 
-		.bee-row-10 .bee-row-content {
+		.row-10 .row-content {
 			background-image: url('images/3_Faint_Bg.png');
 			background-repeat: no-repeat;
 			border-radius: 0;
 			color: #000000
 		}
 
-		.bee-row-10 .bee-col-1 {
+		.row-10 .col-1 {
 			padding-bottom: 5px;
 			padding-top: 5px
 		}
 
-		.bee-row-11 {
+		.row-11 {
 			background-color: #adadad;
 			background-repeat: no-repeat;
 			background-size: auto
 		}
 
-		.bee-row-11 .bee-col-1,
-		.bee-row-11 .bee-col-2 {
+		.row-11 .col-1,
+		.row-11 .col-2 {
 			padding-bottom: 5px;
 			padding-left: 30px;
 			padding-top: 5px
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-2 {
+		.row-11 .col-1 .block-2 {
 			padding: 25px 30px 20px;
 			width: 100%
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-10,
-		.bee-row-11 .bee-col-1 .bee-block-3,
-		.bee-row-11 .bee-col-2 .bee-block-4 {
+		.row-11 .col-1 .block-10,
+		.row-11 .col-1 .block-3,
+		.row-11 .col-2 .block-4 {
 			padding: 10px 25px 5px
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-4 {
+		.row-11 .col-1 .block-4 {
 			padding: 10px 25px 20px;
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-5 {
+		.row-11 .col-1 .block-5 {
 			padding-bottom: 5px;
 			padding-left: 30px;
 			padding-top: 10px;
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-6,
-		.bee-row-11 .bee-col-1 .bee-block-7,
-		.bee-row-11 .bee-col-1 .bee-block-8 {
+		.row-11 .col-1 .block-6,
+		.row-11 .col-1 .block-7,
+		.row-11 .col-1 .block-8 {
 			padding: 10px 30px 5px;
 			text-align: center;
 			width: 100%
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-2 {
+		.row-11 .col-2 .block-2 {
 			padding: 10px;
 			text-align: center;
 			width: 100%
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 {
+		.row-11 .col-2 .block-3 {
 			font-family: Montserrat, Oxygen;
 			font-size: 14px;
 			font-weight: 500;
 			padding: 10px
 		}
 
-		.bee-row-1 .bee-col-2 .bee-block-2 li {
+		.row-1 .col-2 .block-2 li {
 			padding: 5px 20px
 		}
 
-		.bee-row-1 .bee-col-2 .bee-block-2 li a,
-		.bee-row-11 .bee-col-1 .bee-block-3 a {
+		.row-1 .col-2 .block-2 li a,
+		.row-11 .col-1 .block-3 a {
 			color: #ffffff
 		}
 
-		.bee-row-6 .bee-col-1 .bee-block-1 h1 {
+		.row-6 .col-1 .block-1 h1 {
 			color: #ffffff;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -608,8 +608,8 @@
 			text-align: left
 		}
 
-		.bee-row-6 .bee-col-2 .bee-block-1,
-		.bee-row-9 .bee-col-2 .bee-block-1 {
+		.row-6 .col-2 .block-1,
+		.row-9 .col-2 .block-1 {
 			color: #ffffff;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -620,8 +620,8 @@
 			text-align: left
 		}
 
-		.bee-row-6 .bee-col-3 .bee-block-1,
-		.bee-row-9 .bee-col-3 .bee-block-1 {
+		.row-6 .col-3 .block-1,
+		.row-9 .col-3 .block-1 {
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
 			font-weight: 400;
@@ -629,35 +629,35 @@
 			line-height: 150%
 		}
 
-		.bee-row-6 .bee-col-2 .bee-block-1 a,
-		.bee-row-9 .bee-col-2 .bee-block-1 a {
+		.row-6 .col-2 .block-1 a,
+		.row-9 .col-2 .block-1 a {
 			color: #8a3b8f
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-10 p:not(:last-child),
-		.bee-row-11 .bee-col-1 .bee-block-3 p:not(:last-child),
-		.bee-row-11 .bee-col-2 .bee-block-4 p:not(:last-child),
-		.bee-row-6 .bee-col-2 .bee-block-1 p:not(:last-child),
-		.bee-row-6 .bee-col-3 .bee-block-1 p:not(:last-child),
-		.bee-row-9 .bee-col-2 .bee-block-1 p:not(:last-child),
-		.bee-row-9 .bee-col-3 .bee-block-1 p:not(:last-child) {
+		.row-11 .col-1 .block-10 p:not(:last-child),
+		.row-11 .col-1 .block-3 p:not(:last-child),
+		.row-11 .col-2 .block-4 p:not(:last-child),
+		.row-6 .col-2 .block-1 p:not(:last-child),
+		.row-6 .col-3 .block-1 p:not(:last-child),
+		.row-9 .col-2 .block-1 p:not(:last-child),
+		.row-9 .col-3 .block-1 p:not(:last-child) {
 			margin-bottom: 16px
 		}
 
-		.bee-row-6 .bee-col-3 .bee-block-1 {
+		.row-6 .col-3 .block-1 {
 			color: #ffffff;
 			font-size: 18px;
 			text-align: left
 		}
 
-		.bee-row-6 .bee-col-3 .bee-block-1 a,
-		.bee-row-9 .bee-col-3 .bee-block-1 a {
+		.row-6 .col-3 .block-1 a,
+		.row-9 .col-3 .block-1 a {
 			color: #adadad
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-4 a:hover,
-		.bee-row-6 .bee-col-3 .bee-block-2 a:hover,
-		.bee-row-9 .bee-col-3 .bee-block-2 a:hover {
+		.row-11 .col-1 .block-4 a:hover,
+		.row-6 .col-3 .block-2 a:hover,
+		.row-9 .col-3 .block-2 a:hover {
 			background-color: #adadad !important;
 			border-bottom: 0 solid transparent !important;
 			border-left: 0 solid transparent !important;
@@ -666,9 +666,9 @@
 			color: #ffffff !important
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-4 a,
-		.bee-row-6 .bee-col-3 .bee-block-2 a,
-		.bee-row-9 .bee-col-3 .bee-block-2 a {
+		.row-11 .col-1 .block-4 a,
+		.row-6 .col-3 .block-2 a,
+		.row-9 .col-3 .block-2 a {
 			background-color: #ff5c37;
 			border-bottom: 1px solid #ffffff;
 			border-left: 1px solid #ffffff;
@@ -686,7 +686,7 @@
 			width: auto
 		}
 
-		.bee-row-9 .bee-col-1 .bee-block-1 h1 {
+		.row-9 .col-1 .block-1 h1 {
 			color: #adadad;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -697,15 +697,15 @@
 			text-align: left
 		}
 
-		.bee-row-9 .bee-col-3 .bee-block-1 {
+		.row-9 .col-3 .block-1 {
 			color: #363434;
 			font-size: 18px;
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-10,
-		.bee-row-11 .bee-col-1 .bee-block-3,
-		.bee-row-11 .bee-col-2 .bee-block-4 {
+		.row-11 .col-1 .block-10,
+		.row-11 .col-1 .block-3,
+		.row-11 .col-2 .block-4 {
 			font-size: 14px;
 			letter-spacing: 0;
 			line-height: 150%;
@@ -714,12 +714,12 @@
 			font-weight: 500
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-3 {
+		.row-11 .col-1 .block-3 {
 			color: #1a1a1a;
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-8 h3 {
+		.row-11 .col-1 .block-8 h3 {
 			color: #1a1a1a;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -730,8 +730,8 @@
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-6 h3,
-		.bee-row-11 .bee-col-1 .bee-block-7 h3 {
+		.row-11 .col-1 .block-6 h3,
+		.row-11 .col-1 .block-7 h3 {
 			color: #000000;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -742,13 +742,13 @@
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-1 .bee-block-10,
-		.bee-row-11 .bee-col-2 .bee-block-4 {
+		.row-11 .col-1 .block-10,
+		.row-11 .col-2 .block-4 {
 			color: #ffffff;
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-2 h3 {
+		.row-11 .col-2 .block-2 h3 {
 			color: #ffffff;
 			direction: ltr;
 			font-family: Montserrat, Oxygen;
@@ -760,242 +760,242 @@
 		}
 
 		@media (max-width:768px) {
-			.bee-desktop_hide {
+			.desktop_hide {
 				display: block !important
 			}
 
-			.bee-form form {
+			.form form {
 				width: 100% !important
 			}
 
-			img.bee-fullwidthOnMobile {
+			img.fullwidthOnMobile {
 				max-width: none !important
 			}
 
-			.bee-mobile_hide {
+			.mobile_hide {
 				display: none
 			}
 
-			.bee-row-content:not(.no_stack) {
+			.row-content:not(.no_stack) {
 				display: block
 			}
 
-			.bee-row-5 .bee-row-content {
+			.row-5 .row-content {
 				padding: 15px 40px !important
 			}
 
-			.bee-row-5 .bee-col-1,
-			.bee-row-5 .bee-col-2,
-			.bee-row-5 .bee-col-3,
-			.bee-row-5 .bee-col-4,
-			.bee-row-7 .bee-col-1,
-			.bee-row-7 .bee-col-2,
-			.bee-row-7 .bee-col-3,
-			.bee-row-7 .bee-col-4 {
+			.row-5 .col-1,
+			.row-5 .col-2,
+			.row-5 .col-3,
+			.row-5 .col-4,
+			.row-7 .col-1,
+			.row-7 .col-2,
+			.row-7 .col-3,
+			.row-7 .col-4 {
 				padding: 10px 25px !important
 			}
 
-			.bee-row-6 .bee-col-1 {
+			.row-6 .col-1 {
 				padding: 5px 5px 0 !important
 			}
 
-			.bee-row-1 .bee-col-1 .bee-block-2,
-			.bee-row-6 .bee-col-2,
-			.bee-row-9 .bee-col-2 {
+			.row-1 .col-1 .block-2,
+			.row-6 .col-2,
+			.row-9 .col-2 {
 				padding: 0 !important
 			}
 
-			.bee-row-6 .bee-col-3,
-			.bee-row-9 .bee-col-3 {
+			.row-6 .col-3,
+			.row-9 .col-3 {
 				padding: 0 25px 20px !important
 			}
 
-			.bee-row-9 .bee-col-1 {
+			.row-9 .col-1 {
 				padding: 10px 5px 0 !important
 			}
 
-			.bee-row-11 .bee-row-content {
+			.row-11 .row-content {
 				padding-left: 15px !important;
 				padding-right: 15px !important
 			}
 
-			.bee-row-11 .bee-col-1,
-			.bee-row-11 .bee-col-2 {
+			.row-11 .col-1,
+			.row-11 .col-2 {
 				padding: 5px 0 !important
 			}
 
-			.bee-row-1 .bee-col-2 .bee-block-1 {
+			.row-1 .col-2 .block-1 {
 				height: 10px !important
 			}
 
-			.bee-row-1 .bee-col-1 .bee-block-2 img,
-			.bee-row-11 .bee-col-1 .bee-block-2 img,
-			.bee-row-2 .bee-col-1 .bee-block-1 img,
-			.bee-row-5 .bee-col-1 .bee-block-1 img,
-			.bee-row-5 .bee-col-2 .bee-block-1 img,
-			.bee-row-5 .bee-col-2 .bee-block-3 img,
-			.bee-row-5 .bee-col-3 .bee-block-1 img,
-			.bee-row-5 .bee-col-4 .bee-block-1 img,
-			.bee-row-5 .bee-col-4 .bee-block-3 img,
-			.bee-row-8 .bee-col-1 .bee-block-1 img {
+			.row-1 .col-1 .block-2 img,
+			.row-11 .col-1 .block-2 img,
+			.row-2 .col-1 .block-1 img,
+			.row-5 .col-1 .block-1 img,
+			.row-5 .col-2 .block-1 img,
+			.row-5 .col-2 .block-3 img,
+			.row-5 .col-3 .block-1 img,
+			.row-5 .col-4 .block-1 img,
+			.row-5 .col-4 .block-3 img,
+			.row-8 .col-1 .block-1 img {
 				float: none !important;
 				margin: 0 auto !important
 			}
 
-			.bee-row-5 .bee-col-1 .bee-block-1,
-			.bee-row-5 .bee-col-2 .bee-block-1,
-			.bee-row-5 .bee-col-2 .bee-block-3,
-			.bee-row-5 .bee-col-3 .bee-block-1,
-			.bee-row-5 .bee-col-4 .bee-block-1,
-			.bee-row-5 .bee-col-4 .bee-block-3 {
+			.row-5 .col-1 .block-1,
+			.row-5 .col-2 .block-1,
+			.row-5 .col-2 .block-3,
+			.row-5 .col-3 .block-1,
+			.row-5 .col-4 .block-1,
+			.row-5 .col-4 .block-3 {
 				padding: 0 15px !important
 			}
 
-			.bee-row-5 .bee-col-1 .bee-block-2,
-			.bee-row-7 .bee-col-1 .bee-block-1 {
+			.row-5 .col-1 .block-2,
+			.row-7 .col-1 .block-1 {
 				height: 1px !important
 			}
 
-			.bee-row-5 .bee-col-2 .bee-block-2,
-			.bee-row-5 .bee-col-4 .bee-block-2,
-			.bee-row-7 .bee-col-2 .bee-block-1,
-			.bee-row-7 .bee-col-4 .bee-block-1 {
+			.row-5 .col-2 .block-2,
+			.row-5 .col-4 .block-2,
+			.row-7 .col-2 .block-1,
+			.row-7 .col-4 .block-1 {
 				height: 20px !important
 			}
 
-			.bee-row-1 .bee-col-2 .bee-block-2 {
+			.row-1 .col-2 .block-2 {
 				text-align: left !important
 			}
 
-			.bee-row-1 .bee-col-2 .bee-block-2 li {
+			.row-1 .col-2 .block-2 li {
 				font-size: 13px !important;
 				line-height: auto !important
 			}
 
-			.bee-row-6 .bee-col-1 .bee-block-1,
-			.bee-row-9 .bee-col-1 .bee-block-1 {
+			.row-6 .col-1 .block-1,
+			.row-9 .col-1 .block-1 {
 				padding: 10px 15px;
 				text-align: center
 			}
 
-			.bee-row-6 .bee-col-1 .bee-block-1 h1,
-			.bee-row-9 .bee-col-1 .bee-block-1 h1 {
+			.row-6 .col-1 .block-1 h1,
+			.row-9 .col-1 .block-1 h1 {
 				font-size: 22px;
 				text-align: center
 			}
 
-			.bee-row-6 .bee-col-2 .bee-block-1,
-			.bee-row-9 .bee-col-2 .bee-block-1 {
+			.row-6 .col-2 .block-1,
+			.row-9 .col-2 .block-1 {
 				text-align: center !important;
 				font-size: 1px !important
 			}
 
-			.bee-row-6 .bee-col-3 .bee-block-1,
-			.bee-row-9 .bee-col-3 .bee-block-1 {
+			.row-6 .col-3 .block-1,
+			.row-9 .col-3 .block-1 {
 				padding: 5px 0 5px 35px !important;
 				text-align: justify !important;
 				font-size: 13px !important
 			}
 
-			.bee-row-8 .bee-col-1 .bee-block-1 {
+			.row-8 .col-1 .block-1 {
 				padding: 0 10px !important
 			}
 
-			.bee-row-11 .bee-col-1 .bee-block-4,
-			.bee-row-11 .bee-col-1 .bee-block-4 .bee-button-content,
-			.bee-row-6 .bee-col-3 .bee-block-2,
-			.bee-row-6 .bee-col-3 .bee-block-2 .bee-button-content,
-			.bee-row-9 .bee-col-3 .bee-block-2,
-			.bee-row-9 .bee-col-3 .bee-block-2 .bee-button-content {
+			.row-11 .col-1 .block-4,
+			.row-11 .col-1 .block-4 .button-content,
+			.row-6 .col-3 .block-2,
+			.row-6 .col-3 .block-2 .button-content,
+			.row-9 .col-3 .block-2,
+			.row-9 .col-3 .block-2 .button-content {
 				text-align: center !important
 			}
 
-			.bee-row-11 .bee-col-1 .bee-block-2 {
+			.row-11 .col-1 .block-2 {
 				padding: 10px 0 !important
 			}
 
-			.bee-row-11 .bee-col-1 .bee-block-3 {
+			.row-11 .col-1 .block-3 {
 				padding: 10px 0 !important;
 				text-align: left !important
 			}
 
-			.bee-row-11 .bee-col-1 .bee-block-5 {
+			.row-11 .col-1 .block-5 {
 				padding: 10px 0 5px !important;
 				text-align: center !important
 			}
 
-			.bee-row-11 .bee-col-1 .bee-block-6,
-			.bee-row-11 .bee-col-1 .bee-block-7,
-			.bee-row-11 .bee-col-1 .bee-block-8,
-			.bee-row-11 .bee-col-2 .bee-block-2 {
+			.row-11 .col-1 .block-6,
+			.row-11 .col-1 .block-7,
+			.row-11 .col-1 .block-8,
+			.row-11 .col-2 .block-2 {
 				padding: 10px 0;
 				text-align: center
 			}
 
-			.bee-row-11 .bee-col-1 .bee-block-6 h3,
-			.bee-row-11 .bee-col-1 .bee-block-7 h3,
-			.bee-row-11 .bee-col-1 .bee-block-8 h3,
-			.bee-row-11 .bee-col-2 .bee-block-2 h3 {
+			.row-11 .col-1 .block-6 h3,
+			.row-11 .col-1 .block-7 h3,
+			.row-11 .col-1 .block-8 h3,
+			.row-11 .col-2 .block-2 h3 {
 				text-align: center
 			}
 
-			.bee-row-11 .bee-col-1 .bee-block-10 {
+			.row-11 .col-1 .block-10 {
 				padding: 10px 0 !important;
 				text-align: center !important
 			}
 
-			.bee-row-11 .bee-col-2 .bee-block-4 {
+			.row-11 .col-2 .block-4 {
 				padding: 10px 0 !important;
 				text-align: center !important;
 				font-size: 10px !important
 			}
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 {
+		.row-11 .col-2 .block-3 {
 			text-align: left
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 form {
+		.row-11 .col-2 .block-3 form {
 			display: inline-block;
 			width: 100%
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 div.label,
-		.bee-row-11 .bee-col-2 .bee-block-3 label {
+		.row-11 .col-2 .block-3 div.label,
+		.row-11 .col-2 .block-3 label {
 			color: #545454;
 			line-height: 200%;
 			text-align: left;
 			display: block
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 ::-webkit-input-placeholder {
+		.row-11 .col-2 .block-3 ::-webkit-input-placeholder {
 			color: #000000
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 :-moz-placeholder {
+		.row-11 .col-2 .block-3 :-moz-placeholder {
 			color: #000000
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 ::-moz-placeholder {
+		.row-11 .col-2 .block-3 ::-moz-placeholder {
 			color: #000000
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 :-ms-input-placeholder {
+		.row-11 .col-2 .block-3 :-ms-input-placeholder {
 			color: #000000
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 .bee-field>label:first-child,
-		.bee-row-11 .bee-col-2 .bee-block-3 div.label {
+		.row-11 .col-2 .block-3 .field>label:first-child,
+		.row-11 .col-2 .block-3 div.label {
 			padding: 3px
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 .bee-field.bee-inline-field input[type=checkbox] {
+		.row-11 .col-2 .block-3 .field.inline-field input[type=checkbox] {
 			position: relative;
 			color: purple;
 			top: 8px
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+		.row-11 .col-2 .block-3 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
 			background-color: #ffffff;
 			border-bottom: 1px solid transparent;
 			border-left: 1px solid transparent;
@@ -1008,11 +1008,11 @@
 			min-height: 48px
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 input:not([type=checkbox]):not([type=radio]):focus {
+		.row-11 .col-2 .block-3 input:not([type=checkbox]):not([type=radio]):focus {
 			outline-color: #ff5c37
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 button {
+		.row-11 .col-2 .block-3 button {
 			background-color: #ff5c37;
 			border-bottom: 1px solid #ffffff;
 			border-left: 1px solid #ffffff;
@@ -1027,13 +1027,13 @@
 			width: 45%
 		}
 
-		.bee-row-11 .bee-col-2 .bee-block-3 .bee-button-container {
+		.row-11 .col-2 .block-3 .button-container {
 			padding-top: 15px;
 			text-align: left
 		}
 		
 /* Force header height and vertically center logo + menu */
-.bee-row-1 {
+.row-1 {
     height: 90px !important;         /* adjust as needed */
     padding-top: 10px !important;   /* adjust value as needed */
     padding-bottom: 10px !important;
@@ -1041,7 +1041,7 @@
     align-items: center !important;  /* center items inside header background */
 }
 
-.bee-row-1 .bee-row-content {
+.row-1 .row-content {
     display: flex !important;
     width: 100%;
     height: 100%;
@@ -1051,23 +1051,23 @@
     max-height: 60px;
 }
 
-.bee-row-1 img {
+.row-1 img {
     display: block;
     height: auto;
     max-height: 60px;                /* keep logo inside header */
 }
 
-.bee-row-1 .bee-menu {
+.row-1 .menu {
     display: flex !important;
     align-items: center !important;  /* center menu items as well */
 }
 /* FORCE TRUE VERTICAL CENTERING – FULL OVERRIDE */
 
 /* Remove any internal padding BeeFree injects */
-.bee-row-1,
-.bee-row-1 .bee-row-content,
-.bee-row-1 .bee-col,
-.bee-row-1 .bee-col-content {
+.row-1,
+.row-1 .row-content,
+.row-1 .col,
+.row-1 .col-content {
     padding: 0 !important;
     margin: 0 !important;
     height: 100% !important;
@@ -1076,24 +1076,24 @@
 }
 
 /* Force the header to the height you want */
-.bee-row-1 {
+.row-1 {
     height: 90px !important;            /* adjust if needed */
 }
 
 /* Make columns center their children */
-.bee-row-1 .bee-col,
-.bee-row-1 .bee-col-content {
+.row-1 .col,
+.row-1 .col-content {
     justify-content: center !important; /* vertical alignment helper */
 }
 
 /* Center the logo */
-.bee-row-1 img {
+.row-1 img {
     max-height: 60px !important;        /* ensures it won't overflow */
     align-self: center !important;
 }
 
 /* Center menu items */
-.bee-row-1 .bee-menu {
+.row-1 .menu {
     align-items: center !important;
     display: flex !important;
 }
@@ -1117,7 +1117,7 @@ nav .menu-item a:hover {
     transform: scale(1.05); /* only applies on hover */
 }
 /* Static hover-state applied permanently to the HOME link */
-.bee-row-1 .bee-menu li:first-child a {
+.row-1 .menu li:first-child a {
     background-color: rgba(0, 0, 0, 0.25);   /* same as hover */
     transform: scale(1.05);                  /* same as hover */
     color: #ffffff;
@@ -1126,14 +1126,14 @@ nav .menu-item a:hover {
 }
 
 /* Prevent HOME from reacting to hover */
-.bee-row-1 .bee-menu li:first-child a:hover {
+.row-1 .menu li:first-child a:hover {
     background-color: rgba(0, 0, 0, 0.25) !important;
     transform: scale(1.05) !important;
     color: #ffffff !important;
 }
 
 /* Keep all OTHER menu items behaving normally on hover */
-.bee-row-1 .bee-menu li:not(:first-child) a:hover {
+.row-1 .menu li:not(:first-child) a:hover {
     background-color: rgba(0, 0, 0, 0.25);
     transform: scale(1.05);
     color: #ffffff;
@@ -1145,7 +1145,7 @@ nav .menu-item a:hover {
 @media (max-width: 600px) {
 
     /* Header container */
-    .bee-row-1 {
+    .row-1 {
         height: auto !important;                /* let header expand */
         padding: 24px 0 !important;            /* double previous padding */
         display: flex !important;
@@ -1157,7 +1157,7 @@ nav .menu-item a:hover {
     }
 
     /* Row content */
-    .bee-row-1 .bee-row-content {
+    .row-1 .row-content {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
@@ -1167,7 +1167,7 @@ nav .menu-item a:hover {
     }
 
     /* Logo fully centered and stable */
-    .bee-row-1 img {
+    .row-1 img {
         display: block !important;
         margin: 0 auto !important;
         max-width: 70% !important;
@@ -1180,7 +1180,7 @@ nav .menu-item a:hover {
     }
 
     /* Menu stacked vertically, centered */
-    .bee-row-1 .bee-menu {
+    .row-1 .menu {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -1192,7 +1192,7 @@ nav .menu-item a:hover {
     }
 
     /* Each menu item full-width */
-    .bee-row-1 .bee-menu li {
+    .row-1 .menu li {
         list-style: none !important;
         width: 100% !important;
         text-align: center !important;
@@ -1200,7 +1200,7 @@ nav .menu-item a:hover {
         padding: 0 !important;
     }
 
-    .bee-row-1 .bee-menu li a {
+    .row-1 .menu li a {
         display: block !important;
         width: 100% !important;
         text-align: center !important;
@@ -1211,7 +1211,7 @@ nav .menu-item a:hover {
 }
 
 		/* Logo centered */
-.bee-row-1 img {
+.row-1 img {
     display: block !important;       /* force block layout */
     margin: 0 auto !important;       /* horizontally center */
     max-width: 100%;
@@ -1221,7 +1221,7 @@ nav .menu-item a:hover {
 }
 
 /* Ensure the logo never shifts or pushes layout on hover */
-.bee-row-1 img {
+.row-1 img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -1234,22 +1234,22 @@ nav .menu-item a:hover {
 </head>
 
 <body>
-	<div class="bee-page-container">
-		<div class="bee-row bee-row-1">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-spacer">
+	<div class="page-container">
+		<div class="row row-1">
+			<div class="row-content">
+				<div class="col col-1 col-w3">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:60px;"></div>
 					</div>
-					<div class="bee-block bee-block-2 bee-image"><a href="index.html"><img alt="" class="bee-center bee-fixedwidth" src="images/4_Logo.png" style="max-width:90px;" title="" /></a></div>
+					<div class="block block-2 image"><a href="index.html"><img alt="" class="center fixedwidth" src="images/4_Logo.png" style="max-width:90px;" title="" /></a></div>
 				</div>
-				<div class="bee-col bee-col-2 bee-col-w9">
-					<div class="bee-block bee-block-1 bee-spacer">
+				<div class="col col-2 col-w9">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:60px;"></div>
 					</div>
-					<div class="bee-block bee-block-2 bee-menu">
-						<nav class="bee-menu">
-							<ul class="bee-horizontal">
+					<div class="block block-2 menu">
+						<nav class="menu">
+							<ul class="horizontal">
     <li><a href="index.html">Home ✪</a></li>
     <span></span>
 
@@ -1266,208 +1266,208 @@ nav .menu-item a:hover {
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-2">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="Hello!" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/5_Final_Poster.gif" style="max-width:11760px;" title="Hello!" /></div>
+		<div class="row row-2">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="Hello!" class="center fixedwidth fullwidthOnMobile" src="images/5_Final_Poster.gif" style="max-width:11760px;" title="Hello!" /></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-3">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/6_Strip_final_1.gif" style="max-width:720px;" title="" /></div>
+		<div class="row row-3">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="images/6_Strip_final_1.gif" style="max-width:720px;" title="" /></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-4">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif" style="max-width:960px;" title="" /></div>
+		<div class="row row-4">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif" style="max-width:960px;" title="" /></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-5">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" target="_blank"><img alt="Z" class="bee-center bee-fullwidthOnMobile bee-autowidth" src="images/8_PD_1.png" style="max-width:250px;border-radius:40px;" title="Z" /></a></div>
-					<div class="bee-block bee-block-2 bee-spacer">
+		<div class="row row-5">
+			<div class="row-content">
+				<div class="col col-1 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" target="_blank"><img alt="Z" class="center fullwidthOnMobile autowidth" src="images/8_PD_1.png" style="max-width:250px;border-radius:40px;" title="Z" /></a></div>
+					<div class="block block-2 spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
 				</div>
-				<div class="bee-col bee-col-2 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" target="_blank"><img alt="Hex" class="bee-center bee-autowidth" src="images/9_colored_hex.png" style="max-width:250px;border-radius:40px;" title="Hex" /></a></div>
-					<div class="bee-block bee-block-2 bee-spacer">
+				<div class="col col-2 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" target="_blank"><img alt="Hex" class="center autowidth" src="images/9_colored_hex.png" style="max-width:250px;border-radius:40px;" title="Hex" /></a></div>
+					<div class="block block-2 spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
-					<div class="bee-block bee-block-3 bee-image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" target="_blank"><img alt="Nova" class="bee-center bee-autowidth" src="images/10_PD8.png" style="max-width:250px;border-radius:40px 40px 40px 40px;" title="Nova" /></a></div>
+					<div class="block block-3 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" target="_blank"><img alt="Nova" class="center autowidth" src="images/10_PD8.png" style="max-width:250px;border-radius:40px 40px 40px 40px;" title="Nova" /></a></div>
 				</div>
-				<div class="bee-col bee-col-3 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" target="_blank"><img alt="Titan" class="bee-center bee-autowidth" src="images/11_PD_4.png" style="max-width:250px;border-radius:40px;" title="Titan" /></a></div>
+				<div class="col col-3 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" target="_blank"><img alt="Titan" class="center autowidth" src="images/11_PD_4.png" style="max-width:250px;border-radius:40px;" title="Titan" /></a></div>
 				</div>
-				<div class="bee-col bee-col-4 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" target="_blank"><img alt="IKEA" class="bee-center bee-autowidth" src="images/12_PD_5.png" style="max-width:250px;border-radius:40px;" title="IKEA" /></a></div>
-					<div class="bee-block bee-block-2 bee-spacer">
+				<div class="col col-4 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" target="_blank"><img alt="IKEA" class="center autowidth" src="images/12_PD_5.png" style="max-width:250px;border-radius:40px;" title="IKEA" /></a></div>
+					<div class="block block-2 spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
-					<div class="bee-block bee-block-3 bee-image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" target="_blank"><img alt="Expedition" class="bee-center bee-autowidth" src="images/13_PD7.png" style="max-width:250px;border-radius:40px;" title="Expedition" /></a></div>
+					<div class="block block-3 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" target="_blank"><img alt="Expedition" class="center autowidth" src="images/13_PD7.png" style="max-width:250px;border-radius:40px;" title="Expedition" /></a></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-6">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w6">
-					<div class="bee-block bee-block-1 bee-heading">
+		<div class="row row-6">
+			<div class="row-content">
+				<div class="col col-1 col-w6">
+					<div class="block block-1 heading">
 						<h1><span class="tinyMce-placeholder">Check out my <a href="https://sarthaktavate.com/assets/product_portfolio.pdf" rel="noopener" style="text-decoration: none; color: #ff6044;" target="_blank">Product Design</a> portfolio here!</span> </h1>
 					</div>
 				</div>
-				<div class="bee-col bee-col-2 bee-col-w2">
-					<div class="bee-block bee-block-1 bee-paragraph"></div>
+				<div class="col col-2 col-w2">
+					<div class="block block-1 paragraph"></div>
 				</div>
-				<div class="bee-col bee-col-3 bee-col-w4">
-					<div class="bee-block bee-block-1 bee-paragraph">
+				<div class="col col-3 col-w4">
+					<div class="block block-1 paragraph">
 						<p>Products that solve real problems impacting real people.</p>
 					</div>
-					<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://sarthaktavate.com/assets/product_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
+					<div class="block block-2 button"><a class="button-content" href="https://sarthaktavate.com/assets/product_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-7 bee-mobile_hide">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-spacer">
+		<div class="row row-7 mobile_hide">
+			<div class="row-content">
+				<div class="col col-1 col-w3">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
 				</div>
-				<div class="bee-col bee-col-2 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-spacer">
+				<div class="col col-2 col-w3">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
 				</div>
-				<div class="bee-col bee-col-3 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-spacer">
+				<div class="col col-3 col-w3">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:60px;"></div>
 					</div>
 				</div>
-				<div class="bee-col bee-col-4 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-spacer">
+				<div class="col col-4 col-w3">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-8">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth bee-fullwidthOnMobile" src="images/14_Colored_UX_poster.png" style="max-width:1200px;" title="" /></div>
+		<div class="row row-8">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="images/14_Colored_UX_poster.png" style="max-width:1200px;" title="" /></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-9">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w6">
-					<div class="bee-block bee-block-1 bee-heading">
+		<div class="row row-9">
+			<div class="row-content">
+				<div class="col col-1 col-w6">
+					<div class="block block-1 heading">
 						<h1><span class="tinyMce-placeholder">Check out my <a href="https://sarthaktavate.com/assets/ux_portfolio.pdf" rel="noopener" style="text-decoration: none; color: #ff6044;" target="_blank">UX Design</a> portfolio here!</span> </h1>
 					</div>
 				</div>
-				<div class="bee-col bee-col-2 bee-col-w2">
-					<div class="bee-block bee-block-1 bee-paragraph"></div>
+				<div class="col col-2 col-w2">
+					<div class="block block-1 paragraph"></div>
 				</div>
-				<div class="bee-col bee-col-3 bee-col-w4">
-					<div class="bee-block bee-block-1 bee-paragraph">
+				<div class="col col-3 col-w4">
+					<div class="block block-1 paragraph">
 						<p>Purpose-led design, real results<br />Here’s what I’ve been creating.</p>
 					</div>
-					<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://sarthaktavate.com/assets/ux_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
+					<div class="block block-2 button"><a class="button-content" href="https://sarthaktavate.com/assets/ux_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-10 bee-mobile_hide">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w12">
-					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-fixedwidth" src="images/15_Small_blank.png" style="max-width:900px;" title="" /></div>
+		<div class="row row-10 mobile_hide">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth" src="images/15_Small_blank.png" style="max-width:900px;" title="" /></div>
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-11">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w8">
-					<div class="bee-block bee-block-1 bee-spacer">
+		<div class="row row-11">
+			<div class="row-content">
+				<div class="col col-1 col-w8">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:25px;"></div>
 					</div>
-					<div class="bee-block bee-block-2 bee-image"><a href="index.html"><img alt="Home" class="bee-fixedwidth" src="images/darkmodelogo.png" style="max-width:115px;border-radius:0px 0px 0px 0px;" title="Home" /></a></div>
-					<div class="bee-block bee-block-3 bee-paragraph bee-mobile_hide">
+					<div class="block block-2 image"><a href="index.html"><img alt="Home" class="fixedwidth" src="images/darkmodelogo.png" style="max-width:115px;border-radius:0px 0px 0px 0px;" title="Home" /></a></div>
+					<div class="block block-3 paragraph mobile_hide">
 						<p>Multidisciplinary product designer with a strong foundation in both UX design and industrial design, bringing over 3 years of experience crafting human-centered digital systems, immersive 3D environments, and functional hardware prototypes. Currently pursuing an M.S. in Human-Centered Computing (HCI) at the University of Maryland, BC, serving as a Research Assistant and Student Association Senator.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
 					</div>
-					<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You’d Be a Great Fit!&amp;body=" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Hire me  ↗</span></a></div>
-					<div class="bee-block bee-block-5 bee-social">
+					<div class="block block-4 button"><a class="button-content" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You’d Be a Great Fit!&amp;body=" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Hire me  ↗</span></a></div>
+					<div class="block block-5 social">
 						<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img alt="Linkedin" src="images/16_linkedin2x.png" title="linkedin" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.behance.net/sarthaktawate" target="_blank"><img alt="Behance" src="images/17_Behance.png" title="Behance" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank"><img alt="Facebook" src="images/18_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img alt="Instagram" src="images/19_instagram2x.png" title="instagram" /></a></span></div>
 					</div>
-					<div class="bee-block bee-block-6 bee-heading">
+					<div class="block block-6 heading">
 						<h3>+1 (646) 318-9495 </h3>
 					</div>
-					<div class="bee-block bee-block-7 bee-heading">
+					<div class="block block-7 heading">
 						<h3>sarthak.tavate24@gmail.com </h3>
 					</div>
-					<div class="bee-block bee-block-8 bee-heading">
+					<div class="block block-8 heading">
 						<h3>Washington, D.C. (GMT-5) </h3>
 					</div>
-					<div class="bee-block bee-block-9 bee-spacer bee-mobile_hide">
+					<div class="block block-9 spacer mobile_hide">
 						<div class="spacer" style="height:50px;"></div>
 					</div>
-					<div class="bee-block bee-block-10 bee-paragraph bee-mobile_hide">
+					<div class="block block-10 paragraph mobile_hide">
 						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
 					</div>
 				</div>
-				<div class="bee-col bee-col-2 bee-col-w4">
-					<div class="bee-block bee-block-1 bee-spacer">
+				<div class="col col-2 col-w4">
+					<div class="block block-1 spacer">
 						<div class="spacer" style="height:50px;"></div>
 					</div>
-					<div class="bee-block bee-block-2 bee-heading bee-mobile_hide">
+					<div class="block block-2 heading mobile_hide">
 						<h3><span class="tinyMce-placeholder">Let’s connect</span> </h3>
 					</div>
-					<div class="bee-block bee-block-3 bee-form bee-mobile_hide">
+					<div class="block block-3 form mobile_hide">
     <form action="https://formspree.io/f/xangkrgg" method="POST" target="_blank">
         
-        <div class="bee-form-row">
-            <div class="bee-field bee-field-r10c1m2r1f1">
+        <div class="form-row">
+            <div class="field field-r10c1m2r1f1">
                 <label for="r10c1m2r1f1">Name</label>
                 <input id="r10c1m2r1f1" name="name" required type="text" />
             </div>
         </div>
 
-        <div class="bee-form-row">
-            <div class="bee-field bee-field-r10c1m2r2f1">
+        <div class="form-row">
+            <div class="field field-r10c1m2r2f1">
                 <label for="r10c1m2r2f1">Email</label>
                 <input id="r10c1m2r2f1" name="email" required type="email" />
             </div>
         </div>
 
-        <div class="bee-form-row">
-            <div class="bee-field bee-field-r10c1m2r3f1">
+        <div class="form-row">
+            <div class="field field-r10c1m2r3f1">
                 <label for="r10c1m2r3f1">Message</label>
                 <input id="r10c1m2r3f1" name="message" required type="text" />
             </div>
         </div>
 
-        <div class="bee-form-row">
-            <div class="bee-field bee-field-r10c1m2r4f1 bee-inline-field">
-                <span class="bee-form-option-wrapper">
+        <div class="form-row">
+            <div class="field field-r10c1m2r4f1 inline-field">
+                <span class="form-option-wrapper">
                     <input id="r10c1m2r4f1" name="privacy_policy" type="checkbox" />
                     <label class="inline" for="r10c1m2r4f1">  Send me your brainwaves via email!</label>
                 </span>
             </div>
         </div>
 
-        <div class="bee-form-row">
-            <div class="bee-field bee-field-r10c1m2r5f1">
-                <div class="bee-button-container">
+        <div class="form-row">
+            <div class="field field-r10c1m2r5f1">
+                <div class="button-container">
                     <button id="r10c1m2r5f1" name="submit" type="submit" value="Send">Send</button>
                 </div>
             </div>
         </div>
     </form>
 </div>
-					<div class="bee-block bee-block-4 bee-paragraph bee-desktop_hide">
+					<div class="block block-4 paragraph desktop_hide">
 						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
 					</div>
 				</div>
