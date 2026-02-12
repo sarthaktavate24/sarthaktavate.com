@@ -1,1492 +1,815 @@
-
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-
-	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Sarthak Tavate Website</title>
-    <meta name="description" content="Explore my work in User Experience Design & Product Design" />
-
-    <!-- Open Graph / LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sarthak Tavate Website" />
-    <meta property="og:description" content="Explore my work in User Experience Design & Product Design" />
-    <meta property="og:url" content="https://www.sarthaktavate.com/" />
-    <meta property="og:image" content="https://www.sarthaktavate.com/images/preview.png" />
-
-	<link rel="icon" type="image/png" href="images/favicon.png">
-	<meta content="summary_large_image" name="twitter:card" />
-	<meta content="website" property="og:type" />
-	<meta content="" property="og:description" />
-	<meta content="" property="og:url" />
-	<meta content="images/1_13671710_large.jpg" property="og:image" />
-	<meta content="" property="og:title" />
-	<meta content="" name="description" />
-	<meta charset="utf-8" />
-	<meta content="width=device-width" name="viewport" />
-	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
-	
-	<style>
-
-/* Control header height and bottom-align logo + menu */
-.row-1 {
-    height: 80px;               /* fixed height so bottom alignment works */
-    padding: 0 !important;      
-}
-
-.row-1 .row-content {
-    display: flex;
-    height: 100%;
-    align-items: flex-end;      /* bottom-aligned */
-    justify-content: space-between;
-}
-
-.row-1 img {
-    display: block;
-    margin: 0;
-}
-
-.row-1 .menu {
-    display: flex;
-    align-items: flex-end;      /* bottom-align menu items too */
-}
-		
-.row-11 .col-2 .block-3 .field.inline-field input[type="checkbox"] + label {
-    margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
-}
-
-.form-row.checkbox-row {
-    margin-top: 12px;    /* space above the entire row */
-}
-		
-.form-row input[type="text"],
-.form-row input[type="email"],
-.form-row input[type="tel"],
-.form-row textarea {
-    padding: 10px 14px;      /* adjust inner spacing */
-    box-sizing: border-box;  /* keeps size consistent */
-}
-		
-/* Hover effect for Portfolio Images in Row 5 */
-
-/* Z Image */
-.row-5 .col-1 .block-1 a:hover img {
-    transform: scale(0.97);                  /* slightly smaller */ 
-    border: 3px solid #ff5c37;               /* colored stroke */
-    transition: all 0.3s ease-in-out;        /* smooth effect */
-    border-radius: 40px;                      /* maintain shape */
-}
-
-/* Hex Image */
-.row-5 .col-2 .block-1 a:hover img {
-    transform: scale(0.97);
-    border: 3px solid #ffffff;
-    transition: all 0.3s ease-in-out;
-    border-radius: 40px;
-}
-
-/* Nova Image */
-.row-5 .col-2 .block-3 a:hover img {
-    transform: scale(0.97);
-    border: 3px solid #ff5c37;
-    transition: all 0.3s ease-in-out;
-    border-radius: 40px;
-}
-
-/* Titan Image */
-.row-5 .col-3 .block-1 a:hover img {
-    transform: scale(0.97);
-    border: 3px solid #ff5c37;
-    transition: all 0.3s ease-in-out;
-    border-radius: 40px;
-}
-
-/* IKEA Image */
-.row-5 .col-4 .block-1 a:hover img {
-    transform: scale(0.97);
-    border: 3px solid #ff5c37;
-    transition: all 0.3s ease-in-out;
-    border-radius: 40px;
-}
-
-/* Expedition Image */
-.row-5 .col-4 .block-3 a:hover img {
-    transform: scale(0.97);
-    border: 3px solid #ff5c37;
-    transition: all 0.3s ease-in-out;
-    border-radius: 40px;
-}
-		/* Original logo style (no rounding) */
-.row-1 .col-1 .block-2 a img {
-    transition: all 0.3s ease-in-out; /* smooth transition */
-    border-radius: 0;                 /* original: no rounding */
-}
-
-/* On hover, apply rounding and overlay effect */
-.row-1 .col-1 .block-2 a:hover img {
-    border-radius: 50px;              /* capsule/pill rounding on hover */
-    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2); /* translucent overlay */
-    transform: scale(1.05);           /* subtle zoom effect */
-}
-
-.page-container > .row-1 {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-
-    /* Glassmorphism */
-    background: rgba(173, 173, 173, 0.5);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-
-    /* Background image */
-    background-image: url("images/2_BG_electronics.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: auto;
-
-    /* Rounded bottom corners */
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-
-    /* White stroke around header */
-    border-bottom: 2px solid #ffffff;
-
-    /* Drop shadow */
-    box-shadow: 0 4px 20px #adadad;
-
-    /* Optional padding */
-    padding-bottom: 15px;
-}
-		
-		/* Static capsule for active page */
-.row-1 .menu a.active {
-    border: 2px solid #ffffff;  /* white stroke */
-    border-radius: 50px;        /* capsule shape */
-    padding: 6px 20px;          /* vertical | horizontal spacing */
-    background-color: transparent; /* no fill */
-    color: #ffffff;             /* text color */
-    font-weight: 600;           /* emphasis */
-}
-
-/* Default menu item style */
-.row-1 .menu a {
-    background-color: rgba(0, 0, 0, 0.08); /* subtle overlay by default */
-    padding: 6px 20px;                     /* controls visual size */
-    color: #ffffff;                        /* keep text white */
-    border-radius: 50px;                   /* capsule shape */
-    text-decoration: none;
-    display: inline-block;                  /* ensures transform works correctly */
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* smooth hover */
-    transform: scale(1);                    /* default size */
-}
-
-/* Hover effect: darken background + scale up slightly */
-.row-1 .menu a:hover {
-    background-color: rgba(0, 0, 0, 0.25); /* darker overlay */
-    transform: scale(1.05);                 /* subtle zoom only on hover */
-    color: #ffffff;                          /* text stays visible */
-}
-		.row-10,
-		.row-3,
-		.row-4,
-		.row-8,
-		.row-9 {
-			background-color: #ffffff;
-			background-repeat: no-repeat
-		}
-
-		body {
-			background-color: #adadad;
-			color: #000000;
-			font-family: Fira Sans, Lucida Sans Unicode, Lucida Grande, sans-serif
-		}
-
-		.page-container {
-			background-image: url("images/2_BG_electronics.png");
-			background-position: top center
-		}
-
-		.row-11 .col-1 .block-10 a,
-		.row-11 .col-2 .block-4 a,
-		a {
-			color: #7747FF
-		}
-
-		* {
-			box-sizing: border-box
-		}
-
-		body,
-		h1,
-		h3,
-		p {
-			margin: 0
-		}
-
-		.desktop_hide {
-			display: none
-		}
-
-		.row-content {
-			max-width: 1200px;
-			margin: 0 auto;
-			display: flex
-		}
-
-		.row-content .col-w2 {
-			flex-basis: 16.6666666667%
-		}
-
-		.row-content .col-w3 {
-			flex-basis: 25%
-		}
-
-		.row-content .col-w4 {
-			flex-basis: 33.3333333333%
-		}
-
-		.row-content .col-w6 {
-			flex-basis: 50%
-		}
-
-		.row-content .col-w8 {
-			flex-basis: 66.6666666667%
-		}
-
-		.row-content .col-w9 {
-			flex-basis: 75%
-		}
-
-		.row-11 .col-2 .block-3 div.label:not(.inline),
-		.row-11 .col-2 .block-3 label:not(.inline),
-		.row-content .col-w12 {
-			flex-basis: 100%
-		}
-
-		.button a,
-		.menu ul li a {
-			text-decoration: none
-		}
-
-		.image {
-			overflow: auto
-		}
-
-		.image .center {
-			margin: 0 auto
-		}
-
-		.row-1 .col-1 .block-2,
-		.row-10 .col-1 .block-1,
-		.row-11 .col-2 .block-3 .form-row:not(.sidelabel) input:not([type=checkbox]):not([type=radio]),
-		.row-3 .col-1 .block-1,
-		.row-4 .col-1 .block-1,
-		.row-5 .col-1 .block-1,
-		.row-5 .col-2 .block-1,
-		.row-5 .col-2 .block-3,
-		.row-5 .col-3 .block-1,
-		.row-5 .col-4 .block-1,
-		.row-5 .col-4 .block-3,
-		.row-8 .col-1 .block-1 {
-			width: 100%
-		}
-
-		.form .form-row .field {
-			padding: 3px;
-			display: flex;
-			flex: 1;
-			flex-wrap: wrap;
-			align-items: center
-		}
-
-		.form .form-row .field.inline-field {
-			flex-wrap: nowrap;
-			align-items: flex-start;
-			display: block
-		}
-
-		.form .form-row .field .form-option-wrapper {
-			align-items: flex-start;
-			display: inline-flex
-		}
-
-		.form .form-row .field .form-option-wrapper>input {
-			margin: 0 0 0 3px
-		}
-
-		.form .form-row .field .form-option-wrapper>label {
-			min-width: 0
-		}
-
-		.form .form-row .field input:not([type=checkbox]):not([type=radio]) {
-			flex-grow: 1;
-			font-family: inherit;
-			font-size: inherit
-		}
-
-		.form .form-row .field input[type=checkbox]:not(:first-of-type) {
-			margin-left: 15px
-		}
-
-		.form .form-row .field button {
-			font-family: inherit;
-			font-size: inherit;
-			cursor: pointer
-		}
-
-		.form .form-row .field .button-container {
-			flex-grow: 1
-		}
-
-		.form input[type=color] {
-			border: none;
-			height: 38px
-		}
-
-		.form input[type=color]::-webkit-color-swatch-wrapper {
-			margin: 0;
-			padding: 2px
-		}
-
-		.form input[type=color]::-webkit-color-swatch {
-			margin: 0;
-			padding: 0
-		}
-
-		.image img {
-			display: block;
-			width: 100%
-		}
-
-		.menu ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0
-		}
-
-		.menu ul.horizontal li {
-			display: inline-block
-		}
-
-		.paragraph {
-			overflow-wrap: anywhere
-		}
-
-		.social .icon img {
-			max-height: 32px
-		}
-
-		.row-1,
-		.row-5,
-		.row-6,
-		.row-7 {
-			background-repeat: no-repeat
-		}
-
-		.row-1 .row-content,
-		.row-3 .row-content,
-		.row-7 .row-content {
-			background-repeat: no-repeat;
-			border-radius: 0;
-			color: #000000
-		}
-
-		.row-1 .col-1,
-		.row-1 .col-2,
-		.row-3 .col-1,
-		.row-8 .col-1 {
-			padding-top: 5px
-		}
-
-		.row-1 .col-2 .block-2 {
-			color: #ffffff;
-			font-family: inherit;
-			font-size: 16px;
-			font-weight: 400;
-			padding: 10px 60px;
-			text-align: left
-		}
-
-		.row-2 {
-			background-repeat: no-repeat;
-			background-size: auto
-		}
-
-		.row-2 .row-content {
-			background-repeat: no-repeat;
-			background-size: auto;
-			color: #000000
-		}
-
-		.row-2 .col-1 .block-1 {
-			padding-left: 20px;
-			width: 100%
-		}
-
-		.row-4,
-		.row-8 {
-			background-size: auto
-		}
-
-		.row-11 .row-content,
-		.row-4 .row-content,
-		.row-8 .row-content {
-			background-image: url('images/3_Faint_Bg.png');
-			background-repeat: no-repeat;
-			background-size: auto;
-			border-radius: 0;
-			color: #000000
-		}
-
-		.row-5 .row-content {
-			background-repeat: no-repeat;
-			border-radius: 0;
-			color: #000000;
-			padding: 60px
-		}
-
-		.row-6 .row-content,
-		.row-9 .row-content {
-			border-radius: 20px;
-			background-image: url('images/3_Faint_Bg.png');
-			color: #000000;
-			background-repeat: no-repeat
-		}
-
-		.row-5 .col-1,
-		.row-5 .col-2,
-		.row-5 .col-3,
-		.row-5 .col-4,
-		.row-7 .col-1,
-		.row-7 .col-2,
-		.row-7 .col-3,
-		.row-7 .col-4 {
-			padding: 10px
-		}
-
-		.row-6 .row-content {
-			background-color: #848484
-		}
-
-		.row-6 .col-1,
-		.row-9 .col-1 {
-			padding: 35px 60px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center
-		}
-
-		.row-6 .col-1 .block-1,
-		.row-9 .col-1 .block-1 {
-			padding: 10px 25px;
-			text-align: center;
-			width: 100%
-		}
-
-		.row-6 .col-2,
-		.row-9 .col-2 {
-			padding: 5px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center
-		}
-
-		.row-6 .col-2 .block-1,
-		.row-9 .col-2 .block-1 {
-			padding-bottom: 15px;
-			padding-left: 25px;
-			padding-right: 25px
-		}
-
-		.row-6 .col-3,
-		.row-9 .col-3 {
-			padding-bottom: 20px;
-			padding-right: 25px;
-			padding-top: 35px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center
-		}
-
-		.row-6 .col-3 .block-1,
-		.row-9 .col-3 .block-1 {
-			padding-bottom: 25px;
-			padding-left: 10px;
-			padding-top: 25px
-		}
-
-		.row-6 .col-3 .block-2,
-		.row-9 .col-3 .block-2 {
-			padding: 10px;
-			text-align: left
-		}
-
-		.row-9 .row-content {
-			background-color: #ffffff
-		}
-
-		.row-10 .row-content {
-			background-image: url('images/3_Faint_Bg.png');
-			background-repeat: no-repeat;
-			border-radius: 0;
-			color: #000000
-		}
-
-		.row-10 .col-1 {
-			padding-bottom: 5px;
-			padding-top: 5px
-		}
-
-		.row-11 {
-			background-color: #adadad;
-			background-repeat: no-repeat;
-			background-size: auto
-		}
-
-		.row-11 .col-1,
-		.row-11 .col-2 {
-			padding-bottom: 5px;
-			padding-left: 30px;
-			padding-top: 5px
-		}
-
-		.row-11 .col-1 .block-2 {
-			padding: 25px 30px 20px;
-			width: 100%
-		}
-
-		.row-11 .col-1 .block-10,
-		.row-11 .col-1 .block-3,
-		.row-11 .col-2 .block-4 {
-			padding: 10px 25px 5px
-		}
-
-		.row-11 .col-1 .block-4 {
-			padding: 10px 25px 20px;
-			text-align: left
-		}
-
-		.row-11 .col-1 .block-5 {
-			padding-bottom: 5px;
-			padding-left: 30px;
-			padding-top: 10px;
-			text-align: left
-		}
-
-		.row-11 .col-1 .block-6,
-		.row-11 .col-1 .block-7,
-		.row-11 .col-1 .block-8 {
-			padding: 10px 30px 5px;
-			text-align: center;
-			width: 100%
-		}
-
-		.row-11 .col-2 .block-2 {
-			padding: 10px;
-			text-align: center;
-			width: 100%
-		}
-
-		.row-11 .col-2 .block-3 {
-			font-family: Montserrat, Oxygen;
-			font-size: 14px;
-			font-weight: 500;
-			padding: 10px
-		}
-
-		.row-1 .col-2 .block-2 li {
-			padding: 5px 20px
-		}
-
-		.row-1 .col-2 .block-2 li a,
-		.row-11 .col-1 .block-3 a {
-			color: #ffffff
-		}
-
-		.row-6 .col-1 .block-1 h1 {
-			color: #ffffff;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 53px;
-			font-weight: 600;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.row-6 .col-2 .block-1,
-		.row-9 .col-2 .block-1 {
-			color: #ffffff;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 19px;
-			font-weight: 700;
-			letter-spacing: 0;
-			line-height: 150%;
-			text-align: left
-		}
-
-		.row-6 .col-3 .block-1,
-		.row-9 .col-3 .block-1 {
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-weight: 400;
-			letter-spacing: 0;
-			line-height: 150%
-		}
-
-		.row-6 .col-2 .block-1 a,
-		.row-9 .col-2 .block-1 a {
-			color: #8a3b8f
-		}
-
-		.row-11 .col-1 .block-10 p:not(:last-child),
-		.row-11 .col-1 .block-3 p:not(:last-child),
-		.row-11 .col-2 .block-4 p:not(:last-child),
-		.row-6 .col-2 .block-1 p:not(:last-child),
-		.row-6 .col-3 .block-1 p:not(:last-child),
-		.row-9 .col-2 .block-1 p:not(:last-child),
-		.row-9 .col-3 .block-1 p:not(:last-child) {
-			margin-bottom: 16px
-		}
-
-		.row-6 .col-3 .block-1 {
-			color: #ffffff;
-			font-size: 18px;
-			text-align: left
-		}
-
-		.row-6 .col-3 .block-1 a,
-		.row-9 .col-3 .block-1 a {
-			color: #adadad
-		}
-
-		.row-11 .col-1 .block-4 a:hover,
-		.row-6 .col-3 .block-2 a:hover,
-		.row-9 .col-3 .block-2 a:hover {
-			background-color: #adadad !important;
-			border-bottom: 0 solid transparent !important;
-			border-left: 0 solid transparent !important;
-			border-right: 0px solid transparent !important;
-			border-top: 0 solid transparent !important;
-			color: #ffffff !important
-		}
-
-		.row-11 .col-1 .block-4 a,
-		.row-6 .col-3 .block-2 a,
-		.row-9 .col-3 .block-2 a {
-			background-color: #ff5c37;
-			border-bottom: 1px solid #ffffff;
-			border-left: 1px solid #ffffff;
-			border-radius: 60px;
-			border-right: 1px solid #ffffff;
-			border-top: 1px solid #ffffff;
-			color: #ffffff;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 16px;
-			font-weight: 500;
-			letter-spacing: 0;
-			line-height: 200%;
-			padding: 5px 20px;
-			width: auto
-		}
-
-		.row-9 .col-1 .block-1 h1 {
-			color: #adadad;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 51px;
-			font-weight: 600;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.row-9 .col-3 .block-1 {
-			color: #363434;
-			font-size: 18px;
-			text-align: left
-		}
-
-		.row-11 .col-1 .block-10,
-		.row-11 .col-1 .block-3,
-		.row-11 .col-2 .block-4 {
-			font-size: 14px;
-			letter-spacing: 0;
-			line-height: 150%;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-weight: 500
-		}
-
-		.row-11 .col-1 .block-3 {
-			color: #1a1a1a;
-			text-align: left
-		}
-
-		.row-11 .col-1 .block-8 h3 {
-			color: #1a1a1a;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 16px;
-			font-weight: 500;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.row-11 .col-1 .block-6 h3,
-		.row-11 .col-1 .block-7 h3 {
-			color: #000000;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 16px;
-			font-weight: 500;
-			letter-spacing: normal;
-			line-height: 120%;
-			text-align: left
-		}
-
-		.row-11 .col-1 .block-10,
-		.row-11 .col-2 .block-4 {
-			color: #ffffff;
-			text-align: left
-		}
-
-		.row-11 .col-2 .block-2 h3 {
-			color: #ffffff;
-			direction: ltr;
-			font-family: Montserrat, Oxygen;
-			font-size: 21px;
-			font-weight: 500;
-			letter-spacing: 1px;
-			line-height: 120%;
-			text-align: left
-		}
-
-		@media (max-width:768px) {
-			.desktop_hide {
-				display: block !important
-			}
-
-			.form form {
-				width: 100% !important
-			}
-
-			img.fullwidthOnMobile {
-				max-width: none !important
-			}
-
-			.mobile_hide {
-				display: none
-			}
-
-			.row-content:not(.no_stack) {
-				display: block
-			}
-
-			.row-5 .row-content {
-				padding: 15px 40px !important
-			}
-
-			.row-5 .col-1,
-			.row-5 .col-2,
-			.row-5 .col-3,
-			.row-5 .col-4,
-			.row-7 .col-1,
-			.row-7 .col-2,
-			.row-7 .col-3,
-			.row-7 .col-4 {
-				padding: 10px 25px !important
-			}
-
-			.row-6 .col-1 {
-				padding: 5px 5px 0 !important
-			}
-
-			.row-1 .col-1 .block-2,
-			.row-6 .col-2,
-			.row-9 .col-2 {
-				padding: 0 !important
-			}
-
-			.row-6 .col-3,
-			.row-9 .col-3 {
-				padding: 0 25px 20px !important
-			}
-
-			.row-9 .col-1 {
-				padding: 10px 5px 0 !important
-			}
-
-			.row-11 .row-content {
-				padding-left: 15px !important;
-				padding-right: 15px !important
-			}
-
-			.row-11 .col-1,
-			.row-11 .col-2 {
-				padding: 5px 0 !important
-			}
-
-			.row-1 .col-2 .block-1 {
-				height: 10px !important
-			}
-
-			.row-1 .col-1 .block-2 img,
-			.row-11 .col-1 .block-2 img,
-			.row-2 .col-1 .block-1 img,
-			.row-5 .col-1 .block-1 img,
-			.row-5 .col-2 .block-1 img,
-			.row-5 .col-2 .block-3 img,
-			.row-5 .col-3 .block-1 img,
-			.row-5 .col-4 .block-1 img,
-			.row-5 .col-4 .block-3 img,
-			.row-8 .col-1 .block-1 img {
-				float: none !important;
-				margin: 0 auto !important
-			}
-
-			.row-5 .col-1 .block-1,
-			.row-5 .col-2 .block-1,
-			.row-5 .col-2 .block-3,
-			.row-5 .col-3 .block-1,
-			.row-5 .col-4 .block-1,
-			.row-5 .col-4 .block-3 {
-				padding: 0 15px !important
-			}
-
-			.row-5 .col-1 .block-2,
-			.row-7 .col-1 .block-1 {
-				height: 1px !important
-			}
-
-			.row-5 .col-2 .block-2,
-			.row-5 .col-4 .block-2,
-			.row-7 .col-2 .block-1,
-			.row-7 .col-4 .block-1 {
-				height: 20px !important
-			}
-
-			.row-1 .col-2 .block-2 {
-				text-align: left !important
-			}
-
-			.row-1 .col-2 .block-2 li {
-				font-size: 13px !important;
-				line-height: auto !important
-			}
-
-			.row-6 .col-1 .block-1,
-			.row-9 .col-1 .block-1 {
-				padding: 10px 15px;
-				text-align: center
-			}
-
-			.row-6 .col-1 .block-1 h1,
-			.row-9 .col-1 .block-1 h1 {
-				font-size: 22px;
-				text-align: center
-			}
-
-			.row-6 .col-2 .block-1,
-			.row-9 .col-2 .block-1 {
-				text-align: center !important;
-				font-size: 1px !important
-			}
-
-			.row-6 .col-3 .block-1,
-			.row-9 .col-3 .block-1 {
-				padding: 5px 0 5px 35px !important;
-				text-align: justify !important;
-				font-size: 13px !important
-			}
-
-			.row-8 .col-1 .block-1 {
-				padding: 0 10px !important
-			}
-
-			.row-11 .col-1 .block-4,
-			.row-11 .col-1 .block-4 .button-content,
-			.row-6 .col-3 .block-2,
-			.row-6 .col-3 .block-2 .button-content,
-			.row-9 .col-3 .block-2,
-			.row-9 .col-3 .block-2 .button-content {
-				text-align: center !important
-			}
-
-			.row-11 .col-1 .block-2 {
-				padding: 10px 0 !important
-			}
-
-			.row-11 .col-1 .block-3 {
-				padding: 10px 0 !important;
-				text-align: left !important
-			}
-
-			.row-11 .col-1 .block-5 {
-				padding: 10px 0 5px !important;
-				text-align: center !important
-			}
-
-			.row-11 .col-1 .block-6,
-			.row-11 .col-1 .block-7,
-			.row-11 .col-1 .block-8,
-			.row-11 .col-2 .block-2 {
-				padding: 10px 0;
-				text-align: center
-			}
-
-			.row-11 .col-1 .block-6 h3,
-			.row-11 .col-1 .block-7 h3,
-			.row-11 .col-1 .block-8 h3,
-			.row-11 .col-2 .block-2 h3 {
-				text-align: center
-			}
-
-			.row-11 .col-1 .block-10 {
-				padding: 10px 0 !important;
-				text-align: center !important
-			}
-
-			.row-11 .col-2 .block-4 {
-				padding: 10px 0 !important;
-				text-align: center !important;
-				font-size: 10px !important
-			}
-		}
-
-		.row-11 .col-2 .block-3 {
-			text-align: left
-		}
-
-		.row-11 .col-2 .block-3 form {
-			display: inline-block;
-			width: 100%
-		}
-
-		.row-11 .col-2 .block-3 div.label,
-		.row-11 .col-2 .block-3 label {
-			color: #545454;
-			line-height: 200%;
-			text-align: left;
-			display: block
-		}
-
-		.row-11 .col-2 .block-3 ::-webkit-input-placeholder {
-			color: #000000
-		}
-
-		.row-11 .col-2 .block-3 :-moz-placeholder {
-			color: #000000
-		}
-
-		.row-11 .col-2 .block-3 ::-moz-placeholder {
-			color: #000000
-		}
-
-		.row-11 .col-2 .block-3 :-ms-input-placeholder {
-			color: #000000
-		}
-
-		.row-11 .col-2 .block-3 .field>label:first-child,
-		.row-11 .col-2 .block-3 div.label {
-			padding: 3px
-		}
-
-		.row-11 .col-2 .block-3 .field.inline-field input[type=checkbox] {
-			position: relative;
-			color: purple;
-			top: 8px
-		}
-
-		.row-11 .col-2 .block-3 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
-			background-color: #ffffff;
-			border-bottom: 1px solid transparent;
-			border-left: 1px solid transparent;
-			border-radius: 25px;
-			border-right: 1px solid transparent;
-			border-top: 1px solid transparent;
-			color: #000000;
-			padding-bottom: 10px;
-			padding-top: 10px;
-			min-height: 48px
-		}
-
-		.row-11 .col-2 .block-3 input:not([type=checkbox]):not([type=radio]):focus {
-			outline-color: #ff5c37
-		}
-
-		.row-11 .col-2 .block-3 button {
-			background-color: #ff5c37;
-			border-bottom: 1px solid #ffffff;
-			border-left: 1px solid #ffffff;
-			border-radius: 26px;
-			border-right: 1px solid #ffffff;
-			border-top: 1px solid #ffffff;
-			color: #ffffff;
-			letter-spacing: normal;
-			line-height: 200%;
-			padding-bottom: 10px;
-			padding-top: 10px;
-			width: 45%
-		}
-
-		.row-11 .col-2 .block-3 .button-container {
-			padding-top: 15px;
-			text-align: left
-		}
-		
-/* Force header height and vertically center logo + menu */
-.row-1 {
-    height: 90px !important;         /* adjust as needed */
-    padding-top: 10px !important;   /* adjust value as needed */
-    padding-bottom: 10px !important;
-    display: flex !important;
-    align-items: center !important;  /* center items inside header background */
-}
-
-.row-1 .row-content {
-    display: flex !important;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center !important;  /* vertical centering */
-	height: 90px !important;
-    max-height: 60px;
-}
-
-.row-1 img {
-    display: block;
-    height: auto;
-    max-height: 60px;                /* keep logo inside header */
-}
-
-.row-1 .menu {
-    display: flex !important;
-    align-items: center !important;  /* center menu items as well */
-}
-/* FORCE TRUE VERTICAL CENTERING – FULL OVERRIDE */
-
-/* Remove any internal padding BeeFree injects */
-.row-1,
-.row-1 .row-content,
-.row-1 .col,
-.row-1 .col-content {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;     /* center vertically */
-}
-
-/* Force the header to the height you want */
-.row-1 {
-    height: 90px !important;            /* adjust if needed */
-}
-
-/* Make columns center their children */
-.row-1 .col,
-.row-1 .col-content {
-    justify-content: center !important; /* vertical alignment helper */
-}
-
-/* Center the logo */
-.row-1 img {
-    max-height: 60px !important;        /* ensures it won't overflow */
-    align-self: center !important;
-}
-
-/* Center menu items */
-.row-1 .menu {
-    align-items: center !important;
-    display: flex !important;
-}
-		/* STICKY ACTIVE STATE FOR HOME (only on index.html) */
-nav .menu-item.home a {
-    background: rgba(0,0,0,0.35); /* adjust opacity as needed */
-    border-radius: 999px; /* creates a capsule shape */
-    padding: 8px 16px; /* slightly larger tap target without shifting layout */
-    transform: scale(1); /* ensure Home is not shrunk or enlarged */
-}
-
-/* Prevent Resume button from inheriting hover-scale unless hovered */
-nav .menu-item.resume a {
-    transform: scale(1) !important;
-}
-
-/* Maintain your original hover rules for all items */
-nav .menu-item a:hover {
-    background: rgba(0,0,0,0.45); /* hover stays slightly stronger */
-    border-radius: 999px;
-    transform: scale(1.05); /* only applies on hover */
-}
-/* Static hover-state applied permanently to the HOME link */
-.row-1 .menu li:first-child a {
-    background-color: rgba(0, 0, 0, 0.25);   /* same as hover */
-    transform: scale(1.05);                  /* same as hover */
-    color: #ffffff;
-    border-radius: 50px;
-    padding: 6px 20px;
-}
-
-/* Prevent HOME from reacting to hover */
-.row-1 .menu li:first-child a:hover {
-    background-color: rgba(0, 0, 0, 0.25) !important;
-    transform: scale(1.05) !important;
-    color: #ffffff !important;
-}
-
-/* Keep all OTHER menu items behaving normally on hover */
-.row-1 .menu li:not(:first-child) a:hover {
-    background-color: rgba(0, 0, 0, 0.25);
-    transform: scale(1.05);
-    color: #ffffff;
-    border-radius: 50px;
-}
-	/* ----------------------------- */
-/* MOBILE OVERRIDE — MAX 600px   */
-/* ----------------------------- */
-@media (max-width: 600px) {
-
-    /* Header container */
-    .row-1 {
-        height: auto !important;                /* let header expand */
-        padding: 24px 0 !important;            /* double previous padding */
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        overflow: hidden !important;            /* prevent scrollbars */
-        box-sizing: border-box !important;
-    }
-
-    /* Row content */
-    .row-1 .row-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        width: 100% !important;
-        height: auto !important;
-        overflow: hidden !important;
-    }
-
-    /* Logo fully centered and stable */
-    .row-1 img {
-        display: block !important;
-        margin: 0 auto !important;
-        max-width: 70% !important;
-        height: auto !important;
-        float: none !important;
-        position: relative !important;
-        left: 0 !important;
-        right: 0 !important;
-        transition: none !important;
-    }
-
-    /* Menu stacked vertically, centered */
-    .row-1 .menu {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Each menu item full-width */
-    .row-1 .menu li {
-        list-style: none !important;
-        width: 100% !important;
-        text-align: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .row-1 .menu li a {
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-        padding: 6px 0 !important;
-        margin: 0 !important;
-        transition: none !important;
-    }
-}
-
-		/* Logo centered */
-.row-1 img {
-    display: block !important;       /* force block layout */
-    margin: 0 auto !important;       /* horizontally center */
-    max-width: 100%;
-    height: auto;
-    float: none !important;          /* remove any floating */
-    transition: none !important;     /* prevent hover shifts */
-}
-
-/* Ensure the logo never shifts or pushes layout on hover */
-.row-1 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    transform: none !important;
-    transition: inherit !important; /* preserves existing hover effects elsewhere */
-}
-
-
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sarthak Tavate - Multidisciplinary Product Designer Portfolio. Showcasing UX Design and Product Design work.">
+    <meta name="theme-color" content="#050505">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Sarthak Tavate | Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #141414;
+            --bg-glass: rgba(30, 30, 30, 0.6);
+            --border-color: #2a2a2a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent: #ffffff;
+            --hover-bg: #1a1a1a;
+            --accent-color: #6366f1;
+            --accent-secondary: #ec4899;
+        }
+
+        body.light-mode {
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-card: #fafafa;
+            --bg-glass: rgba(255, 255, 255, 0.8);
+            --border-color: #e0e0e0;
+            --text-primary: #111111;
+            --text-secondary: #555555;
+            --text-muted: #888888;
+            --accent: #111111;
+            --hover-bg: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            padding: 8px 12px;
+            z-index: 1000;
+            gap: 20px;
+            max-width: 1000px;
+            width: calc(100% - 40px);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            font-weight: 700;
+            font-size: 15px;
+            font-family: 'Cabinet Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 4px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 20px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+            background: var(--hover-bg);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+        }
+
+        .theme-toggle span {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .toggle-switch {
+            width: 36px;
+            height: 20px;
+            background: var(--border-color);
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: var(--text-primary);
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+
+        body.light-mode .toggle-switch::after {
+            transform: translateX(16px);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--hover-bg);
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 0 60px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-image {
+            max-width: 100%;
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .hero-gif {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-primary);
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        /* Portfolio Section */
+        .portfolio-cta {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 80px 0;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .portfolio-cta h2 {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .portfolio-cta p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-logo {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-item {
+            margin-bottom: 24px;
+        }
+
+        .contact-item h4 {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .contact-item p {
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .social-link img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .contact-form h4 {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                border-radius: 24px;
+            }
+
+            .nav-links {
+                order: 3;
+                width: 100%;
+                justify-content: space-around;
+                padding-top: 8px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .portfolio-cta {
+                padding: 40px 24px;
+            }
+
+            .portfolio-cta h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<div class="page-container">
-		<div class="row row-1">
-			<div class="row-content">
-				<div class="col col-1 col-w3">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:60px;"></div>
-					</div>
-					<div class="block block-2 image"><a href="index.html"><img alt="" class="center fixedwidth" src="images/4_Logo.png" style="max-width:90px;" title="" /></a></div>
-				</div>
-				<div class="col col-2 col-w9">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:60px;"></div>
-					</div>
-					<div class="block block-2 menu">
-						<nav class="menu">
-							<ul class="horizontal">
-    <li><a href="index.html">Home ✪</a></li>
-    <span></span>
-
-    <li><a href="ux.html">User Experience Design</a></li>
-    <span></span>
-
-    <li><a href="product.html">Product Design</a></li>
-    <span></span>
-
-    <li><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/sarthak_resume.pdf#pagemode=none" target="_blank">Resumé ↗</a></li>
-</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-2">
-			<div class="row-content">
-				<div class="col col-1 col-w12">
-					<div class="block block-1 image"><img alt="Hello!" class="center fixedwidth fullwidthOnMobile" src="images/5_Final_Poster.gif" style="max-width:11760px;" title="Hello!" /></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-3">
-			<div class="row-content">
-				<div class="col col-1 col-w12">
-					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="images/6_Strip_final_1.gif" style="max-width:720px;" title="" /></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-4">
-			<div class="row-content">
-				<div class="col col-1 col-w12">
-					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif" style="max-width:960px;" title="" /></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-5">
-			<div class="row-content">
-				<div class="col col-1 col-w3">
-					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" target="_blank"><img alt="Z" class="center fullwidthOnMobile autowidth" src="images/8_PD_1.png" style="max-width:250px;border-radius:40px;" title="Z" /></a></div>
-					<div class="block block-2 spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-				</div>
-				<div class="col col-2 col-w3">
-					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" target="_blank"><img alt="Hex" class="center autowidth" src="images/9_colored_hex.png" style="max-width:250px;border-radius:40px;" title="Hex" /></a></div>
-					<div class="block block-2 spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-					<div class="block block-3 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" target="_blank"><img alt="Nova" class="center autowidth" src="images/10_PD8.png" style="max-width:250px;border-radius:40px 40px 40px 40px;" title="Nova" /></a></div>
-				</div>
-				<div class="col col-3 col-w3">
-					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" target="_blank"><img alt="Titan" class="center autowidth" src="images/11_PD_4.png" style="max-width:250px;border-radius:40px;" title="Titan" /></a></div>
-				</div>
-				<div class="col col-4 col-w3">
-					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" target="_blank"><img alt="IKEA" class="center autowidth" src="images/12_PD_5.png" style="max-width:250px;border-radius:40px;" title="IKEA" /></a></div>
-					<div class="block block-2 spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-					<div class="block block-3 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" target="_blank"><img alt="Expedition" class="center autowidth" src="images/13_PD7.png" style="max-width:250px;border-radius:40px;" title="Expedition" /></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-6">
-			<div class="row-content">
-				<div class="col col-1 col-w6">
-					<div class="block block-1 heading">
-						<h1><span class="tinyMce-placeholder">Check out my <a href="https://sarthaktavate.com/assets/product_portfolio.pdf" rel="noopener" style="text-decoration: none; color: #ff6044;" target="_blank">Product Design</a> portfolio here!</span> </h1>
-					</div>
-				</div>
-				<div class="col col-2 col-w2">
-					<div class="block block-1 paragraph"></div>
-				</div>
-				<div class="col col-3 col-w4">
-					<div class="block block-1 paragraph">
-						<p>Products that solve real problems impacting real people.</p>
-					</div>
-					<div class="block block-2 button"><a class="button-content" href="https://sarthaktavate.com/assets/product_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-7 mobile_hide">
-			<div class="row-content">
-				<div class="col col-1 col-w3">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-				</div>
-				<div class="col col-2 col-w3">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-				</div>
-				<div class="col col-3 col-w3">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:60px;"></div>
-					</div>
-				</div>
-				<div class="col col-4 col-w3">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-8">
-			<div class="row-content">
-				<div class="col col-1 col-w12">
-					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="images/14_Colored_UX_poster.png" style="max-width:1200px;" title="" /></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-9">
-			<div class="row-content">
-				<div class="col col-1 col-w6">
-					<div class="block block-1 heading">
-						<h1><span class="tinyMce-placeholder">Check out my <a href="https://sarthaktavate.com/assets/ux_portfolio.pdf" rel="noopener" style="text-decoration: none; color: #ff6044;" target="_blank">UX Design</a> portfolio here!</span> </h1>
-					</div>
-				</div>
-				<div class="col col-2 col-w2">
-					<div class="block block-1 paragraph"></div>
-				</div>
-				<div class="col col-3 col-w4">
-					<div class="block block-1 paragraph">
-						<p>Purpose-led design, real results<br />Here’s what I’ve been creating.</p>
-					</div>
-					<div class="block block-2 button"><a class="button-content" href="https://sarthaktavate.com/assets/ux_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-10 mobile_hide">
-			<div class="row-content">
-				<div class="col col-1 col-w12">
-					<div class="block block-1 image"><img alt="" class="center fixedwidth" src="images/15_Small_blank.png" style="max-width:900px;" title="" /></div>
-				</div>
-			</div>
-		</div>
-		<div class="row row-11">
-			<div class="row-content">
-				<div class="col col-1 col-w8">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:25px;"></div>
-					</div>
-					<div class="block block-2 image"><a href="index.html"><img alt="Home" class="fixedwidth" src="images/darkmodelogo.png" style="max-width:115px;border-radius:0px 0px 0px 0px;" title="Home" /></a></div>
-					<div class="block block-3 paragraph mobile_hide">
-						<p>Multidisciplinary product designer with a strong foundation in both UX design and industrial design, bringing over 3 years of experience crafting human-centered digital systems, immersive 3D environments, and functional hardware prototypes. Currently pursuing an M.S. in Human-Centered Computing (HCI) at the University of Maryland, BC, serving as a Research Assistant and Student Association Senator.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
-					</div>
-					<div class="block block-4 button"><a class="button-content" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You’d Be a Great Fit!&amp;body=" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Hire me  ↗</span></a></div>
-					<div class="block block-5 social">
-						<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img alt="Linkedin" src="images/16_linkedin2x.png" title="linkedin" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.behance.net/sarthaktawate" target="_blank"><img alt="Behance" src="images/17_Behance.png" title="Behance" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank"><img alt="Facebook" src="images/18_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img alt="Instagram" src="images/19_instagram2x.png" title="instagram" /></a></span></div>
-					</div>
-					<div class="block block-6 heading">
-						<h3>+1 (646) 318-9495 </h3>
-					</div>
-					<div class="block block-7 heading">
-						<h3>sarthak.tavate24@gmail.com </h3>
-					</div>
-					<div class="block block-8 heading">
-						<h3>Washington, D.C. (GMT-5) </h3>
-					</div>
-					<div class="block block-9 spacer mobile_hide">
-						<div class="spacer" style="height:50px;"></div>
-					</div>
-					<div class="block block-10 paragraph mobile_hide">
-						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
-					</div>
-				</div>
-				<div class="col col-2 col-w4">
-					<div class="block block-1 spacer">
-						<div class="spacer" style="height:50px;"></div>
-					</div>
-					<div class="block block-2 heading mobile_hide">
-						<h3><span class="tinyMce-placeholder">Let’s connect</span> </h3>
-					</div>
-					<div class="block block-3 form mobile_hide">
-    <form action="https://formspree.io/f/xangkrgg" method="POST" target="_blank">
-        
-        <div class="form-row">
-            <div class="field field-r10c1m2r1f1">
-                <label for="r10c1m2r1f1">Name</label>
-                <input id="r10c1m2r1f1" name="name" required type="text" />
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/4_Logo.png" alt="ST" class="logo-img">
+            <span>Sarthak Tavate</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home ✪</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/sarthak_resume.pdf#pagemode=none" target="_blank">Resumé ↗</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <span>☀️</span>
+                <div class="toggle-switch"></div>
+                <span>🌙</span>
             </div>
         </div>
+    </nav>
 
-        <div class="form-row">
-            <div class="field field-r10c1m2r2f1">
-                <label for="r10c1m2r2f1">Email</label>
-                <input id="r10c1m2r2f1" name="email" required type="email" />
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <img src="images/5_Final_Poster.gif" alt="Hello!" class="hero-image">
+                <img src="images/6_Strip_final_1.gif" alt="Animation" class="hero-gif">
+                <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif" alt="Animated Website" class="hero-gif">
             </div>
-        </div>
+        </section>
 
-        <div class="form-row">
-            <div class="field field-r10c1m2r3f1">
-                <label for="r10c1m2r3f1">Message</label>
-                <input id="r10c1m2r3f1" name="message" required type="text" />
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 48px;">Featured Work</h2>
+                
+                <div class="projects-grid">
+                    <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" class="project-card" target="_blank">
+                        <img src="images/8_PD_1.png" alt="Z" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Z</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" class="project-card" target="_blank">
+                        <img src="images/9_colored_hex.png" alt="Hex" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Hex</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" class="project-card" target="_blank">
+                        <img src="images/10_PD8.png" alt="Nova" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Nova</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" class="project-card" target="_blank">
+                        <img src="images/11_PD_4.png" alt="Titan" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Titan</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" class="project-card" target="_blank">
+                        <img src="images/12_PD_5.png" alt="IKEA" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">IKEA</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" class="project-card" target="_blank">
+                        <img src="images/13_PD7.png" alt="Expedition" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Expedition</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Product Design CTA -->
+                <div class="portfolio-cta">
+                    <h2>Check out my Product Design portfolio here!</h2>
+                    <p>Products that solve real problems impacting real people.</p>
+                    <a href="https://sarthaktavate.com/assets/product_portfolio.pdf" class="btn btn-primary" target="_blank">Take me there ↗</a>
+                </div>
+
+                <!-- UX Design CTA -->
+                <div style="text-align: center; margin: 60px 0;">
+                    <img src="images/14_Colored_UX_poster.png" alt="UX Design" style="max-width: 100%; border-radius: 20px; margin-bottom: 40px;">
+                </div>
+
+                <div class="portfolio-cta">
+                    <h2>Check out my UX Design portfolio here!</h2>
+                    <p>Purpose-led design, real results<br>Here's what I've been creating.</p>
+                    <a href="https://sarthaktavate.com/assets/ux_portfolio.pdf" class="btn btn-primary" target="_blank">Take me there ↗</a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="form-row">
-            <div class="field field-r10c1m2r4f1 inline-field">
-                <span class="form-option-wrapper">
-                    <input id="r10c1m2r4f1" name="privacy_policy" type="checkbox" />
-                    <label class="inline" for="r10c1m2r4f1">  Send me your brainwaves via email!</label>
-                </span>
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <img src="images/15_Small_blank.png" alt="Spacer" style="max-width: 100%;">
+                </div>
+                
+                <div class="about-grid">
+                    <div>
+                        <img src="images/darkmodelogo.png" alt="Sarthak Tavate" class="about-logo">
+                    </div>
+                    <div class="about-content">
+                        <p>
+                            Multidisciplinary product designer with a strong foundation in both UX design and industrial design, 
+                            bringing over 3 years of experience crafting human-centered digital systems, immersive 3D environments, 
+                            and functional hardware prototypes. Currently pursuing an M.S. in Human-Centered Computing (HCI) at the 
+                            University of Maryland, BC, serving as a Research Assistant and Student Association Senator.
+                        </p>
+                        <a href="mailto:sarthak.tavate24@gmail.com?subject=We Think You'd Be a Great Fit!" class="btn btn-primary">Hire me ↗</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="form-row">
-            <div class="field field-r10c1m2r5f1">
-                <div class="button-container">
-                    <button id="r10c1m2r5f1" name="submit" type="submit" value="Send">Send</button>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's connect</h3>
+                        
+                        <div class="contact-item">
+                            <h4>Phone</h4>
+                            <p>+1 (646) 318-9495</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p>sarthak.tavate24@gmail.com</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Location</h4>
+                            <p>Washington, D.C. (GMT-5)</p>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" class="social-link" target="_blank">
+                                <img src="images/16_linkedin2x.png" alt="LinkedIn">
+                            </a>
+                            <a href="https://www.behance.net/sarthaktawate" class="social-link" target="_blank">
+                                <img src="images/17_Behance.png" alt="Behance">
+                            </a>
+                            <a href="https://www.facebook.com/sarthak.tavate.3/" class="social-link" target="_blank">
+                                <img src="images/18_facebook2x.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com/sarthak.ioi/" class="social-link" target="_blank">
+                                <img src="images/19_instagram2x.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h4>Send me your brainwaves via email!</h4>
+                        <form onsubmit="handleContact(event)">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    Copyright© Sarthak Tavate | All Rights Reserved.
                 </div>
             </div>
         </div>
-    </form>
-</div>
-					<div class="block block-4 paragraph desktop_hide">
-						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+    </footer>
 
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        }
+
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+
+        // Contact form handler
+        function handleContact(e) {
+            e.preventDefault();
+            const form = e.target;
+            const name = form.querySelector('input[type="text"]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const message = form.querySelector('textarea').value;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:sarthak.tavate24@gmail.com?subject=Contact from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
+            window.location.href = mailtoLink;
+            
+            form.reset();
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
