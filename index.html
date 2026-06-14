@@ -1,1041 +1,1479 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarthak Tavate — UX & Product Designer</title>
-  <meta name="description" content="Explore my work in User Experience Design & Product Design" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sarthak Tavate — UX & Product Designer" />
-  <meta property="og:description" content="Explore my work in User Experience Design & Product Design" />
-  <meta property="og:url" content="https://www.sarthaktavate.com/" />
-  <meta property="og:image" content="https://www.sarthaktavate.com/images/preview.png" />
-  <meta content="summary_large_image" name="twitter:card" />
-
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-
-  <style>
-    /* =========================================================
-       DESIGN TOKENS
-    ========================================================= */
-    :root {
-      --color-primary:       #E48B59;
-      --color-secondary:     #ED7B46;
-      --color-accent:        #ED7B46;
-      --color-bg:            #FFFFFF;
-      --color-surface:       #53617A;
-      --color-surface-light: #f0f2f5;
-      --color-text-primary:  #111827;
-      --color-text-secondary:#4B5563;
-      --color-border:        #D8DADF;
-      --color-muted:         #9CA3AF;
-
-      --font-sans:  'Inter', system-ui, sans-serif;
-      --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
-
-      --space-1:  8px;
-      --space-2:  16px;
-      --space-3:  24px;
-      --space-4:  32px;
-      --space-6:  48px;
-      --space-8:  64px;
-      --space-10: 80px;
-
-      --radius-card:    16px;
-      --radius-control: 8px;
-      --radius-pill:    9999px;
-
-      --shadow-card:  0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
-      --shadow-hover: 0 8px 30px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
-
-      --ease-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
-      --transition:  0.3s var(--ease-smooth);
-    }
-
-    /* =========================================================
-       RESET & BASE
-    ========================================================= */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-sans);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.6;
-      color: var(--color-text-primary);
-      background: var(--color-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: var(--color-primary); text-decoration: none; }
-    img { display: block; max-width: 100%; height: auto; }
-    ul { list-style: none; }
-
-    /* =========================================================
-       LAYOUT CONTAINERS
-    ========================================================= */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-3);
-    }
-
-    /* =========================================================
-       NAV / HEADER
-    ========================================================= */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 9999;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      background: rgba(83, 97, 122, 0.72);
-      backdrop-filter: blur(28px);
-      -webkit-backdrop-filter: blur(28px);
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-      border-bottom-left-radius: 24px;
-      border-bottom-right-radius: 24px;
-      box-shadow: 0 4px 24px rgba(17,24,39,0.18);
-    }
-
-    .site-header .container {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-link img {
-      max-height: 52px;
-      width: auto;
-      border-radius: var(--radius-control);
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .logo-link:hover img {
-      transform: scale(1.06);
-      box-shadow: 0 0 0 3px rgba(228,139,89,0.4);
-      border-radius: var(--radius-pill);
-    }
-
-    .main-nav ul {
-      display: flex;
-      align-items: center;
-      gap: var(--space-1);
-    }
-
-    .main-nav a {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 20px;
-      color: #FFFFFF;
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: var(--radius-pill);
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.0);
-      transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-      letter-spacing: 0.01em;
-    }
-
-    .main-nav a:hover,
-    .main-nav a.active {
-      background: rgba(255,255,255,0.16);
-      border-color: rgba(255,255,255,0.28);
-      transform: scale(1.04);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-    }
-
-    .main-nav a.nav-cta {
-      background: var(--color-primary);
-      color: #fff;
-      border-color: transparent;
-      font-weight: 600;
-    }
-
-    .main-nav a.nav-cta:hover {
-      background: var(--color-secondary);
-      transform: scale(1.06);
-    }
-
-    /* =========================================================
-       HERO — FULL BLEED GIF
-    ========================================================= */
-    .hero-section {
-      width: 100%;
-      overflow: hidden;
-      background: #adadad;
-    }
-
-    .hero-section img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* =========================================================
-       STRIP SECTION
-    ========================================================= */
-    .strip-section {
-      background: var(--color-bg);
-      display: flex;
-      justify-content: center;
-      padding: var(--space-4) 0;
-    }
-
-    .strip-section img {
-      max-width: 720px;
-      width: 100%;
-    }
-
-    /* =========================================================
-       ANIMATED GIF SECTION
-    ========================================================= */
-    .animated-section {
-      background: var(--color-surface-light);
-      display: flex;
-      justify-content: center;
-      padding: var(--space-6) 0;
-    }
-
-    .animated-section img {
-      max-width: 960px;
-      width: 100%;
-      border-radius: var(--radius-card);
-      box-shadow: var(--shadow-card);
-    }
-
-    /* =========================================================
-       BENTO GRID — PORTFOLIO
-    ========================================================= */
-    .bento-section {
-      padding: var(--space-10) 0;
-      background: var(--color-bg);
-    }
-
-    .bento-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1.2;
-      color: var(--color-primary);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-3);
-    }
-
-    .bento-label::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--color-primary);
-      animation: pulse-dot 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse-dot {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.4); opacity: 0.6; }
-    }
-
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
-      gap: var(--space-2);
-    }
-
-    .bento-card {
-      position: relative;
-      border-radius: var(--radius-card);
-      overflow: hidden;
-      background: var(--color-surface);
-      box-shadow: var(--shadow-card);
-      transition: transform var(--transition), box-shadow var(--transition);
-      cursor: pointer;
-    }
-
-    .bento-card:hover {
-      transform: translateY(-6px) scale(1.015);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .bento-card a {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .bento-card img {
-      width: 100%;
-      height: auto;
-      border-radius: var(--radius-card);
-      display: block;
-      transition: transform var(--transition);
-    }
-
-    .bento-card:hover img {
-      transform: scale(1.03);
-    }
-
-    /* Card overlay label on hover */
-    .bento-card .card-overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to top, rgba(17,24,39,0.85) 0%, transparent 100%);
-      padding: var(--space-3);
-      opacity: 0;
-      transform: translateY(8px);
-      transition: opacity var(--transition), transform var(--transition);
-      border-radius: 0 0 var(--radius-card) var(--radius-card);
-    }
-
-    .bento-card:hover .card-overlay {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card-overlay-title {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.9);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .card-overlay-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--color-primary);
-    }
-
-    /* Tall cards spanning 2 rows */
-    .bento-card.tall {
-      grid-row: span 2;
-    }
-
-    /* =========================================================
-       CTA SECTIONS (Product & UX)
-    ========================================================= */
-    .cta-section {
-      padding: var(--space-10) 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section.dark {
-      background: var(--color-surface);
-    }
-
-    .cta-section.light {
-      background: var(--color-bg);
-    }
-
-    /* Ambient grain overlay on dark section */
-    .cta-section.dark::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      opacity: 0.6;
-    }
-
-    .cta-inner {
-      display: grid;
-      grid-template-columns: 1fr 80px 1fr;
-      align-items: center;
-      gap: var(--space-4);
-      position: relative;
-    }
-
-    .cta-heading {
-      font-family: var(--font-sans);
-      font-size: clamp(36px, 5vw, 56px);
-      font-weight: 500;
-      line-height: 1.06;
-      letter-spacing: -0.02em;
-    }
-
-    .dark .cta-heading { color: #FFFFFF; }
-    .light .cta-heading { color: var(--color-text-secondary); }
-
-    .cta-heading a {
-      color: var(--color-primary);
-      text-decoration: none;
-      position: relative;
-    }
-
-    .cta-heading a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px; left: 0; right: 0;
-      height: 2px;
-      background: var(--color-primary);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform var(--transition);
-    }
-
-    .cta-heading a:hover::after { transform: scaleX(1); }
-
-    .cta-body {
-      font-size: 17px;
-      line-height: 1.65;
-    }
-
-    .dark .cta-body { color: rgba(255,255,255,0.78); }
-    .light .cta-body { color: var(--color-text-secondary); }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: var(--space-3);
-      padding: 14px 28px;
-      background: var(--color-primary);
-      color: #FFFFFF;
-      font-family: var(--font-sans);
-      font-size: 15px;
-      font-weight: 600;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(255,255,255,0.2);
-      box-shadow: 0 2px 12px rgba(228,139,89,0.35);
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      cursor: pointer;
-    }
-
-    .cta-button:hover {
-      background: var(--color-secondary);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(228,139,89,0.5);
-      color: #fff;
-    }
-
-    /* =========================================================
-       UX VISUAL SECTION
-    ========================================================= */
-    .ux-poster-section {
-      background: var(--color-bg);
-      padding: var(--space-6) 0;
-    }
-
-    .ux-poster-section img {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: var(--radius-card);
-      box-shadow: var(--shadow-card);
-    }
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-    .site-footer {
-      background: var(--color-surface);
-      padding: var(--space-8) 0 var(--space-6);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* ambient left-edge glow */
-    .site-footer::before {
-      content: '';
-      position: absolute;
-      top: -80px; left: -80px;
-      width: 320px; height: 320px;
-      background: radial-gradient(circle, rgba(228,139,89,0.14) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-8);
-      align-items: start;
-    }
-
-    .footer-logo-link img {
-      max-width: 115px;
-      margin-bottom: var(--space-3);
-      transition: opacity var(--transition);
-    }
-
-    .footer-logo-link:hover img { opacity: 0.8; }
-
-    .footer-bio {
-      font-size: 14px;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.62);
-      margin-bottom: var(--space-3);
-      max-width: 420px;
-    }
-
-    .footer-hire-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 26px;
-      background: var(--color-primary);
-      color: #fff;
-      font-size: 15px;
-      font-weight: 600;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow: 0 2px 12px rgba(228,139,89,0.3);
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      margin-bottom: var(--space-3);
-    }
-
-    .footer-hire-btn:hover {
-      background: var(--color-secondary);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(228,139,89,0.45);
-    }
-
-    .footer-social {
-      display: flex;
-      gap: var(--space-2);
-      margin-top: var(--space-3);
-      margin-bottom: var(--space-3);
-    }
-
-    .footer-social a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      transition: background var(--transition), transform var(--transition), border-color var(--transition);
-    }
-
-    .footer-social a:hover {
-      background: rgba(228,139,89,0.22);
-      border-color: rgba(228,139,89,0.5);
-      transform: translateY(-3px);
-    }
-
-    .footer-social img {
-      max-height: 18px;
-      width: auto;
-    }
-
-    .footer-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: var(--space-3);
-    }
-
-    .footer-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.2;
-    }
-
-    .footer-meta-item::before {
-      content: '→';
-      color: var(--color-primary);
-      font-size: 11px;
-    }
-
-    /* Right col — connect form */
-    .footer-form-col {
-      padding-top: var(--space-2);
-    }
-
-    .footer-form-heading {
-      font-family: var(--font-sans);
-      font-size: 20px;
-      font-weight: 500;
-      color: #FFFFFF;
-      margin-bottom: var(--space-3);
-      letter-spacing: -0.01em;
-    }
-
-    .footer-form .form-group {
-      margin-bottom: var(--space-2);
-    }
-
-    .footer-form label {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .footer-form input[type="text"],
-    .footer-form input[type="email"] {
-      width: 100%;
-      padding: 12px 16px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-control);
-      color: #FFFFFF;
-      font-family: var(--font-sans);
-      font-size: 14px;
-      line-height: 1.5;
-      outline: none;
-      transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
-    }
-
-    .footer-form input::placeholder { color: rgba(255,255,255,0.28); }
-
-    .footer-form input:focus {
-      border-color: var(--color-primary);
-      background: rgba(255,255,255,0.10);
-      box-shadow: 0 0 0 3px rgba(228,139,89,0.18);
-    }
-
-    .footer-form .checkbox-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: var(--space-2);
-    }
-
-    .footer-form input[type="checkbox"] {
-      width: 16px; height: 16px;
-      accent-color: var(--color-primary);
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    .footer-form .checkbox-label {
-      font-size: 13px;
-      color: rgba(255,255,255,0.55);
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .footer-form-submit {
-      margin-top: var(--space-3);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 32px;
-      background: var(--color-primary);
-      color: #fff;
-      font-family: var(--font-sans);
-      font-size: 15px;
-      font-weight: 600;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: var(--radius-pill);
-      cursor: pointer;
-      box-shadow: 0 2px 12px rgba(228,139,89,0.32);
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-    }
-
-    .footer-form-submit:hover {
-      background: var(--color-secondary);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(228,139,89,0.46);
-    }
-
-    .footer-divider {
-      margin-top: var(--space-6);
-      padding-top: var(--space-3);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-copyright {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: rgba(255,255,255,0.32);
-      letter-spacing: 0.04em;
-    }
-
-    /* =========================================================
-       SECTION DIVIDER / SPACER
-    ========================================================= */
-    .section-spacer { height: var(--space-8); }
-
-    /* =========================================================
-       SCROLL REVEAL (JS-aided)
-    ========================================================= */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.65s var(--ease-smooth), transform 0.65s var(--ease-smooth);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.08s; }
-    .reveal-delay-2 { transition-delay: 0.16s; }
-    .reveal-delay-3 { transition-delay: 0.24s; }
-    .reveal-delay-4 { transition-delay: 0.32s; }
-
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-    @media (max-width: 900px) {
-      .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .bento-card.tall { grid-row: auto; }
-
-      .cta-inner {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-      }
-
-      .cta-section { padding: var(--space-8) 0; }
-    }
-
-    @media (max-width: 600px) {
-      .site-header { height: auto; padding: var(--space-2) 0; border-radius: 0 0 16px 16px; }
-      .site-header .container { flex-direction: column; gap: var(--space-2); padding: var(--space-2) var(--space-2); }
-      .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 6px; }
-      .main-nav a { font-size: 13px; padding: 6px 14px; }
-
-      .bento-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .cta-inner { grid-template-columns: 1fr; }
-      .cta-heading { font-size: 30px; }
-
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-divider { flex-direction: column; gap: var(--space-2); text-align: center; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<title></title>
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="website" property="og:type" />
+	<meta content="" property="og:description" />
+	<meta content="" property="og:url" />
+	<meta content="images/1_13671710_large.jpg" property="og:image" />
+	<meta content="" property="og:title" />
+	<meta content="" name="description" />
+	<meta charset="utf-8" />
+	<meta content="width=device-width" name="viewport" />
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Urbanist:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css" />
+	
+	<style>
+
+/* Control header height and bottom-align logo + menu */
+.row-1 {
+    height: 80px;               /* fixed height so bottom alignment works */
+    padding: 0 !important;      
+}
+
+.row-1 .row-content {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;      /* bottom-aligned */
+    justify-content: space-between;
+}
+
+.row-1 img {
+    display: block;
+    margin: 0;
+}
+
+.row-1 .menu {
+    display: flex;
+    align-items: flex-end;      /* bottom-align menu items too */
+}
+		
+.row-11 .col-2 .block-3 .field.inline-field input[type="checkbox"] + label {
+    margin-left: 5px; /* space between checkbox and "Send me your brainwaves via email!" */
+}
+
+.form-row.checkbox-row {
+    margin-top: 12px;    /* space above the entire row */
+}
+		
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row textarea {
+    padding: 10px 14px;      /* adjust inner spacing */
+    box-sizing: border-box;  /* keeps size consistent */
+}
+		
+/* Hover effect for Portfolio Images in Row 5 */
+
+/* Z Image */
+.row-5 .col-1 .block-1 a:hover img {
+    transform: scale(0.97);                  /* slightly smaller */ 
+    border: 3px solid #ff5c37;               /* colored stroke */
+    transition: all 0.3s ease-in-out;        /* smooth effect */
+    border-radius: 40px;                      /* maintain shape */
+}
+
+/* Hex Image */
+.row-5 .col-2 .block-1 a:hover img {
+    transform: scale(0.97);
+    border: 3px solid #ffffff;
+    transition: all 0.3s ease-in-out;
+    border-radius: 40px;
+}
+
+/* Nova Image */
+.row-5 .col-2 .block-3 a:hover img {
+    transform: scale(0.97);
+    border: 3px solid #ff5c37;
+    transition: all 0.3s ease-in-out;
+    border-radius: 40px;
+}
+
+/* Titan Image */
+.row-5 .col-3 .block-1 a:hover img {
+    transform: scale(0.97);
+    border: 3px solid #ff5c37;
+    transition: all 0.3s ease-in-out;
+    border-radius: 40px;
+}
+
+/* IKEA Image */
+.row-5 .col-4 .block-1 a:hover img {
+    transform: scale(0.97);
+    border: 3px solid #ff5c37;
+    transition: all 0.3s ease-in-out;
+    border-radius: 40px;
+}
+
+/* Expedition Image */
+.row-5 .col-4 .block-3 a:hover img {
+    transform: scale(0.97);
+    border: 3px solid #ff5c37;
+    transition: all 0.3s ease-in-out;
+    border-radius: 40px;
+}
+		/* Original logo style (no rounding) */
+.row-1 .col-1 .block-2 a img {
+    transition: all 0.3s ease-in-out; /* smooth transition */
+    border-radius: 0;                 /* original: no rounding */
+}
+
+/* On hover, apply rounding and overlay effect */
+.row-1 .col-1 .block-2 a:hover img {
+    border-radius: 50px;              /* capsule/pill rounding on hover */
+    box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.2); /* translucent overlay */
+    transform: scale(1.05);           /* subtle zoom effect */
+}
+
+.page-container > .row-1 {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    /* Glassmorphism */
+    background: rgba(173, 173, 173, 0.5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    /* Background image */
+    background-image: url("images/2_BG_electronics.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    /* Rounded bottom corners */
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    /* White stroke around header */
+    border-bottom: 2px solid #ffffff;
+
+    /* Drop shadow */
+    box-shadow: 0 4px 20px #adadad;
+
+    /* Optional padding */
+    padding-bottom: 15px;
+}
+		
+		/* Static capsule for active page */
+.row-1 .menu a.active {
+    border: 2px solid #ffffff;  /* white stroke */
+    border-radius: 50px;        /* capsule shape */
+    padding: 6px 20px;          /* vertical | horizontal spacing */
+    background-color: transparent; /* no fill */
+    color: #ffffff;             /* text color */
+    font-weight: 600;           /* emphasis */
+}
+
+/* Default menu item style */
+.row-1 .menu a {
+    background-color: rgba(0, 0, 0, 0.08); /* subtle overlay by default */
+    padding: 6px 20px;                     /* controls visual size */
+    color: #ffffff;                        /* keep text white */
+    border-radius: 50px;                   /* capsule shape */
+    text-decoration: none;
+    display: inline-block;                  /* ensures transform works correctly */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* smooth hover */
+    transform: scale(1);                    /* default size */
+}
+
+/* Hover effect: darken background + scale up slightly */
+.row-1 .menu a:hover {
+    background-color: rgba(0, 0, 0, 0.25); /* darker overlay */
+    transform: scale(1.05);                 /* subtle zoom only on hover */
+    color: #ffffff;                          /* text stays visible */
+}
+		.row-10,
+		.row-3,
+		.row-4,
+		.row-8,
+		.row-9 {
+			background-color: #ffffff;
+			background-repeat: no-repeat
+		}
+
+		body {
+			background-color: #adadad;
+			color: #000000;
+			font-family: Fira Sans, Lucida Sans Unicode, Lucida Grande, sans-serif
+		}
+
+		.page-container {
+			background-image: url("images/2_BG_electronics.png");
+			background-position: top center
+		}
+
+		.row-11 .col-1 .block-10 a,
+		.row-11 .col-2 .block-4 a,
+		a {
+			color: #7747FF
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		h3,
+		p {
+			margin: 0
+		}
+
+		.desktop_hide {
+			display: none
+		}
+
+		.row-content {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.row-content .col-w2 {
+			flex-basis: 16.6666666667%
+		}
+
+		.row-content .col-w3 {
+			flex-basis: 25%
+		}
+
+		.row-content .col-w4 {
+			flex-basis: 33.3333333333%
+		}
+
+		.row-content .col-w6 {
+			flex-basis: 50%
+		}
+
+		.row-content .col-w8 {
+			flex-basis: 66.6666666667%
+		}
+
+		.row-content .col-w9 {
+			flex-basis: 75%
+		}
+
+		.row-11 .col-2 .block-3 div.label:not(.inline),
+		.row-11 .col-2 .block-3 label:not(.inline),
+		.row-content .col-w12 {
+			flex-basis: 100%
+		}
+
+		.button a,
+		.menu ul li a {
+			text-decoration: none
+		}
+
+		.image {
+			overflow: auto
+		}
+
+		.image .center {
+			margin: 0 auto
+		}
+
+		.row-1 .col-1 .block-2,
+		.row-10 .col-1 .block-1,
+		.row-11 .col-2 .block-3 .form-row:not(.sidelabel) input:not([type=checkbox]):not([type=radio]),
+		.row-3 .col-1 .block-1,
+		.row-4 .col-1 .block-1,
+		.row-5 .col-1 .block-1,
+		.row-5 .col-2 .block-1,
+		.row-5 .col-2 .block-3,
+		.row-5 .col-3 .block-1,
+		.row-5 .col-4 .block-1,
+		.row-5 .col-4 .block-3,
+		.row-8 .col-1 .block-1 {
+			width: 100%
+		}
+
+		.form .form-row .field {
+			padding: 3px;
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center
+		}
+
+		.form .form-row .field.inline-field {
+			flex-wrap: nowrap;
+			align-items: flex-start;
+			display: block
+		}
+
+		.form .form-row .field .form-option-wrapper {
+			align-items: flex-start;
+			display: inline-flex
+		}
+
+		.form .form-row .field .form-option-wrapper>input {
+			margin: 0 0 0 3px
+		}
+
+		.form .form-row .field .form-option-wrapper>label {
+			min-width: 0
+		}
+
+		.form .form-row .field input:not([type=checkbox]):not([type=radio]) {
+			flex-grow: 1;
+			font-family: inherit;
+			font-size: inherit
+		}
+
+		.form .form-row .field input[type=checkbox]:not(:first-of-type) {
+			margin-left: 15px
+		}
+
+		.form .form-row .field button {
+			font-family: inherit;
+			font-size: inherit;
+			cursor: pointer
+		}
+
+		.form .form-row .field .button-container {
+			flex-grow: 1
+		}
+
+		.form input[type=color] {
+			border: none;
+			height: 38px
+		}
+
+		.form input[type=color]::-webkit-color-swatch-wrapper {
+			margin: 0;
+			padding: 2px
+		}
+
+		.form input[type=color]::-webkit-color-swatch {
+			margin: 0;
+			padding: 0
+		}
+
+		.image img {
+			display: block;
+			width: 100%
+		}
+
+		.menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0
+		}
+
+		.menu ul.horizontal li {
+			display: inline-block
+		}
+
+		.paragraph {
+			overflow-wrap: anywhere
+		}
+
+		.social .icon img {
+			max-height: 32px
+		}
+
+		.row-1,
+		.row-5,
+		.row-6,
+		.row-7 {
+			background-repeat: no-repeat
+		}
+
+		.row-1 .row-content,
+		.row-3 .row-content,
+		.row-7 .row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000
+		}
+
+		.row-1 .col-1,
+		.row-1 .col-2,
+		.row-3 .col-1,
+		.row-8 .col-1 {
+			padding-top: 5px
+		}
+
+		.row-1 .col-2 .block-2 {
+			color: #ffffff;
+			font-family: inherit;
+			font-size: 16px;
+			font-weight: 400;
+			padding: 10px 60px;
+			text-align: left
+		}
+
+		.row-2 {
+			background-repeat: no-repeat;
+			background-size: auto
+		}
+
+		.row-2 .row-content {
+			background-repeat: no-repeat;
+			background-size: auto;
+			color: #000000
+		}
+
+		.row-2 .col-1 .block-1 {
+			padding-left: 20px;
+			width: 100%
+		}
+
+		.row-4,
+		.row-8 {
+			background-size: auto
+		}
+
+		.row-11 .row-content,
+		.row-4 .row-content,
+		.row-8 .row-content {
+			background-image: url('images/3_Faint_Bg.png');
+			background-repeat: no-repeat;
+			background-size: auto;
+			border-radius: 0;
+			color: #000000
+		}
+
+		.row-5 .row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000;
+			padding: 60px
+		}
+
+		.row-6 .row-content,
+		.row-9 .row-content {
+			border-radius: 20px;
+			background-image: url('images/3_Faint_Bg.png');
+			color: #000000;
+			background-repeat: no-repeat
+		}
+
+		.row-5 .col-1,
+		.row-5 .col-2,
+		.row-5 .col-3,
+		.row-5 .col-4,
+		.row-7 .col-1,
+		.row-7 .col-2,
+		.row-7 .col-3,
+		.row-7 .col-4 {
+			padding: 10px
+		}
+
+		.row-6 .row-content {
+			background-color: #848484
+		}
+
+		.row-6 .col-1,
+		.row-9 .col-1 {
+			padding: 35px 60px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center
+		}
+
+		.row-6 .col-1 .block-1,
+		.row-9 .col-1 .block-1 {
+			padding: 10px 25px;
+			text-align: center;
+			width: 100%
+		}
+
+		.row-6 .col-2,
+		.row-9 .col-2 {
+			padding: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center
+		}
+
+		.row-6 .col-2 .block-1,
+		.row-9 .col-2 .block-1 {
+			padding-bottom: 15px;
+			padding-left: 25px;
+			padding-right: 25px
+		}
+
+		.row-6 .col-3,
+		.row-9 .col-3 {
+			padding-bottom: 20px;
+			padding-right: 25px;
+			padding-top: 35px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center
+		}
+
+		.row-6 .col-3 .block-1,
+		.row-9 .col-3 .block-1 {
+			padding-bottom: 25px;
+			padding-left: 10px;
+			padding-top: 25px
+		}
+
+		.row-6 .col-3 .block-2,
+		.row-9 .col-3 .block-2 {
+			padding: 10px;
+			text-align: left
+		}
+
+		.row-9 .row-content {
+			background-color: #ffffff
+		}
+
+		.row-10 .row-content {
+			background-image: url('images/3_Faint_Bg.png');
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000000
+		}
+
+		.row-10 .col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.row-11 {
+			background-color: #adadad;
+			background-repeat: no-repeat;
+			background-size: auto
+		}
+
+		.row-11 .col-1,
+		.row-11 .col-2 {
+			padding-bottom: 5px;
+			padding-left: 30px;
+			padding-top: 5px
+		}
+
+		.row-11 .col-1 .block-2 {
+			padding: 25px 30px 20px;
+			width: 100%
+		}
+
+		.row-11 .col-1 .block-10,
+		.row-11 .col-1 .block-3,
+		.row-11 .col-2 .block-4 {
+			padding: 10px 25px 5px
+		}
+
+		.row-11 .col-1 .block-4 {
+			padding: 10px 25px 20px;
+			text-align: left
+		}
+
+		.row-11 .col-1 .block-5 {
+			padding-bottom: 5px;
+			padding-left: 30px;
+			padding-top: 10px;
+			text-align: left
+		}
+
+		.row-11 .col-1 .block-6,
+		.row-11 .col-1 .block-7,
+		.row-11 .col-1 .block-8 {
+			padding: 10px 30px 5px;
+			text-align: center;
+			width: 100%
+		}
+
+		.row-11 .col-2 .block-2 {
+			padding: 10px;
+			text-align: center;
+			width: 100%
+		}
+
+		.row-11 .col-2 .block-3 {
+			font-family: Montserrat, Oxygen;
+			font-size: 14px;
+			font-weight: 500;
+			padding: 10px
+		}
+
+		.row-1 .col-2 .block-2 li {
+			padding: 5px 20px
+		}
+
+		.row-1 .col-2 .block-2 li a,
+		.row-11 .col-1 .block-3 a {
+			color: #ffffff
+		}
+
+		.row-6 .col-1 .block-1 h1 {
+			color: #ffffff;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 53px;
+			font-weight: 600;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.row-6 .col-2 .block-1,
+		.row-9 .col-2 .block-1 {
+			color: #ffffff;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 19px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 150%;
+			text-align: left
+		}
+
+		.row-6 .col-3 .block-1,
+		.row-9 .col-3 .block-1 {
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 150%
+		}
+
+		.row-6 .col-2 .block-1 a,
+		.row-9 .col-2 .block-1 a {
+			color: #8a3b8f
+		}
+
+		.row-11 .col-1 .block-10 p:not(:last-child),
+		.row-11 .col-1 .block-3 p:not(:last-child),
+		.row-11 .col-2 .block-4 p:not(:last-child),
+		.row-6 .col-2 .block-1 p:not(:last-child),
+		.row-6 .col-3 .block-1 p:not(:last-child),
+		.row-9 .col-2 .block-1 p:not(:last-child),
+		.row-9 .col-3 .block-1 p:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.row-6 .col-3 .block-1 {
+			color: #ffffff;
+			font-size: 18px;
+			text-align: left
+		}
+
+		.row-6 .col-3 .block-1 a,
+		.row-9 .col-3 .block-1 a {
+			color: #adadad
+		}
+
+		.row-11 .col-1 .block-4 a:hover,
+		.row-6 .col-3 .block-2 a:hover,
+		.row-9 .col-3 .block-2 a:hover {
+			background-color: #adadad !important;
+			border-bottom: 0 solid transparent !important;
+			border-left: 0 solid transparent !important;
+			border-right: 0px solid transparent !important;
+			border-top: 0 solid transparent !important;
+			color: #ffffff !important
+		}
+
+		.row-11 .col-1 .block-4 a,
+		.row-6 .col-3 .block-2 a,
+		.row-9 .col-3 .block-2 a {
+			background-color: #ff5c37;
+			border-bottom: 1px solid #ffffff;
+			border-left: 1px solid #ffffff;
+			border-radius: 60px;
+			border-right: 1px solid #ffffff;
+			border-top: 1px solid #ffffff;
+			color: #ffffff;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: 0;
+			line-height: 200%;
+			padding: 5px 20px;
+			width: auto
+		}
+
+		.row-9 .col-1 .block-1 h1 {
+			color: #adadad;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 51px;
+			font-weight: 600;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.row-9 .col-3 .block-1 {
+			color: #363434;
+			font-size: 18px;
+			text-align: left
+		}
+
+		.row-11 .col-1 .block-10,
+		.row-11 .col-1 .block-3,
+		.row-11 .col-2 .block-4 {
+			font-size: 14px;
+			letter-spacing: 0;
+			line-height: 150%;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-weight: 500
+		}
+
+		.row-11 .col-1 .block-3 {
+			color: #1a1a1a;
+			text-align: left
+		}
+
+		.row-11 .col-1 .block-8 h3 {
+			color: #1a1a1a;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.row-11 .col-1 .block-6 h3,
+		.row-11 .col-1 .block-7 h3 {
+			color: #000000;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.row-11 .col-1 .block-10,
+		.row-11 .col-2 .block-4 {
+			color: #ffffff;
+			text-align: left
+		}
+
+		.row-11 .col-2 .block-2 h3 {
+			color: #ffffff;
+			direction: ltr;
+			font-family: Montserrat, Oxygen;
+			font-size: 21px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			line-height: 120%;
+			text-align: left
+		}
+
+		@media (max-width:768px) {
+			.desktop_hide {
+				display: block !important
+			}
+
+			.form form {
+				width: 100% !important
+			}
+
+			img.fullwidthOnMobile {
+				max-width: none !important
+			}
+
+			.mobile_hide {
+				display: none
+			}
+
+			.row-content:not(.no_stack) {
+				display: block
+			}
+
+			.row-5 .row-content {
+				padding: 15px 40px !important
+			}
+
+			.row-5 .col-1,
+			.row-5 .col-2,
+			.row-5 .col-3,
+			.row-5 .col-4,
+			.row-7 .col-1,
+			.row-7 .col-2,
+			.row-7 .col-3,
+			.row-7 .col-4 {
+				padding: 10px 25px !important
+			}
+
+			.row-6 .col-1 {
+				padding: 5px 5px 0 !important
+			}
+
+			.row-1 .col-1 .block-2,
+			.row-6 .col-2,
+			.row-9 .col-2 {
+				padding: 0 !important
+			}
+
+			.row-6 .col-3,
+			.row-9 .col-3 {
+				padding: 0 25px 20px !important
+			}
+
+			.row-9 .col-1 {
+				padding: 10px 5px 0 !important
+			}
+
+			.row-11 .row-content {
+				padding-left: 15px !important;
+				padding-right: 15px !important
+			}
+
+			.row-11 .col-1,
+			.row-11 .col-2 {
+				padding: 5px 0 !important
+			}
+
+			.row-1 .col-2 .block-1 {
+				height: 10px !important
+			}
+
+			.row-1 .col-1 .block-2 img,
+			.row-11 .col-1 .block-2 img,
+			.row-2 .col-1 .block-1 img,
+			.row-5 .col-1 .block-1 img,
+			.row-5 .col-2 .block-1 img,
+			.row-5 .col-2 .block-3 img,
+			.row-5 .col-3 .block-1 img,
+			.row-5 .col-4 .block-1 img,
+			.row-5 .col-4 .block-3 img,
+			.row-8 .col-1 .block-1 img {
+				float: none !important;
+				margin: 0 auto !important
+			}
+
+			.row-5 .col-1 .block-1,
+			.row-5 .col-2 .block-1,
+			.row-5 .col-2 .block-3,
+			.row-5 .col-3 .block-1,
+			.row-5 .col-4 .block-1,
+			.row-5 .col-4 .block-3 {
+				padding: 0 15px !important
+			}
+
+			.row-5 .col-1 .block-2,
+			.row-7 .col-1 .block-1 {
+				height: 1px !important
+			}
+
+			.row-5 .col-2 .block-2,
+			.row-5 .col-4 .block-2,
+			.row-7 .col-2 .block-1,
+			.row-7 .col-4 .block-1 {
+				height: 20px !important
+			}
+
+			.row-1 .col-2 .block-2 {
+				text-align: left !important
+			}
+
+			.row-1 .col-2 .block-2 li {
+				font-size: 13px !important;
+				line-height: auto !important
+			}
+
+			.row-6 .col-1 .block-1,
+			.row-9 .col-1 .block-1 {
+				padding: 10px 15px;
+				text-align: center
+			}
+
+			.row-6 .col-1 .block-1 h1,
+			.row-9 .col-1 .block-1 h1 {
+				font-size: 22px;
+				text-align: center
+			}
+
+			.row-6 .col-2 .block-1,
+			.row-9 .col-2 .block-1 {
+				text-align: center !important;
+				font-size: 1px !important
+			}
+
+			.row-6 .col-3 .block-1,
+			.row-9 .col-3 .block-1 {
+				padding: 5px 0 5px 35px !important;
+				text-align: justify !important;
+				font-size: 13px !important
+			}
+
+			.row-8 .col-1 .block-1 {
+				padding: 0 10px !important
+			}
+
+			.row-11 .col-1 .block-4,
+			.row-11 .col-1 .block-4 .button-content,
+			.row-6 .col-3 .block-2,
+			.row-6 .col-3 .block-2 .button-content,
+			.row-9 .col-3 .block-2,
+			.row-9 .col-3 .block-2 .button-content {
+				text-align: center !important
+			}
+
+			.row-11 .col-1 .block-2 {
+				padding: 10px 0 !important
+			}
+
+			.row-11 .col-1 .block-3 {
+				padding: 10px 0 !important;
+				text-align: left !important
+			}
+
+			.row-11 .col-1 .block-5 {
+				padding: 10px 0 5px !important;
+				text-align: center !important
+			}
+
+			.row-11 .col-1 .block-6,
+			.row-11 .col-1 .block-7,
+			.row-11 .col-1 .block-8,
+			.row-11 .col-2 .block-2 {
+				padding: 10px 0;
+				text-align: center
+			}
+
+			.row-11 .col-1 .block-6 h3,
+			.row-11 .col-1 .block-7 h3,
+			.row-11 .col-1 .block-8 h3,
+			.row-11 .col-2 .block-2 h3 {
+				text-align: center
+			}
+
+			.row-11 .col-1 .block-10 {
+				padding: 10px 0 !important;
+				text-align: center !important
+			}
+
+			.row-11 .col-2 .block-4 {
+				padding: 10px 0 !important;
+				text-align: center !important;
+				font-size: 10px !important
+			}
+		}
+
+		.row-11 .col-2 .block-3 {
+			text-align: left
+		}
+
+		.row-11 .col-2 .block-3 form {
+			display: inline-block;
+			width: 100%
+		}
+
+		.row-11 .col-2 .block-3 div.label,
+		.row-11 .col-2 .block-3 label {
+			color: #545454;
+			line-height: 200%;
+			text-align: left;
+			display: block
+		}
+
+		.row-11 .col-2 .block-3 ::-webkit-input-placeholder {
+			color: #000000
+		}
+
+		.row-11 .col-2 .block-3 :-moz-placeholder {
+			color: #000000
+		}
+
+		.row-11 .col-2 .block-3 ::-moz-placeholder {
+			color: #000000
+		}
+
+		.row-11 .col-2 .block-3 :-ms-input-placeholder {
+			color: #000000
+		}
+
+		.row-11 .col-2 .block-3 .field>label:first-child,
+		.row-11 .col-2 .block-3 div.label {
+			padding: 3px
+		}
+
+		.row-11 .col-2 .block-3 .field.inline-field input[type=checkbox] {
+			position: relative;
+			color: purple;
+			top: 8px
+		}
+
+		.row-11 .col-2 .block-3 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: #ffffff;
+			border-bottom: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-radius: 25px;
+			border-right: 1px solid transparent;
+			border-top: 1px solid transparent;
+			color: #000000;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			min-height: 48px
+		}
+
+		.row-11 .col-2 .block-3 input:not([type=checkbox]):not([type=radio]):focus {
+			outline-color: #ff5c37
+		}
+
+		.row-11 .col-2 .block-3 button {
+			background-color: #ff5c37;
+			border-bottom: 1px solid #ffffff;
+			border-left: 1px solid #ffffff;
+			border-radius: 26px;
+			border-right: 1px solid #ffffff;
+			border-top: 1px solid #ffffff;
+			color: #ffffff;
+			letter-spacing: normal;
+			line-height: 200%;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			width: 45%
+		}
+
+		.row-11 .col-2 .block-3 .button-container {
+			padding-top: 15px;
+			text-align: left
+		}
+		
+/* Force header height and vertically center logo + menu */
+.row-1 {
+    height: 90px !important;         /* adjust as needed */
+    padding-top: 10px !important;   /* adjust value as needed */
+    padding-bottom: 10px !important;
+    display: flex !important;
+    align-items: center !important;  /* center items inside header background */
+}
+
+.row-1 .row-content {
+    display: flex !important;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center !important;  /* vertical centering */
+	height: 90px !important;
+    max-height: 60px;
+}
+
+.row-1 img {
+    display: block;
+    height: auto;
+    max-height: 60px;                /* keep logo inside header */
+}
+
+.row-1 .menu {
+    display: flex !important;
+    align-items: center !important;  /* center menu items as well */
+}
+/* FORCE TRUE VERTICAL CENTERING – FULL OVERRIDE */
+
+/* Remove any internal padding BeeFree injects */
+.row-1,
+.row-1 .row-content,
+.row-1 .col,
+.row-1 .col-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;     /* center vertically */
+}
+
+/* Force the header to the height you want */
+.row-1 {
+    height: 90px !important;            /* adjust if needed */
+}
+
+/* Make columns center their children */
+.row-1 .col,
+.row-1 .col-content {
+    justify-content: center !important; /* vertical alignment helper */
+}
+
+/* Center the logo */
+.row-1 img {
+    max-height: 60px !important;        /* ensures it won't overflow */
+    align-self: center !important;
+}
+
+/* Center menu items */
+.row-1 .menu {
+    align-items: center !important;
+    display: flex !important;
+}
+		/* STICKY ACTIVE STATE FOR HOME (only on index.html) */
+nav .menu-item.home a {
+    background: rgba(0,0,0,0.35); /* adjust opacity as needed */
+    border-radius: 999px; /* creates a capsule shape */
+    padding: 8px 16px; /* slightly larger tap target without shifting layout */
+    transform: scale(1); /* ensure Home is not shrunk or enlarged */
+}
+
+/* Prevent Resume button from inheriting hover-scale unless hovered */
+nav .menu-item.resume a {
+    transform: scale(1) !important;
+}
+
+/* Maintain your original hover rules for all items */
+nav .menu-item a:hover {
+    background: rgba(0,0,0,0.45); /* hover stays slightly stronger */
+    border-radius: 999px;
+    transform: scale(1.05); /* only applies on hover */
+}
+/* Static hover-state applied permanently to the HOME link */
+.row-1 .menu li:first-child a {
+    background-color: rgba(0, 0, 0, 0.25);   /* same as hover */
+    transform: scale(1.05);                  /* same as hover */
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 6px 20px;
+}
+
+/* Prevent HOME from reacting to hover */
+.row-1 .menu li:first-child a:hover {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+
+/* Keep all OTHER menu items behaving normally on hover */
+.row-1 .menu li:not(:first-child) a:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    color: #ffffff;
+    border-radius: 50px;
+}
+	/* ----------------------------- */
+/* MOBILE OVERRIDE — MAX 600px   */
+/* ----------------------------- */
+@media (max-width: 600px) {
+
+    /* Header container */
+    .row-1 {
+        height: auto !important;                /* let header expand */
+        padding: 24px 0 !important;            /* double previous padding */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;            /* prevent scrollbars */
+        box-sizing: border-box !important;
+    }
+
+    /* Row content */
+    .row-1 .row-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+
+    /* Logo fully centered and stable */
+    .row-1 img {
+        display: block !important;
+        margin: 0 auto !important;
+        max-width: 70% !important;
+        height: auto !important;
+        float: none !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
         transition: none !important;
-        animation: none !important;
-      }
     }
-  </style>
+
+    /* Menu stacked vertically, centered */
+    .row-1 .menu {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Each menu item full-width */
+    .row-1 .menu li {
+        list-style: none !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .row-1 .menu li a {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 6px 0 !important;
+        margin: 0 !important;
+        transition: none !important;
+    }
+}
+
+		/* Logo centered */
+.row-1 img {
+    display: block !important;       /* force block layout */
+    margin: 0 auto !important;       /* horizontally center */
+    max-width: 100%;
+    height: auto;
+    float: none !important;          /* remove any floating */
+    transition: none !important;     /* prevent hover shifts */
+}
+
+/* Ensure the logo never shifts or pushes layout on hover */
+.row-1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transform: none !important;
+    transition: inherit !important; /* preserves existing hover effects elsewhere */
+}
+
+
+	</style>
 </head>
 
 <body>
+	<div class="page-container">
+		<div class="row row-1">
+			<div class="row-content">
+				<div class="col col-1 col-w3">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+					<div class="block block-2 image"><a href="index.html"><img alt="" class="center fixedwidth" src="images/4_Logo.png" style="max-width:90px;" title="" /></a></div>
+				</div>
+				<div class="col col-2 col-w9">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+					<div class="block block-2 menu">
+						<nav class="menu">
+							<ul class="horizontal">
+    <li><a href="index.html">Home ✪</a></li>
+    <span></span>
 
-  <!-- ============================================================
-       HEADER / NAV
-  ============================================================ -->
-  <header class="site-header">
-    <div class="container">
-      <a class="logo-link" href="index.html">
-        <img src="images/4_Logo.png" alt="Sarthak Tavate" style="max-height:48px;" />
-      </a>
-      <nav class="main-nav" aria-label="Primary navigation">
-        <ul>
-          <li><a href="index.html" class="active">Home ✪</a></li>
-          <li><a href="ux.html">User Experience Design</a></li>
-          <li><a href="product.html">Product Design</a></li>
-          <li><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/sarthak_resume.pdf#pagemode=none" target="_blank" rel="noopener" class="nav-cta">Resumé ↗</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <li><a href="ux.html">User Experience Design</a></li>
+    <span></span>
 
-  <!-- ============================================================
-       HERO — FULL BLEED GIF
-  ============================================================ -->
-  <section class="hero-section" aria-label="Hero">
-    <img src="images/5_Final_Poster.gif" alt="Hello!" />
-  </section>
+    <li><a href="product.html">Product Design</a></li>
+    <span></span>
 
-  <!-- ============================================================
-       ANIMATED STRIP
-  ============================================================ -->
-  <section class="strip-section">
-    <img src="images/6_Strip_final_1.gif" alt="" />
-  </section>
-
-  <!-- ============================================================
-       ANIMATED BRAND GIF
-  ============================================================ -->
-  <section class="animated-section">
-    <img src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif"
-         alt="Animated brand visualization" />
-  </section>
-
-  <!-- ============================================================
-       BENTO PORTFOLIO GRID
-  ============================================================ -->
-  <section class="bento-section" aria-label="Portfolio work">
-    <div class="container">
-      <div class="bento-label">Selected Work</div>
-      <div class="bento-grid">
-
-        <!-- Z -->
-        <div class="bento-card tall reveal">
-          <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" target="_blank" rel="noopener">
-            <img src="images/8_PD_1.png" alt="Z — Product Design" style="border-radius:16px;" />
-            <div class="card-overlay">
-              <div class="card-overlay-title">Z</div>
-              <div class="card-overlay-cta">View project ↗</div>
+    <li><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/sarthak_resume.pdf#pagemode=none" target="_blank">Resumé ↗</a></li>
+</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-2">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="Hello!" class="center fixedwidth fullwidthOnMobile" src="images/5_Final_Poster.gif" style="max-width:11760px;" title="Hello!" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-3">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="images/6_Strip_final_1.gif" style="max-width:720px;" title="" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-4">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/qcatemda/xrq/uf7/5kw/Animated%20Website.gif" style="max-width:960px;" title="" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-5">
+			<div class="row-content">
+				<div class="col col-1 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" target="_blank"><img alt="Z" class="center fullwidthOnMobile autowidth" src="images/8_PD_1.png" style="max-width:250px;border-radius:40px;" title="Z" /></a></div>
+					<div class="block block-2 spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+				</div>
+				<div class="col col-2 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" target="_blank"><img alt="Hex" class="center autowidth" src="images/9_colored_hex.png" style="max-width:250px;border-radius:40px;" title="Hex" /></a></div>
+					<div class="block block-2 spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+					<div class="block block-3 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" target="_blank"><img alt="Nova" class="center autowidth" src="images/10_PD8.png" style="max-width:250px;border-radius:40px 40px 40px 40px;" title="Nova" /></a></div>
+				</div>
+				<div class="col col-3 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" target="_blank"><img alt="Titan" class="center autowidth" src="images/11_PD_4.png" style="max-width:250px;border-radius:40px;" title="Titan" /></a></div>
+				</div>
+				<div class="col col-4 col-w3">
+					<div class="block block-1 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" target="_blank"><img alt="IKEA" class="center autowidth" src="images/12_PD_5.png" style="max-width:250px;border-radius:40px;" title="IKEA" /></a></div>
+					<div class="block block-2 spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+					<div class="block block-3 image"><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" target="_blank"><img alt="Expedition" class="center autowidth" src="images/13_PD7.png" style="max-width:250px;border-radius:40px;" title="Expedition" /></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-6">
+			<div class="row-content">
+				<div class="col col-1 col-w6">
+					<div class="block block-1 heading">
+						<h1><span class="tinyMce-placeholder">Check out my <a href="https://sarthaktavate.com/assets/product_portfolio.pdf" rel="noopener" style="text-decoration: none; color: #ff6044;" target="_blank">Product Design</a> portfolio here!</span> </h1>
+					</div>
+				</div>
+				<div class="col col-2 col-w2">
+					<div class="block block-1 paragraph"></div>
+				</div>
+				<div class="col col-3 col-w4">
+					<div class="block block-1 paragraph">
+						<p>Products that solve real problems impacting real people.</p>
+					</div>
+					<div class="block block-2 button"><a class="button-content" href="https://sarthaktavate.com/assets/product_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-7 mobile_hide">
+			<div class="row-content">
+				<div class="col col-1 col-w3">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+				</div>
+				<div class="col col-2 col-w3">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+				</div>
+				<div class="col col-3 col-w3">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+				<div class="col col-4 col-w3">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-8">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth fullwidthOnMobile" src="images/14_Colored_UX_poster.png" style="max-width:1200px;" title="" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-9">
+			<div class="row-content">
+				<div class="col col-1 col-w6">
+					<div class="block block-1 heading">
+						<h1><span class="tinyMce-placeholder">Check out my <a href="https://sarthaktavate.com/assets/ux_portfolio.pdf" rel="noopener" style="text-decoration: none; color: #ff6044;" target="_blank">UX Design</a> portfolio here!</span> </h1>
+					</div>
+				</div>
+				<div class="col col-2 col-w2">
+					<div class="block block-1 paragraph"></div>
+				</div>
+				<div class="col col-3 col-w4">
+					<div class="block block-1 paragraph">
+						<p>Purpose-led design, real results<br />Here’s what I’ve been creating.</p>
+					</div>
+					<div class="block block-2 button"><a class="button-content" href="https://sarthaktavate.com/assets/ux_portfolio.pdf" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Take me there ↗</span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-10 mobile_hide">
+			<div class="row-content">
+				<div class="col col-1 col-w12">
+					<div class="block block-1 image"><img alt="" class="center fixedwidth" src="images/15_Small_blank.png" style="max-width:900px;" title="" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-11">
+			<div class="row-content">
+				<div class="col col-1 col-w8">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:25px;"></div>
+					</div>
+					<div class="block block-2 image"><a href="index.html"><img alt="Home" class="fixedwidth" src="images/darkmodelogo.png" style="max-width:115px;border-radius:0px 0px 0px 0px;" title="Home" /></a></div>
+					<div class="block block-3 paragraph mobile_hide">
+						<p>Multidisciplinary product designer with a strong foundation in both UX design and industrial design, bringing over 3 years of experience crafting human-centered digital systems, immersive 3D environments, and functional hardware prototypes. Currently pursuing an M.S. in Human-Centered Computing (HCI) at the University of Maryland, BC, serving as a Research Assistant and Student Association Senator.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
+					</div>
+					<div class="block block-4 button"><a class="button-content" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You’d Be a Great Fit!&amp;body=" style="font-size: 16px; display: inline-block;" target="_blank"><span style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">Hire me  ↗</span></a></div>
+					<div class="block block-5 social">
+						<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img alt="Linkedin" src="images/16_linkedin2x.png" title="linkedin" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.behance.net/sarthaktawate" target="_blank"><img alt="Behance" src="images/17_Behance.png" title="Behance" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank"><img alt="Facebook" src="images/18_facebook2x.png" title="facebook" /></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img alt="Instagram" src="images/19_instagram2x.png" title="instagram" /></a></span></div>
+					</div>
+					<div class="block block-6 heading">
+						<h3>+1 (646) 318-9495 </h3>
+					</div>
+					<div class="block block-7 heading">
+						<h3>sarthak.tavate24@gmail.com </h3>
+					</div>
+					<div class="block block-8 heading">
+						<h3>Washington, D.C. (GMT-5) </h3>
+					</div>
+					<div class="block block-9 spacer mobile_hide">
+						<div class="spacer" style="height:50px;"></div>
+					</div>
+					<div class="block block-10 paragraph mobile_hide">
+						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
+					</div>
+				</div>
+				<div class="col col-2 col-w4">
+					<div class="block block-1 spacer">
+						<div class="spacer" style="height:50px;"></div>
+					</div>
+					<div class="block block-2 heading mobile_hide">
+						<h3><span class="tinyMce-placeholder">Let’s connect</span> </h3>
+					</div>
+					<div class="block block-3 form mobile_hide">
+    <form action="https://formspree.io/f/xangkrgg" method="POST" target="_blank">
+        
+        <div class="form-row">
+            <div class="field field-r10c1m2r1f1">
+                <label for="r10c1m2r1f1">Name</label>
+                <input id="r10c1m2r1f1" name="name" required type="text" />
             </div>
-          </a>
         </div>
 
-        <!-- Hex -->
-        <div class="bento-card reveal reveal-delay-1">
-          <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" target="_blank" rel="noopener">
-            <img src="images/9_colored_hex.png" alt="Hex — Product Design" style="border-radius:16px;" />
-            <div class="card-overlay">
-              <div class="card-overlay-title">Hex</div>
-              <div class="card-overlay-cta">View project ↗</div>
+        <div class="form-row">
+            <div class="field field-r10c1m2r2f1">
+                <label for="r10c1m2r2f1">Email</label>
+                <input id="r10c1m2r2f1" name="email" required type="email" />
             </div>
-          </a>
         </div>
 
-        <!-- Titan -->
-        <div class="bento-card reveal reveal-delay-2">
-          <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" target="_blank" rel="noopener">
-            <img src="images/11_PD_4.png" alt="Titan — Product Design" style="border-radius:16px;" />
-            <div class="card-overlay">
-              <div class="card-overlay-title">Titan</div>
-              <div class="card-overlay-cta">View project ↗</div>
+        <div class="form-row">
+            <div class="field field-r10c1m2r3f1">
+                <label for="r10c1m2r3f1">Message</label>
+                <input id="r10c1m2r3f1" name="message" required type="text" />
             </div>
-          </a>
         </div>
 
-        <!-- Nova -->
-        <div class="bento-card reveal reveal-delay-1">
-          <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" target="_blank" rel="noopener">
-            <img src="images/10_PD8.png" alt="Nova — Product Design" style="border-radius:16px;" />
-            <div class="card-overlay">
-              <div class="card-overlay-title">Nova</div>
-              <div class="card-overlay-cta">View project ↗</div>
+        <div class="form-row">
+            <div class="field field-r10c1m2r4f1 inline-field">
+                <span class="form-option-wrapper">
+                    <input id="r10c1m2r4f1" name="privacy_policy" type="checkbox" />
+                    <label class="inline" for="r10c1m2r4f1">  Send me your brainwaves via email!</label>
+                </span>
             </div>
-          </a>
         </div>
 
-        <!-- IKEA -->
-        <div class="bento-card reveal reveal-delay-2">
-          <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" target="_blank" rel="noopener">
-            <img src="images/12_PD_5.png" alt="IKEA — Product Design" style="border-radius:16px;" />
-            <div class="card-overlay">
-              <div class="card-overlay-title">IKEA</div>
-              <div class="card-overlay-cta">View project ↗</div>
+        <div class="form-row">
+            <div class="field field-r10c1m2r5f1">
+                <div class="button-container">
+                    <button id="r10c1m2r5f1" name="submit" type="submit" value="Send">Send</button>
+                </div>
             </div>
-          </a>
         </div>
-
-        <!-- Expedition -->
-        <div class="bento-card reveal reveal-delay-3">
-          <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" target="_blank" rel="noopener">
-            <img src="images/13_PD7.png" alt="Expedition — Product Design" style="border-radius:16px;" />
-            <div class="card-overlay">
-              <div class="card-overlay-title">Expedition</div>
-              <div class="card-overlay-cta">View project ↗</div>
-            </div>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       PRODUCT DESIGN CTA
-  ============================================================ -->
-  <section class="cta-section dark" aria-label="Product Design CTA">
-    <div class="container">
-      <div class="cta-inner">
-        <div class="reveal">
-          <h2 class="cta-heading">
-            Check out my
-            <a href="https://sarthaktavate.com/assets/product_portfolio.pdf" target="_blank" rel="noopener">Product Design</a>
-            portfolio here!
-          </h2>
-        </div>
-        <div></div>
-        <div class="reveal reveal-delay-1">
-          <p class="cta-body">Products that solve real problems impacting real people.</p>
-          <a class="cta-button" href="https://sarthaktavate.com/assets/product_portfolio.pdf" target="_blank" rel="noopener">
-            Take me there ↗
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       UX POSTER VISUAL
-  ============================================================ -->
-  <section class="ux-poster-section" aria-label="UX Design showcase">
-    <div class="container">
-      <img src="images/14_Colored_UX_poster.png" alt="UX Design portfolio preview" class="reveal" />
-    </div>
-  </section>
-
-  <!-- ============================================================
-       UX DESIGN CTA
-  ============================================================ -->
-  <section class="cta-section light" aria-label="UX Design CTA">
-    <div class="container">
-      <div class="cta-inner">
-        <div class="reveal">
-          <h2 class="cta-heading">
-            Check out my
-            <a href="https://sarthaktavate.com/assets/ux_portfolio.pdf" target="_blank" rel="noopener">UX Design</a>
-            portfolio here!
-          </h2>
-        </div>
-        <div></div>
-        <div class="reveal reveal-delay-1">
-          <p class="cta-body">Purpose-led design, real results — here's what I've been creating.</p>
-          <a class="cta-button" href="https://sarthaktavate.com/assets/ux_portfolio.pdf" target="_blank" rel="noopener">
-            Take me there ↗
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer class="site-footer" aria-label="Footer">
-    <div class="container">
-      <div class="footer-grid">
-
-        <!-- Left column -->
-        <div>
-          <a class="footer-logo-link" href="index.html">
-            <img src="images/darkmodelogo.png" alt="Sarthak Tavate — Home" />
-          </a>
-
-          <p class="footer-bio">
-            Multidisciplinary product designer with a strong foundation in UX design and industrial design,
-            bringing over 3 years of experience crafting human-centered digital systems, immersive 3D environments,
-            and functional hardware prototypes. Currently pursuing an M.S. in Human-Centered Computing (HCI)
-            at the University of Maryland, BC — Research Assistant and Student Association Senator.
-          </p>
-
-          <a class="footer-hire-btn" href="mailto:sarthak.tavate24@gmail.com?subject=We Think You'd Be a Great Fit!">
-            Hire me ↗
-          </a>
-
-          <div class="footer-social">
-            <a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img src="images/16_linkedin2x.png" alt="LinkedIn" />
-            </a>
-            <a href="https://www.behance.net/sarthaktawate" target="_blank" rel="noopener" aria-label="Behance">
-              <img src="images/17_Behance.png" alt="Behance" />
-            </a>
-            <a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank" rel="noopener" aria-label="Facebook">
-              <img src="images/18_facebook2x.png" alt="Facebook" />
-            </a>
-            <a href="https://www.instagram.com/sarthak.ioi/" target="_blank" rel="noopener" aria-label="Instagram">
-              <img src="images/19_instagram2x.png" alt="Instagram" />
-            </a>
-          </div>
-
-          <div class="footer-meta">
-            <div class="footer-meta-item">+1 (646) 318-9495</div>
-            <div class="footer-meta-item">sarthak.tavate24@gmail.com</div>
-            <div class="footer-meta-item">Washington, D.C. (GMT-5)</div>
-          </div>
-        </div>
-
-        <!-- Right column — contact form -->
-        <div class="footer-form-col">
-          <h3 class="footer-form-heading">Let's connect</h3>
-          <form class="footer-form" action="https://formspree.io/f/xangkrgg" method="POST" target="_blank">
-            <div class="form-group">
-              <label for="f-name">Name</label>
-              <input type="text" id="f-name" name="name" placeholder="Your name" required />
-            </div>
-            <div class="form-group">
-              <label for="f-email">Email</label>
-              <input type="email" id="f-email" name="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="f-message">Message</label>
-              <input type="text" id="f-message" name="message" placeholder="What's on your mind?" required />
-            </div>
-            <div class="checkbox-row">
-              <input type="checkbox" id="f-optin" name="privacy_policy" />
-              <label class="checkbox-label" for="f-optin">Send me your brainwaves via email!</label>
-            </div>
-            <button class="footer-form-submit" type="submit">Send →</button>
-          </form>
-        </div>
-
-      </div>
-
-      <!-- Footer bottom bar -->
-      <div class="footer-divider">
-        <span class="footer-copyright">Copyright © Sarthak Tavate — All Rights Reserved.</span>
-        <span class="footer-copyright" style="color:rgba(255,255,255,0.18);">
-          Designed with intent. Built with care.
-        </span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ============================================================
-       SCROLL REVEAL SCRIPT
-  ============================================================ -->
-  <script>
-    (function () {
-      const els = document.querySelectorAll('.reveal');
-
-      if (!window.IntersectionObserver) {
-        els.forEach(el => el.classList.add('visible'));
-        return;
-      }
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-      els.forEach(el => observer.observe(el));
-    })();
-  </script>
-
+    </form>
+</div>
+					<div class="block block-4 paragraph desktop_hide">
+						<p>Copyright© Sarthak Tavate    |   All Rights Reserved.<br /><a rel="noopener" style="text-decoration: underline;"></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
