@@ -3,24 +3,32 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Sarthak Tavate | Product Designer</title>
+    <title>Sarthak | Product Designer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Urbanist:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Meta Tags -->
+    <meta name="description" content="Portfolio of Sarthak, a Product Designer" />
     
-    <!-- Animation Library CSS -->
+    <!-- Google Fonts matching the design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Scroll Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
         :root {
-            --primary-orange: #FF5C37;
-            --dark-bg: #111111;
-            --light-bg: #FFFFFF;
-            --gray-text: #555555;
-            --glass: rgba(255, 255, 255, 0.8);
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --primary: #ff5c37;
+            --dark: #111111;
+            --light: #f9f9f9;
+            --gray: #adadad;
+            --text-dark: #222222;
+            --text-light: #666666;
+            --bg-glass: rgba(17, 17, 17, 0.95);
         }
 
+        /* --- Global Reset --- */
         * {
             margin: 0;
             padding: 0;
@@ -29,255 +37,288 @@
 
         body {
             font-family: 'Urbanist', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--dark-bg);
+            background-color: var(--light);
+            color: var(--text-dark);
             overflow-x: hidden;
             line-height: 1.6;
         }
 
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.2;
+        }
+
         a {
             text-decoration: none;
-            transition: var(--transition);
+            color: inherit;
         }
 
-        /* --- NAVIGATION --- */
-        .nav-container {
+        /* --- Floating Navbar (Based on Guide) --- */
+        .navbar-wrapper {
             position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: 90%;
-            max-width: 800px;
-        }
-
-        nav {
-            background: var(--dark-bg);
-            padding: 10px 30px;
-            border-radius: 100px;
+            top: 30px;
+            left: 0;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            justify-content: center;
+            z-index: 9999;
+            padding: 0 20px;
         }
 
-        .nav-links {
+        .navbar {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px 15px;
+            border-radius: 999px;
             display: flex;
-            list-style: none;
-            gap: 15px;
             align-items: center;
+            gap: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
         }
 
-        .nav-links a {
-            color: white;
-            font-size: 14px;
+        .nav-item {
+            color: #ffffff;
             font-weight: 500;
-            padding: 8px 18px;
-            border-radius: 50px;
+            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 999px;
+            transition: all 0.3s ease;
         }
 
-        .nav-links a.active {
-            background: var(--primary-orange);
-            color: white;
+        .nav-item.active {
+            background-color: var(--primary);
         }
 
-        .nav-links a:hover:not(.active) {
-            background: rgba(255,255,255,0.1);
+        .nav-item:hover:not(.active) {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
         }
 
-        .logo-nav {
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+        }
+
+        .nav-logo img {
             height: 35px;
-            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-logo:hover img {
+            transform: scale(1.1);
         }
 
-        /* --- HERO SECTION --- */
+        /* --- Hero Section --- */
         .hero {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 120px 20px 60px;
-            position: relative;
+            padding: 180px 5% 100px;
+            max-width: 1300px;
+            margin: 0 auto;
         }
 
-        .hello-bubble {
-            background: white;
-            border: 2px solid var(--dark-bg);
-            padding: 5px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            position: relative;
-            box-shadow: 4px 4px 0px var(--dark-bg);
+        .hello-badge {
             display: inline-block;
-        }
-
-        .hero-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 800;
-            line-height: 1.1;
+            border: 1px solid var(--text-dark);
+            border-radius: 50px;
+            padding: 8px 30px;
+            font-weight: 600;
+            font-size: 18px;
             margin-bottom: 30px;
+            position: relative;
         }
 
-        .hero-title span {
-            color: var(--primary-orange);
+        /* Decorative strokes from the guide */
+        .hello-badge::before, .hello-badge::after {
+            content: '';
+            position: absolute;
+            background: var(--primary);
+            width: 3px;
+            border-radius: 5px;
+        }
+        .hello-badge::before { height: 15px; top: -20px; right: 20px; transform: rotate(15deg); }
+        .hello-badge::after { height: 10px; top: -15px; right: 10px; transform: rotate(45deg); }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
         }
 
-        .hero-content-wrapper {
-            display: flex;
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
             align-items: center;
-            justify-content: center;
-            gap: 50px;
-            max-width: 1200px;
-            margin-top: 40px;
+            width: 100%;
         }
 
         .hero-text {
-            max-width: 450px;
-            text-align: left;
-            font-size: 1.1rem;
-            color: var(--gray-text);
+            font-size: 1.15rem;
+            color: var(--text-light);
             position: relative;
+            padding-left: 20px;
         }
 
-        .hero-text::before {
-            content: "“";
+        .quote-icon {
+            font-family: Georgia, serif;
             font-size: 5rem;
+            color: var(--dark);
             position: absolute;
-            left: -40px;
-            top: -30px;
-            color: var(--primary-orange);
-            opacity: 0.3;
-            font-family: serif;
+            top: -40px;
+            left: 0;
+            line-height: 1;
         }
 
-        .hero-image-container {
+        .hero-image-wrapper {
             position: relative;
-            width: 500px;
-            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .orange-circle {
+        .hero-bg-circle {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            background: var(--primary-orange);
+            width: 90%;
+            aspect-ratio: 1/1;
+            background: linear-gradient(135deg, var(--primary), #ff8a66);
             border-radius: 50%;
             z-index: -1;
-            top: 0;
-            left: 0;
+            bottom: -10%;
         }
 
-        .hero-avatar {
-            width: 100%;
-            height: auto;
-            z-index: 1;
+        .hero-img {
+            width: 80%;
+            max-width: 450px;
+            border-radius: 20px;
+            /* Placeholder sizing for your specific GIF */
+            object-fit: cover;
         }
 
-        .cta-btn {
-            margin-top: 20px;
-            display: inline-block;
-            background: var(--primary-orange);
-            color: white;
-            padding: 15px 35px;
+        .website-btn {
+            position: absolute;
+            bottom: -20px;
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 12px 30px;
             border-radius: 50px;
+            border: 1px solid var(--primary);
             font-weight: 600;
-            border: 3px solid white;
-            box-shadow: 0 10px 20px rgba(255, 92, 55, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
         }
 
-        /* --- PORTFOLIO GRID --- */
-        .section-label {
+        .website-btn:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* --- Section Styling --- */
+        .section {
+            padding: 100px 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             text-align: center;
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 100px 0 50px;
+            margin-bottom: 60px;
         }
 
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .section-header a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* --- Portfolio Grid Reimagined --- */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto 100px;
-            padding: 0 20px;
         }
 
-        .project-card {
-            position: relative;
-            border-radius: 40px;
-            overflow: hidden;
-            aspect-ratio: 1/1;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .project-card img {
+        .portfolio-card img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
+            border-radius: 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: block;
         }
 
-        .project-card:hover img {
-            transform: scale(1.1);
+        .portfolio-card:hover img {
+            transform: scale(0.95);
+            border: 4px solid var(--primary);
+            box-shadow: 0 20px 40px rgba(255, 92, 55, 0.2);
         }
 
-        .project-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            display: flex;
-            align-items: flex-end;
-            padding: 30px;
-            opacity: 0;
-            transition: var(--transition);
+        .full-width-img {
+            width: 100%;
+            border-radius: 40px;
+            transition: transform 0.4s ease;
+        }
+        
+        .full-width-img:hover {
+            transform: scale(0.98);
         }
 
-        .project-card:hover .project-overlay {
-            opacity: 1;
+        /* --- Footer & Contact --- */
+        .footer {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 100px 5% 50px;
+            margin-top: 100px;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            background-image: url("images/3_Faint_Bg.png"); /* Using your pattern */
+            background-size: cover;
         }
 
-        .project-overlay h3 {
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        /* --- CONTACT SECTION --- */
-        .contact-section {
-            background: #f9f9f9;
-            padding: 100px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .contact-container {
-            max-width: 1100px;
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+            gap: 60px;
         }
 
-        .contact-info h2 {
-            font-size: 3rem;
+        .footer-left h3 {
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
-        .contact-info p {
-            color: var(--gray-text);
+        .footer-left p {
+            color: var(--gray);
             margin-bottom: 30px;
             font-size: 1.1rem;
         }
 
-        .info-item {
-            display: block;
-            margin-bottom: 15px;
-            font-weight: 600;
-            color: var(--dark-bg);
+        .contact-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #fff;
         }
 
         .social-links {
@@ -287,19 +328,20 @@
         }
 
         .social-links img {
-            width: 35px;
-            transition: var(--transition);
+            height: 35px;
+            transition: transform 0.3s ease;
         }
 
         .social-links img:hover {
             transform: translateY(-5px);
         }
 
+        /* --- Forms --- */
         .contact-form {
-            background: white;
+            background: rgba(255,255,255,0.05);
             padding: 40px;
             border-radius: 30px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px);
         }
 
         .form-group {
@@ -309,194 +351,227 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            font-weight: 600;
             font-size: 0.9rem;
+            color: var(--gray);
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input {
             width: 100%;
-            padding: 12px 20px;
-            border: 2px solid #eee;
-            border-radius: 15px;
+            padding: 15px 20px;
+            border-radius: 25px;
+            border: 1px solid transparent;
+            background: #fff;
             font-family: inherit;
-            outline: none;
-            transition: 0.3s;
+            font-size: 1rem;
+            transition: all 0.3s;
         }
 
         .form-group input:focus {
-            border-color: var(--primary-orange);
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(255, 92, 55, 0.3);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray);
         }
 
         .submit-btn {
-            background: var(--primary-orange);
-            color: white;
+            background-color: var(--primary);
+            color: #fff;
             border: none;
-            padding: 15px 30px;
-            border-radius: 15px;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s;
             width: 100%;
-            transition: var(--transition);
         }
 
         .submit-btn:hover {
-            background: #e44d2a;
-            transform: scale(1.02);
+            background-color: #ff451a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 92, 55, 0.4);
         }
 
-        footer {
+        .copyright {
             text-align: center;
-            padding: 40px;
+            margin-top: 80px;
+            color: var(--gray);
             font-size: 0.9rem;
-            color: var(--gray-text);
         }
 
-        /* --- RESPONSIVE --- */
-        @media (max-width: 992px) {
-            .hero-content-wrapper {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-text {
-                text-align: center;
-            }
-            .hero-text::before {
-                left: 0;
-            }
-            .contact-container {
+        /* --- Responsive Design --- */
+        @media (max-width: 900px) {
+            .hero-grid, .footer-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .social-links {
-                justify-content: center;
-            }
-            .hero-image-container {
-                width: 350px;
-                height: 350px;
-            }
+            .hero h1 { font-size: 3.5rem; }
+            .quote-icon { left: 50%; transform: translateX(-50%); top: -30px; }
+            .hero-text { padding: 0; margin-top: 20px; }
+            .navbar { flex-wrap: wrap; justify-content: center; padding: 15px; border-radius: 20px; }
+            .nav-item { padding: 8px 15px; font-size: 13px; }
         }
+
     </style>
 </head>
+
 <body>
 
-    <!-- NAVIGATION -->
-    <div class="nav-container">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="ux.html">UX Design ↗</a></li>
-                <li><a href="product.html">Product Design ↗</a></li>
-                <li><a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/sarthak_resume.pdf" target="_blank">Resume ↗</a></li>
-            </ul>
-            <img src="images/4_Logo.png" alt="Logo" class="logo-nav">
-            <div style="width: 120px;"></div> <!-- Spacer for balance -->
+    <!-- Floating Navigation -->
+    <div class="navbar-wrapper" data-aos="fade-down" data-aos-duration="800">
+        <nav class="navbar">
+            <a href="index.html" class="nav-item active">Home ✪</a>
+            <a href="ux.html" class="nav-item">UX Design ↗</a>
+            <a href="index.html" class="nav-logo">
+                <img src="images/4_Logo.png" alt="Sarthak Logo" />
+            </a>
+            <a href="product.html" class="nav-item">Product Design ↗</a>
+            <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/sarthak_resume.pdf#pagemode=none" target="_blank" class="nav-item">Resumé ↗</a>
         </nav>
     </div>
 
-    <!-- HERO SECTION -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hello-bubble" data-aos="fade-down">Hello!</div>
-        <h1 class="hero-title" data-aos="zoom-in" data-aos-delay="200">
-            I'm <span>Sarthak</span>, a<br>Product Designer
+        <div class="hello-badge" data-aos="zoom-in" data-aos-delay="200">Hello!</div>
+        
+        <h1 data-aos="fade-up" data-aos-delay="300">
+            I'm <span>Sarthak</span>, a<br>
+            Product Designer
         </h1>
 
-        <div class="hero-content-wrapper">
-            <div class="hero-text" data-aos="fade-right" data-aos-delay="400">
-                <p>I'm eager to join Tesla to design seamless physical-digital systems aligned with its pace of innovation. With 4+ years across UX and industrial design, I build scalable design systems and production-ready solutions.</p>
-                <a href="#contact" class="cta-btn">Hire Me ↗</a>
+        <div class="hero-grid">
+            <div class="hero-text" data-aos="fade-right" data-aos-delay="500">
+                <div class="quote-icon">“</div>
+                <p>I'm eager to join innovative teams to design seamless physical-digital systems aligned with a fast pace of innovation. With 4+ years across UX and industrial design, I build scalable design systems and production-ready solutions with engineering teams. I thrive in complex, high-impact environments and aim to accelerate the mission through precise, fast, and deeply considered design.</p>
             </div>
             
-            <div class="hero-image-container" data-aos="fade-left" data-aos-delay="600">
-                <div class="orange-circle"></div>
-                <img src="images/5_Final_Poster.gif" alt="Sarthak Avatar" class="hero-avatar">
+            <div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="600">
+                <div class="hero-bg-circle"></div>
+                <!-- Fallback to your animated GIF for the avatar slot -->
+                <img src="images/5_Final_Poster.gif" alt="Sarthak" class="hero-img" />
+                <a href="#portfolio" class="website-btn">Website ↗</a>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO SECTION -->
-    <h2 class="section-label" data-aos="fade-up">Featured Projects</h2>
-    <div class="portfolio-grid">
-        <!-- Project 1 -->
-        <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="100">
-            <img src="images/8_PD_1.png" alt="Z">
-            <div class="project-overlay"><h3>Project Z</h3></div>
-        </a>
-        <!-- Project 2 -->
-        <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="200">
-            <img src="images/9_colored_hex.png" alt="Hex">
-            <div class="project-overlay"><h3>Hex</h3></div>
-        </a>
-        <!-- Project 3 -->
-        <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="300">
-            <img src="images/10_PD8.png" alt="Nova">
-            <div class="project-overlay"><h3>Nova</h3></div>
-        </a>
-        <!-- Project 4 -->
-        <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="400">
-            <img src="images/11_PD_4.png" alt="Titan">
-            <div class="project-overlay"><h3>Titan</h3></div>
-        </a>
-        <!-- Project 5 -->
-        <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="500">
-            <img src="images/12_PD_5.png" alt="IKEA">
-            <div class="project-overlay"><h3>IKEA</h3></div>
-        </a>
-        <!-- Project 6 -->
-        <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" target="_blank" class="project-card" data-aos="fade-up" data-aos-delay="600">
-            <img src="images/13_PD7.png" alt="Expedition">
-            <div class="project-overlay"><h3>Expedition</h3></div>
-        </a>
-    </div>
+    <!-- Animated Banner -->
+    <section class="section" style="padding-top: 0; padding-bottom: 0;" data-aos="zoom-in-up">
+        <img alt="Strip Final" src="images/6_Strip_final_1.gif" style="width: 100%; max-width: 900px; margin: 0 auto; display: block; border-radius: 20px;" />
+    </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <div class="contact-info" data-aos="fade-right">
-                <h2>Let's connect</h2>
-                <p>Multidisciplinary product designer with a strong foundation in both UX design and industrial design.</p>
-                <span class="info-item">📞 +1 (646) 318-9495</span>
-                <span class="info-item">✉️ sarthak.tavate24@gmail.com</span>
-                <span class="info-item">📍 Washington, D.C. (GMT-5)</span>
+    <!-- Product Design Portfolio -->
+    <section id="portfolio" class="section">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Product Design</h2>
+            <p>Products that solve real problems impacting real people. <br> 
+               Check out my <a href="https://sarthaktavate.com/assets/product_portfolio.pdf" target="_blank">Product Design portfolio here! ↗</a></p>
+        </div>
+
+        <div class="portfolio-grid">
+            <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=83" target="_blank" class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/8_PD_1.png" alt="Z Project" />
+            </a>
+            <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=71" target="_blank" class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/9_colored_hex.png" alt="Hex Project" />
+            </a>
+            <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=56" target="_blank" class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/10_PD8.png" alt="Nova Project" />
+            </a>
+            <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=98" target="_blank" class="portfolio-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/11_PD_4.png" alt="Titan Project" />
+            </a>
+            <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=101" target="_blank" class="portfolio-card" data-aos="fade-up" data-aos-delay="500">
+                <img src="images/12_PD_5.png" alt="IKEA Project" />
+            </a>
+            <a href="https://sarthaktavate24.github.io/sarthaktavate.com/assets/product_portfolio.pdf#page=5" target="_blank" class="portfolio-card" data-aos="fade-up" data-aos-delay="600">
+                <img src="images/13_PD7.png" alt="Expedition Project" />
+            </a>
+        </div>
+    </section>
+
+    <!-- UX Design Section -->
+    <section class="section" style="background-color: #fff; border-radius: 60px;">
+        <div class="section-header" data-aos="fade-up">
+            <h2>UX Design</h2>
+            <p>Purpose-led design, real results. Here’s what I’ve been creating. <br>
+               Check out my <a href="https://sarthaktavate.com/assets/ux_portfolio.pdf" target="_blank">UX Design portfolio here! ↗</a></p>
+        </div>
+        
+        <div data-aos="zoom-in" data-aos-delay="200" style="text-align: center;">
+            <img src="images/14_Colored_UX_poster.png" alt="UX Portfolio Preview" class="full-width-img" style="max-width: 1000px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <!-- Left Info -->
+            <div class="footer-left" data-aos="fade-right">
+                <img src="images/darkmodelogo.png" alt="Home" style="max-width: 120px; margin-bottom: 20px;">
                 
+                <p>Multidisciplinary product designer with a strong foundation in both UX design and industrial design, bringing over 3 years of experience crafting human-centered digital systems, immersive 3D environments, and functional hardware prototypes.</p>
+                
+                <div class="contact-info">
+                    <h4>+1 (646) 318-9495</h4>
+                    <h4>sarthak.tavate24@gmail.com</h4>
+                    <h4>Washington, D.C. (GMT-5)</h4>
+                </div>
+
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img src="images/16_linkedin2x.png" alt="LinkedIn"></a>
-                    <a href="https://www.behance.net/sarthaktawate" target="_blank"><img src="images/17_Behance.png" alt="Behance"></a>
-                    <a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img src="images/19_instagram2x.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/sarthak-tavate-a6490816a/" target="_blank"><img src="images/16_linkedin2x.png" alt="LinkedIn" /></a>
+                    <a href="https://www.behance.net/sarthaktawate" target="_blank"><img src="images/17_Behance.png" alt="Behance" /></a>
+                    <a href="https://www.facebook.com/sarthak.tavate.3/" target="_blank"><img src="images/18_facebook2x.png" alt="Facebook" /></a>
+                    <a href="https://www.instagram.com/sarthak.ioi/" target="_blank"><img src="images/19_instagram2x.png" alt="Instagram" /></a>
                 </div>
             </div>
 
-            <div class="contact-form" data-aos="fade-left">
-                <form action="https://formspree.io/f/xangkrgg" method="POST">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" required placeholder="email@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea name="message" rows="4" required placeholder="Your brainwaves..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message ↗</button>
-                </form>
+            <!-- Right Form -->
+            <div class="footer-right" data-aos="fade-left">
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Let’s connect</h3>
+                    <form action="https://formspree.io/f/xangkrgg" method="POST" target="_blank">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" required type="text" placeholder="Your Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" required type="email" placeholder="your@email.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <input id="message" name="message" required type="text" placeholder="How can I help you?" />
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input id="privacy" name="privacy_policy" type="checkbox" style="width: auto;" />
+                            <label for="privacy" style="margin: 0;">Send me your brainwaves via email!</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <p>Copyright © Sarthak Tavate | All Rights Reserved</p>
+        <div class="copyright" data-aos="fade-up">
+            <p>Copyright © Sarthak Tavate | All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <!-- Animation Scripts -->
+    <!-- AOS JS for Scroll Animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize Animations
+        // Initialize AOS animation library
         AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
+            duration: 800,      // animation duration
+            once: true,         // whether animation should happen only once - while scrolling down
+            offset: 50,         // offset (in px) from the original trigger point
+            easing: 'ease-out-cubic',
         });
     </script>
 </body>
